@@ -52,6 +52,8 @@
 table, th, td {
     /*border: 1px solid black;*/
     border-collapse: collapse;
+    height: 30px;
+    line-height: 30px;
     padding: 4px;
     font-size: x-large;	
 }
