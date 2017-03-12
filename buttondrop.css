@@ -76,7 +76,7 @@ tr {
 	border-bottom: 1px solid black;
 }
 table.scroll {
-    /* width: 100%; */ /* Optional */
+    width: 80%; 
     /* border-collapse: collapse; */
     border-spacing: 0;
     border: 2px solid black;
