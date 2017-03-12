@@ -49,12 +49,12 @@
 
 .show {display:block;}
 
-table {
+table, th, td {
     /*border: 1px solid black;*/
+    height: 30px;
+    line-height: 30px;
     border-collapse: collapse;
-    width: 80%;
     padding: 4px;
-    font-size: x-large;	
 }
 
 tr {
@@ -74,3 +74,7 @@ tr {
 .bottoms {
 	border-bottom: 1px solid black;
 }
+
+table.scroll tbody,
+table.scroll thead { display: block; }
+
