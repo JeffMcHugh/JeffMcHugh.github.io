@@ -88,12 +88,6 @@ table.scroll {
 table.scroll tbody,
 table.scroll thead { display: block; }
 
-thead tr th { 
-    height: 30px;
-    line-height: 30px;
-    /* text-align: left; */
-}
-
 table.scroll tbody {
     height: 100px;
     overflow-y: auto;
