@@ -86,8 +86,8 @@ table.scroll tbody,
 table.scroll thead { display: block; }
 
 thead tr th { 
-    height: 80%;
-    line-height: 80%;
+    height: 30px;
+    line-height: 30px;
     /* text-align: left; */
 }
 
