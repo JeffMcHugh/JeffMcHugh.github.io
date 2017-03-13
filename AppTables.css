@@ -69,10 +69,10 @@ table {
 
 th, td {
     /*border: 1px solid black;*/
-    height: 30px;
-    line-height: 30px;
+    height: 20px;
+    line-height: 20px;
     border-collapse: collapse;
-    padding: 2px;
+    padding: 4px;
 }
 
 thead tr td {
