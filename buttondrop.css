@@ -59,6 +59,9 @@
 #commname {
 	width: 800px;
 }
+.bottoms {
+	border-bottom: 1px solid black;
+}
 
 table {
    width: 80%;
@@ -91,9 +94,7 @@ thead tr td {
 .botrow {
 	border-bottom: 1px solid black;
 }
-.bottoms {
-	border-bottom: 1px solid black;
-}
+
 
 table.scroll {
     /* width: 100%; */ /* Optional */
