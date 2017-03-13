@@ -84,7 +84,6 @@ thead tr td {
 
 tr td {
 	border-right: 1px solid black;	
-	border-bottom: 1px solid black;
 }
 
 #years {
@@ -95,7 +94,7 @@ tr td {
 	border-top: 1px solid black;
 }
 
-.botrow tbody tr {
+.botrow {
 	border-bottom: 1px solid black;
 }
 
