@@ -68,7 +68,7 @@ table {
 
 
 
-table, th, td {
+th, td {
     /*border: 1px solid black;*/
     height: 30px;
     line-height: 30px;
