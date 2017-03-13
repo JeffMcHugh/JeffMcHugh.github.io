@@ -88,18 +88,13 @@ table.scroll thead { display: block; }
 
 
 table.scroll tbody {
-    height: 200px;
+    height: 6000px;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
 tbody { border-top: 8px solid black; }
 
-table{
-  width: 80%;
-  
-  
-}
 
 tbody td, thead th {
     /* width: 20%; */ /* Optional */
