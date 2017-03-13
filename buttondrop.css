@@ -59,7 +59,7 @@
 #commname {
 	width: 800px;
 }
-.bottoms {
+div tr .bottoms {
 	border-bottom: 1px solid black;
 }
 
