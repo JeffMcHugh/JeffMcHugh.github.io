@@ -61,7 +61,7 @@
 }
 
 table {
-   width: 80%;
+   width: 50%;
 }
 
 	
@@ -116,7 +116,7 @@ table.scroll tbody {
 tbody { border-top: 8px solid black; }
 
 table{
-  width: 50%;
+  width: 80%;
   
   
 }
