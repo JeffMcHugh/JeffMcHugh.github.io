@@ -49,6 +49,10 @@
 
 .show {display:block;}
 
+.col1 {
+	width:40%;
+}
+
 table {
    width: 80%;
 	
