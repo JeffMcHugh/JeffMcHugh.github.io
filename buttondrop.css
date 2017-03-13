@@ -50,7 +50,10 @@
 .show {display:block;}
 
 .col1 {
-	column-width:40%;
+	column-width:50%;
+}
+.midcolumn {
+	column-width:10%;
 }
 
 table {
