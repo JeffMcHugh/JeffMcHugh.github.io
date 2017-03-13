@@ -58,6 +58,10 @@
 
 table {
    width: 80%;
+
+#commname {
+	column-width: 140px;
+}
 	
 }
 
@@ -87,9 +91,8 @@ tr {
 .bottoms {
 	border-bottom: 1px solid black;
 }
-th#commname {
-	column-width: 140px;
-}
+
+
 
 table.scroll {
     /* width: 100%; */ /* Optional */
