@@ -88,7 +88,7 @@ thead tr td {
 	border-top: 1px solid black;
 }
 
-table tr .botrow {
+.botrow table tr {
 	border-bottom: 1px solid black;
 }
 
