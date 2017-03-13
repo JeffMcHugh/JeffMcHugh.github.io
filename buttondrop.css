@@ -85,7 +85,7 @@ tr {
 	border-bottom: 1px solid black;
 }
 #commname {
-	width: 80%;
+	column-width: 80%;
 }
 
 table.scroll {
