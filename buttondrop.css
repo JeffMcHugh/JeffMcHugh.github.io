@@ -88,7 +88,7 @@ table.scroll thead { display: block; }
 
 
 table.scroll tbody {
-    height: 6000px;
+    height: 600px;
     overflow-y: auto;
     overflow-x: hidden;
 }
