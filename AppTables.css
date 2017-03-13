@@ -94,6 +94,10 @@ tr td {
 .botrow {
 	border-bottom: 1px solid black;
 }
+/* The following takes aligns the columns by accounting for the scroll bar */
+.gap {
+	width: 33px;
+}
 
 
 table.scroll {
