@@ -96,7 +96,7 @@ tr td {
 }
 /* The following takes aligns the columns by accounting for the scroll bar */
 .gap {
-	width: 33px;
+	width: 16.5px;
 }
 
 
@@ -113,7 +113,7 @@ table.scroll thead { display: block; }
 
 
 table.scroll tbody {
-    height: 600px;
+    height: 450px;
     overflow-y: auto;
     overflow-x: hidden;
 }
