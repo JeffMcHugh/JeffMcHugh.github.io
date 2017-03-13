@@ -96,7 +96,7 @@ tr td {
 }
 /* The following takes aligns the columns by accounting for the scroll bar */
 .gap {
-	width: 16.5px;
+	width: 14px;
 }
 
 
@@ -105,6 +105,9 @@ table.scroll {
     /* border-collapse: collapse; */
     border-spacing: 0;
     border: 2px solid black;
+}
+::-webkit-scrollbar {
+    width: 14px;
 }
 
 table.scroll tbody,
@@ -118,7 +121,7 @@ table.scroll tbody {
     overflow-x: hidden;
 }
 
-tbody { border-top: 8px solid black; }
+tbody { border-top: 4px solid black; }
 
 
 tbody td, thead th {
