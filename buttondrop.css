@@ -59,8 +59,8 @@
 table {
    width: 80%;
 
-#commname {
-	column-width: 140px;
+th#commname {
+	column-width: 200px;
 }
 	
 }
