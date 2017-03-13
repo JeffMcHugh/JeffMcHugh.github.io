@@ -56,13 +56,15 @@
 	column-width:110px;
 }
 
+#commname {
+	column-width: 600px;
+}
+
 table {
    width: 80%;
 }
 
-#commname {
-	column-width: 600px;
-}	
+	
 
 
 
