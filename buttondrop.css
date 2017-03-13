@@ -77,7 +77,7 @@ th, td {
     width: 18%;
 }
 
-thead tr {
+thead tr td {
 	border-right: 1px solid black;	
 }
 #years {
