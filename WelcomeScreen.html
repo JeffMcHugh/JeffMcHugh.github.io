@@ -15,13 +15,14 @@
 <script>
 
 function myJsFunction(){
-    var text=document.getElementById('input1').value;
-    console.log(text);
+    var codeentered=document.getElementById('input1').value;
+    console.log(codeentered);
+    // Put the object into storage
+    localStorage.setItem('passvar', codeentered);
  }
+	
+console.log(passvar);
  
-
-// Put the object into storage
-localStorage.setItem('passvar', passvar);
 </script>
 
 <a href="https://jeffmchugh.github.io/AppTables.html"</a>
