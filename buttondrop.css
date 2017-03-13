@@ -58,8 +58,9 @@
 
 table {
    width: 80%;
+}
 
-th#commname {
+th#commname.bottoms {
 	column-width: 200px;
 }
 	
