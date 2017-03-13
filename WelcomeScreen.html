@@ -10,14 +10,15 @@
 <div>
 
 <input type="text" id="input1" />
-<button onclick="myJsFunction()"></button>
+<button onclick="myJsFunction()">Take me there</button>
 
 <script>
 
 function myJsFunction(){
     var text=document.getElementById('input1').value;
+    console.log(text);
  }
- console.log(text);
+ 
 
 // Put the object into storage
 localStorage.setItem('passvar', passvar);
