@@ -49,6 +49,12 @@
 
 .show {display:block;}
 
+table {
+   width: 80%;
+	
+}
+
+
 table, th, td {
     /*border: 1px solid black;*/
     height: 30px;
