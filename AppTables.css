@@ -96,7 +96,7 @@ tr td {
 }
 /* The following takes aligns the columns by accounting for the scroll bar */
 .gap {
-	width: 14px;
+	width: 13px;
 }
 
 
@@ -106,9 +106,7 @@ table.scroll {
     border-spacing: 0;
     border: 2px solid black;
 }
-::-webkit-scrollbar {
-    width: 14px;
-}
+
 
 table.scroll tbody,
 table.scroll thead { display: block; }
