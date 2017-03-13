@@ -15,12 +15,13 @@
 <script>
 
 function myJsFunction(){
-    var codeentered=document.getElementById('input1').value;
-    console.log(codeentered);
+    var codeEntered=document.getElementById('input1').value;
+    console.log(codeEntered);
     // Put the object into storage
-    localStorage.setItem('passvar', codeentered);
+    localStorage.setItem('enteredCode', codeEntered);
  }
-	
+// Retrieve the object from storage
+var passvar = localStorage.getItem('enteredCode');	
 console.log(passvar);
  
 </script>
