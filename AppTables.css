@@ -146,6 +146,10 @@ tbody td:last-child, thead th:last-child {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
 }
 
 .button1 {
@@ -158,4 +162,3 @@ tbody td:last-child, thead th:last-child {
     background-color: #008CBA;
     color: white;
 }
-
