@@ -50,10 +50,10 @@
 .show {display:block;}
 
 .col1 {
-	column-width:50%;
+	column-width:300px;
 }
 .midcolumn {
-	column-width:10%;
+	column-width:110px;
 }
 
 table {
@@ -61,7 +61,7 @@ table {
 }
 
 #commname {
-	column-width: 80%;
+	column-width: 300px;
 }	
 
 
