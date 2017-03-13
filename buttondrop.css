@@ -60,11 +60,10 @@ table {
    width: 80%;
 }
 
-th#commname.bottoms {
+#commname {
 	column-width: 200px;
-}
-	
-}
+}	
+
 
 
 table, th, td {
