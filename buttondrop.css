@@ -87,8 +87,8 @@ tr {
 .bottoms {
 	border-bottom: 1px solid black;
 }
-#commname {
-	column-width: 80px;
+th#commname {
+	column-width: 140px;
 }
 
 table.scroll {
