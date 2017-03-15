@@ -35,6 +35,7 @@ console.log(passvar);
          return b[3] - a[3];
       }
       console.log(byValue);
+      $( "#row1col1" ).replaceWith(byValue[[2][2]]);
   
   };
   $.get(url,expdata,callback);
@@ -51,7 +52,7 @@ console.log(passvar);
       			//	hscodelist[[i-1][1]] = AllHS[[i][1]];
     			//	}
 
-$( "#row1col1" ).replaceWith(byValue[[2][2]]);
+
 
 
 
