@@ -15,7 +15,7 @@ console.log(passvar);
 
   var url="https://api.census.gov/data/timeseries/intltrade/exports";
   var expdata = {
-	  get:"E_COMMODITY_LDESC,CTY_CODE,CTY_NAME,ALL_VAL_YR,QTY_1_YR",
+	  get:"E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_YR,QTY_1_YR",
 	  E_COMMODITY: passvar,
 	  //ALL_VAL_YR,
 	  //QTY_1_YR,
@@ -36,7 +36,7 @@ console.log(passvar);
       }
       console.log(byValue);
       $( "#commname" ).text(byValue[1][0]).toLocaleString();
-      $( "#row1col6" ).text(Number(byValue[1][3]).toLocaleString());
+      $( "#row1col6" ).text(Number(byValue[1][3]).toLocaleString()/1000);
   
   };
   $.get(url,expdata,callback);
