@@ -35,11 +35,18 @@ console.log(passvar);
          return b[3] - a[3];
       }
       console.log(byValue);
-      $( "#row1col1" ).replaceWith(byValue[[2][2]]);
+      $( "#row1col6" ).text(Number(byValue[1][2]).toLocaleString());
   
   };
   $.get(url,expdata,callback);
 
+
+						//$("#row1col1").text(byValue[1][1].toLocaleString());
+						//$("#row1col2").text(Number(byValue[1][2]).toLocaleString());
+						//$("#row2col1").text(byValue[2][1].toLocaleString());
+						//$("#row2col2").text(Number(byValue[2][2]).toLocaleString());
+						//$("#row3col1").text(byValue[3][1].toLocaleString());
+						//$("#row3col2").text(Number(byValue[3][2]).toLocaleString());
 
 	
 				
