@@ -26,10 +26,20 @@ console.log(passvar);
 	  
 	  
   var callback= function(data){
-  	console.log(data);
+
+
+      /* This next section sorts API call results by value */
+      var byValue = data;
+      byValue.sort(compareNumbers);
+      function compareNumbers(a, b) {
+         return b[3] - a[3];
+      }
+      console.log(byValue);
   
   };
   $.get(url,expdata,callback);
+
+
 	
 				
 					//	var AllHS = data.slice(0);
