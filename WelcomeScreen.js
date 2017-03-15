@@ -29,7 +29,7 @@ console.log(passvar);
 
 
       /* This next section sorts API call results by value */
-      var byValue = data;
+      var byValue = data.slice();
       byValue.sort(compareNumbers);
       function compareNumbers(a, b) {
          return b[3] - a[3];
