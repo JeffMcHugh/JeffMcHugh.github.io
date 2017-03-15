@@ -6,10 +6,10 @@ function myJsFunction(){
     // Retrieve the object from storage
     var passvar = localStorage.getItem('enteredCode');	
     console.log(passvar);
-    retrieveData();
+    retrieveData(passvar);
  }
 	
-function retrieveData(){
+function retrieveData(passvar){
   var url="https://api.census.gov/data/timeseries/intltrade/exports";
   var expdata = {
 	  get:"E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_YR,QTY_1_YR",
