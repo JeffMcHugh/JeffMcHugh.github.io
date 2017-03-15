@@ -163,3 +163,7 @@ tbody td:last-child, thead th:last-child {
     background-color: white;
     color: #3385ff;
 }
+
+button.mainbutton {
+	padding:5%;
+}
