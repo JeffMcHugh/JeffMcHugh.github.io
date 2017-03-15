@@ -51,7 +51,7 @@ console.log(passvar);
       			//	hscodelist[[i-1][1]] = AllHS[[i][1]];
     			//	}
 
-
+$( "#row1col1" ).replaceWith(byValue[[2][2]]);
 
 
 
