@@ -34,7 +34,6 @@ function retrieveData(passvar){
   $.get(url,expdata,callback);
 }
 
-
 						//$("#row1col1").text(byValue[1][1].toLocaleString());
 						//$("#row1col2").text(Number(byValue[1][2]).toLocaleString());
 						//$("#row2col1").text(byValue[2][1].toLocaleString());
