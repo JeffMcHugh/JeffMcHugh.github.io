@@ -164,6 +164,6 @@ tbody td:last-child, thead th:last-child {
     color: #3385ff;
 }
 
-button.mainbutton {
+button#mainbutton {
 	padding:5%;
 }
