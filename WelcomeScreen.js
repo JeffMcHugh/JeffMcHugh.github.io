@@ -21,7 +21,7 @@ function retrieveData(){
 	  SUMMARY_LVL:"DET"
   };  
   var callback= function(data){
-      * This next section sorts API call results by value */
+      /* This next section sorts API call results by value */
       var byValue = data.slice();
       byValue.sort(compareNumbers);
       function compareNumbers(a, b) {
