@@ -35,7 +35,7 @@ console.log(passvar);
          return b[3] - a[3];
       }
       console.log(byValue);
-      $( "#row1col6" ).text(Number(byValue[1][2]).toLocaleString());
+      $( "#row1col6" ).text(Number(byValue[1][3]).toLocaleString());
   
   };
   $.get(url,expdata,callback);
