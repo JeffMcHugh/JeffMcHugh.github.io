@@ -3,16 +3,13 @@ function myJsFunction(){
     console.log(codeEntered);
     // Put the object into storage
     localStorage.setItem('enteredCode', codeEntered);
+    // Retrieve the object from storage
+    var passvar = localStorage.getItem('enteredCode');	
+    console.log(passvar);
+    retrieveData();
  }
-// Retrieve the object from storage
-var passvar = localStorage.getItem('enteredCode');	
-console.log(passvar);
 	
-
-
-
-	
-
+function retrieveData(){
   var url="https://api.census.gov/data/timeseries/intltrade/exports";
   var expdata = {
 	  get:"E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_YR,QTY_1_YR",
@@ -22,13 +19,9 @@ console.log(passvar);
 	  MONTH:"12",
 	  YEAR:"2016",
 	  SUMMARY_LVL:"DET"
-  };
-	  
-	  
+  };  
   var callback= function(data){
-
-
-      /* This next section sorts API call results by value */
+      * This next section sorts API call results by value */
       var byValue = data.slice();
       byValue.sort(compareNumbers);
       function compareNumbers(a, b) {
@@ -37,11 +30,9 @@ console.log(passvar);
       console.log(byValue);
       $( "#commname" ).text(byValue[1][0]).toLocaleString();
       $( "#row1col6" ).text(Number(byValue[1][3]/1000)).toFixed(1).toLocaleString();
-  
-	  
-	  
   };
   $.get(url,expdata,callback);
+}
 
 
 						//$("#row1col1").text(byValue[1][1].toLocaleString());
