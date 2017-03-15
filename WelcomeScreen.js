@@ -36,7 +36,7 @@ console.log(passvar);
       }
       console.log(byValue);
       $( "#commname" ).text(byValue[1][0]).toLocaleString();
-      $( "#row1col6" ).text((Number(byValue[1][3]/1000))toFixed(1).toLocaleString());
+      $( "#row1col6" ).text((Number(byValue[1][3]/1000)).toFixed(1).toLocaleString());
   
 	  
 	  
