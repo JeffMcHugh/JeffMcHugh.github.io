@@ -40,3 +40,12 @@ console.log(passvar);
       			//	hscodelist[[i-1][0]] = AllHS[[i][0]];
       			//	hscodelist[[i-1][1]] = AllHS[[i][1]];
     			//	}
+
+
+
+
+
+	
+	
+ 
+
