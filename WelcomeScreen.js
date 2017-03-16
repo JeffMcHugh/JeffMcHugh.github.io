@@ -35,7 +35,7 @@ function retrieveData(passvar){
       console.log(byValue);
       $( "#commname" ).text(byValue[1][0]).toLocaleString();
       $( "#row1col6" ).text(r1c6.toLocaleString());
-      $( "#row3col1" ).text((byValue[2][2]).toLocaleString());
+      $( "#row6col1" ).text((byValue[2][2]).toLocaleString());
       //$( "#row3col6" ).text(r3c6.toLocaleString());
       //$( "#row5col6" ).text(round(Number(byValue[2][3]/1000000)),1).toLocaleString();  
       //$( "#row7col6" ).text(round(Number((byValue[2][3]/1000000)/byValue[2][4])),1).toLocaleString();
