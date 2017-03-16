@@ -27,7 +27,7 @@ function retrieveData(passvar){
       function compareNumbers(a, b) {
          return b[3] - a[3];
       }
-      var r1c6=Math.round(Number(byValue[1][3]/1000000)),1);
+      var r1c6=Math.round((Number(byValue[1][3]/1000000)),1);
 	console.log(r1c6);
       console.log(byValue);
       $( "#commname" ).text(byValue[1][0]).toLocaleString();
