@@ -28,7 +28,7 @@ function retrieveData(passvar){
          return b[3] - a[3];
       }
       var r1c6=Math.round((Number(byValue[1][3]/1000000)),1);
-      var r3c6=Math.round((Number(byValue[1][3]/1000000*byValue[1][4])),1);
+      var r3c6=Math.round((Number((byValue[1][3]/1000000)/byValue[1][4])),1);
       var r1c6=Math.round((Number(byValue[1][3]/1000000)),1);
       var r1c6=Math.round((Number(byValue[1][3]/1000000)),1);
 	console.log(r1c6);
