@@ -6,17 +6,21 @@ function myJsFunction(){
     // Retrieve the object from storage
     var passvar = localStorage.getItem('enteredCode');	
     console.log(passvar);
-    retrieveData(passvar);
+    retrieveData(passvar,"08");
+    retrieveData(passvar,"09");
+    retrieveData(passvar,"10");
+    retrieveData(passvar,"11");
+    retrieveData(passvar,"12");
  }
 	
-function retrieveData(passvar){
+function retrieveData(passvar,month){
   var url="https://api.census.gov/data/timeseries/intltrade/exports";
   var expdata = {
-	  get:"E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_YR,QTY_1_YR",
+	  get:"E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_MO,QTY_1_MO",
 	  E_COMMODITY: passvar,
 	  //ALL_VAL_YR,
 	  //QTY_1_YR,
-	  MONTH:"12",
+	  MONTH:month,
 	  YEAR:"2016",
 	  SUMMARY_LVL:"DET"
   };  
