@@ -31,12 +31,42 @@ function retrieveData(passvar,month){
       function compareNumbers(a, b) {
          return b[3] - a[3];
       }
-      var r1c6=Math.round((Number(byValue[1][3]/1000000)),1);
+      if (month=="08"){
+	      
+      } else if (month=="09"){
+	      
+      } else if (month=="10){
+		 
+      } else if (month=="11){
+		 
+      } else {
+         var r1c6=Math.round((Number(byValue[1][3]/1000000)),1);
+         var r2c6=Math.round((Number(byValue[1][3]/1000000)),1);
+	 var r3c6=Math.round((Number(byValue[1][3]/1000000)),1);
+	 var r4c6=Math.round((Number(byValue[1][3]/1000000)),1);
+	 var r5c6=Math.round((Number(byValue[1][3]/1000000)),1);
+         var r6c6=Math.round((Number(byValue[1][3]/1000000)),1);
+	 var r7c6=Math.round((Number(byValue[1][3]/1000000)),1);
+	 var r8c6=Math.round((Number(byValue[1][3]/1000000)),1);
+	 var r9c6=Math.round((Number(byValue[1][3]/1000000)),1);
+         var r10c6=Math.round((Number(byValue[1][3]/1000000)),1);
+	 var r11c6=Math.round((Number(byValue[1][3]/1000000)),1);
+	 var r12c6=Math.round((Number(byValue[1][3]/1000000)),1);
+	 var r13c6=Math.round((Number(byValue[1][3]/1000000)),1);
+         var r14c6=Math.round((Number(byValue[1][3]/1000000)),1);
+	 var r15c6=Math.round((Number(byValue[1][3]/1000000)),1);
+	 var r16c6=Math.round((Number(byValue[1][3]/1000000)),1);
+	 var r17c6=Math.round((Number(byValue[1][3]/1000000)),1);
+         var r18c6=Math.round((Number(byValue[1][3]/1000000)),1);
+	 var r19c6=Math.round((Number(byValue[1][3]/1000000)),1);
+	 var r20c6=Math.round((Number(byValue[1][3]/1000000)),1); 
+      }		 
+      		 
+
       var r3c6=Math.round((Number((byValue[1][3]/1000000)/byValue[1][4])),1);
       var r1c6=Math.round((Number(byValue[1][3]/1000000)),1);
       var r1c6=Math.round((Number(byValue[1][3]/1000000)),1);
-	console.log(r1c6);
-      console.log(byValue);
+
       $( "#commname" ).text(byValue[1][0]).toLocaleString();
       $( "#row1col6" ).text(r1c6.toLocaleString());
       $( "#row5col1" ).text((byValue[2][2]).toLocaleString());
