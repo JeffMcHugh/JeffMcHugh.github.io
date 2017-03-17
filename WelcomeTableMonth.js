@@ -27,11 +27,37 @@ function retrieveData(passvar,month){
   var callback= function(data){
       /* This next section sorts API call results by value */
       var byValue = data.slice();
+      numcodes=byValue.length;
       byValue.sort(compareNumbers);
       function compareNumbers(a, b) {
          return b[3] - a[3];
       }
+      var CalcValue = byValue.slice();
+      CalcValue[[0][5]]="Unit Price";
+      CalcValue[[0][6]]="Growth of Value";
+      CalcValue[[0][6]]="Growth of Unit Price";
+
+      /*the following sets the value of the unit price */
+      for (i=1;i<=numcodes;i++){ 
+	 CalcValue[[i][3]] = Math.round((Number(byValue[[i][3]]/byValue[[i][3]])),1)
+         CalcValue[[i][4]] = Math.round((Number(byValue[[i][3]]/1000000)),1)
+         CalcValue[[i][5]] = Math.round((Number(byValue[[i][3]]/1000000)),1);
+      }
       if (month=="08"){
+         $( "#commname" ).text(byValue[1][0]).toLocaleString();
+         $( "#row1col1" ).text(byValue[[1][3]].toLocaleString());
+         $( "#row3col1" ).text((byValue[1][2]).toLocaleString());	
+         var r1c1=byValue[[1][3]];
+	 var r3c1=byValue[[][]];
+	 var r1c1=byValue[[1][3]];
+	 var r3c1=byValue[[][]];
+	 var r1c1=byValue[[1][3]];
+	 var r3c1=byValue[[][]];
+	 var r1c1=byValue[[1][3]];
+	 var r3c1=byValue[[][]];
+	 var r1c1=byValue[[1][3]];
+	 var r3c1=byValue[[][]];
+ 
 	      
       } else if (month=="09"){
 	      
@@ -67,9 +93,7 @@ function retrieveData(passvar,month){
       var r1c6=Math.round((Number(byValue[1][3]/1000000)),1);
       var r1c6=Math.round((Number(byValue[1][3]/1000000)),1);
 
-      $( "#commname" ).text(byValue[1][0]).toLocaleString();
-      $( "#row1col6" ).text(r1c6.toLocaleString());
-      $( "#row5col1" ).text((byValue[2][2]).toLocaleString());
+
       //$( "#row3col6" ).text(r3c6.toLocaleString());
       //$( "#row5col6" ).text(round(Number(byValue[2][3]/1000000)),1).toLocaleString();  
       //$( "#row7col6" ).text(round(Number((byValue[2][3]/1000000)/byValue[2][4])),1).toLocaleString();
