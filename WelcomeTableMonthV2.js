@@ -39,6 +39,7 @@ function retrieveData(passvar,mm,mon){
       console.log(byValue);
       topCtyTable[mon] = byValue;
       console.log(topCtyTable);
+	  console.log(topCtyTable["Sep",[2][2]]);
       }
   };
   $.get(url,expdata,callback);
