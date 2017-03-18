@@ -33,6 +33,7 @@ function retrieveData(passvar,mm,mon){
          return b[3] - a[3];
       }
       var topCtyTable = [mon,[byValue]];
+      console.log(topCtyTable);
   }
 }
       
