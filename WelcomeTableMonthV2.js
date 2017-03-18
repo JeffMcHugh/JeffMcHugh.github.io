@@ -18,12 +18,11 @@ function retrieveData(passvar,mm,mon){
 	  get:"E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_MO,QTY_1_MO",
 	  E_COMMODITY: passvar,
 	  //ALL_VAL_YR,
-	  //QTY_1_YR,
 	  MONTH:mm,
 	  YEAR:"2016",
 	  SUMMARY_LVL:"DET"
 	  //key: "63550916d57e686361cb2c21a3634dd765e01e28"
-  } 
+  };
   var callback= function(data){
       /* This next section sorts API call results by value */
       var byValue = data.slice();
@@ -35,10 +34,21 @@ function retrieveData(passvar,mm,mon){
       console.log=byValue;
       //var topCtyTable = [mon,[byValue]];
       //console.log(topCtyTable);
-  }
-};
+  };
+}
       
-      
+var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'sidebar.html');
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      document.getElementById('ajax').innerHTML = xhr.responseText;
+    }
+  };
+
+  function sendAJAX() {
+    xhr.send();
+    document.getElementById('load').style.display = 'none';
+  }      
       
      /* var CalcValue = byValue.slice();
       CalcValue[[0][5]]="Unit Price";
