@@ -11,6 +11,8 @@ function myJsFunction(){
     retrieveData(passvar,"10","Oct");
     retrieveData(passvar,"09","Sep");
  }
+
+var topCtyTable=["Dec","Nov","Oct","Sep"];
 	
 function retrieveData(passvar,mm,mon){
   var url="https://api.census.gov/data/timeseries/intltrade/exports";
@@ -35,7 +37,7 @@ function retrieveData(passvar,mm,mon){
          return b[3] - a[3];
       }
       console.log(byValue);
-      var topCtyTable = [mon,[byValue]];
+      var topCtyTable[mon] = byValue;
       console.log(topCtyTable);
       }
   };
