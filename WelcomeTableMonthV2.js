@@ -22,7 +22,8 @@ function retrieveData(passvar,mm,mon){
 	  //ALL_VAL_YR,
 	  MONTH:mm,
 	  YEAR:"2016",
-	  SUMMARY_LVL:"DET"
+	  SUMMARY_LVL:"DET",
+	  COMM_LVL="HS10"
 	  //key: "63550916d57e686361cb2c21a3634dd765e01e28"
   };
   var callback= function(data){
