@@ -38,8 +38,15 @@ function retrieveData(passvar,mm,mon){
       }
       console.log(byValue);
       topCtyTable[mon] = byValue;
+      topCtyTable[mon][0][9]="Unit Price";      
+      var i;
+      for (i=1;i<=5;i++){
+        topCtyTable[mon][1][9]=topCtyTable[mon][1][3]/topCtyTable[mon][1][4];
+      }
       console.log(topCtyTable);
-	  console.log(topCtyTable[mon][3][2]);
+	      
+	      
+	      
       }
   };
   $.get(url,expdata,callback);
