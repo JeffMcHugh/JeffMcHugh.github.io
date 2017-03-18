@@ -50,6 +50,7 @@ function retrieveData(passvar,mm,mon){
             var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + name + "</td><td>" + email + "</td></tr>";
             $("table tbody").append(markup);
         }); 
+  });
 }
  
      
