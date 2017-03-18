@@ -53,7 +53,7 @@ function retrieveData(passvar,mm,mon){
   $(document).ready(function(){
         var name = $("#name").val();
         var email = $("#email").val();
-        var markup = "<tr><td class="col1">Cty</td><td class="midcol">val1</td><td class="midcol">val2</td><td class="midcol">val3</td><td class="midcol">val4</td><td class="midcol">val5</td></tr>";
+        var markup = "<tr><td class=col1>Cty</td><td class=midcol>val1</td><td class=midcol>val2</td><td class=midcol>val3</td><td class=midcol>val4</td><td class=midcol>val5</td></tr>";
         $("table tbody").append(markup);
   });
 }
