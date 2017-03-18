@@ -37,21 +37,19 @@ function retrieveData(passvar,mm,mon){
       function compareNumbers(a, b) {
          return b[3] - a[3];
       }
-      console.log(byValue);
       topCtyTable[mon] = byValue;
       topCtyTable[mon][0][9]="Unit Price";      
       var i;
       for (i=1;i<=5;i++){
         topCtyTable[mon][1][9]=topCtyTable[mon][1][3]/topCtyTable[mon][1][4];
       }
-      console.log(topCtyTable);
 	      
 	      
 	      
       }
   };
 	
-  console.log(topCtyTable[mon][1][3]);
+  console.log(topCtyTable);
 	
 	
   $.get(url,expdata,callback);
