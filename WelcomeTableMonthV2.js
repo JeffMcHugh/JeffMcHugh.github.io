@@ -37,7 +37,6 @@ function retrieveData(passvar,mm,mon){
       console.log=byValue;
       //var topCtyTable = [mon,[byValue]];
       //console.log(topCtyTable);
-      }
   };
   $.get(url,expdata,callback);
 }
