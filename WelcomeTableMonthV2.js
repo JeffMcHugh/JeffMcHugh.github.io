@@ -30,7 +30,7 @@ function retrieveData(passvar,mm,mon){
       if(!data) {
          console.log("Array Not set");
       } else {
-      var byValue = data.slice(0);
+      var byValue = data.slice(0,5);
       numcodes=byValue.length;
       byValue.sort(compareNumbers);
       function compareNumbers(a, b) {
@@ -44,12 +44,10 @@ function retrieveData(passvar,mm,mon){
   };
   $.get(url,expdata,callback);
   $(document).ready(function(){
-        $(".add-row").click(function(){
-            var name = $("#name").val();
-            var email = $("#email").val();
-            var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + name + "</td><td>" + email + "</td></tr>";
-            $("table tbody").append(markup);
-        }); 
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + name + "</td><td>" + email + "</td></tr>";
+        $("table tbody").append(markup);
   });
 }
  
