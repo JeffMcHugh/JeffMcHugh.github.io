@@ -49,6 +49,10 @@ function retrieveData(passvar,mm,mon){
 	      
       }
   };
+	
+  console.log(topCtyTable);
+	
+	
   $.get(url,expdata,callback);
   $(document).ready(function(){
         $( "#commname" ).text(topCtyTable["Dec"][1][0]).toLocaleString();
