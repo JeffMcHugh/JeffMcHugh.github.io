@@ -28,7 +28,7 @@ function retrieveData(passvar,mm,mon){
       if(!data) {
          console.log("Array Not set");
       } else {
-      var byValue = data.slice();
+      var byValue = data.slice(0);
       numcodes=byValue.length;
       byValue.sort(compareNumbers);
       function compareNumbers(a, b) {
