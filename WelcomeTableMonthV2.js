@@ -50,7 +50,7 @@ function retrieveData(passvar,mm,mon){
       }
   };
 	
-  console.log(topCtyTable);
+  console.log(topCtyTable["Dec"][1][1]);
 	
 	
   $.get(url,expdata,callback);
