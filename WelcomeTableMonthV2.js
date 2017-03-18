@@ -21,8 +21,9 @@ function retrieveData(passvar,mm,mon){
 	  //QTY_1_YR,
 	  MONTH:mm,
 	  YEAR:"2016",
-	  SUMMARY_LVL:"DET"
-  };  
+	  SUMMARY_LVL:"DET",
+	  key: "63550916d57e686361cb2c21a3634dd765e01e28"
+  } 
   var callback= function(data){
       /* This next section sorts API call results by value */
       var byValue = data.slice();
@@ -32,7 +33,7 @@ function retrieveData(passvar,mm,mon){
          return b[3] - a[3];
       }
       var topCtyTable = [mon,[byValue]];
-      
+  }    
       
       
       
