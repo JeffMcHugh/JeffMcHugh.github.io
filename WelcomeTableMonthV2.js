@@ -36,7 +36,7 @@ function retrieveData(passvar,mm,mon){
       //var topCtyTable = [mon,[byValue]];
       //console.log(topCtyTable);
   }
-}
+};
       
       
       
