@@ -50,11 +50,12 @@
 
 .show {display:block;}
 
+
 .col1 {
-	width:50%;
+	width:500px;
 }
 .midcol {
-	width:10%;
+	width:110px;
 }
 /*
 #commname {
@@ -63,8 +64,10 @@
 
 
 table {
-   width: 100%;
+   width: 80%;
 }
+
+
 
 
 th, td {
