@@ -39,7 +39,7 @@ function retrieveData(passvar,mm,mon){
       console.log(byValue);
       topCtyTable[mon] = byValue;
       console.log(topCtyTable);
-	  console.log(topCtyTable[mon][3][0]);
+	  console.log(topCtyTable[mon][3][2]);
       }
   };
   $.get(url,expdata,callback);
