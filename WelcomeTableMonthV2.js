@@ -51,7 +51,7 @@ function retrieveData(passvar,mm,mon){
       }
   };
 	
-  console.log(topCtyTable);
+  console.log(topCtyTable[mon][1][3]);
 	
 	
   $.get(url,expdata,callback);
