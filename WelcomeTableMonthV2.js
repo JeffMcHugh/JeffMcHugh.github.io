@@ -25,6 +25,9 @@ function retrieveData(passvar,mm,mon){
   };
   var callback= function(data){
       /* This next section sorts API call results by value */
+      if(!data) {
+         console.log("Array Not set");
+      } else {
       var byValue = data.slice();
       numcodes=byValue.length;
       byValue.sort(compareNumbers);
@@ -34,6 +37,7 @@ function retrieveData(passvar,mm,mon){
       console.log=byValue;
       //var topCtyTable = [mon,[byValue]];
       //console.log(topCtyTable);
+      }
   };
 }
       
