@@ -42,12 +42,12 @@ function retrieveData(passvar,mm,mon){
       CalcValue[[0][6]]="Growth of Unit Price";
 
       /*the following sets the value of the unit price */
-      for (i=1;i<=numcodes;i++){ 
-	 CalcValue[[i][3]] = Math.round((Number(byValue[[i][3]]/byValue[[i][3]])),1)
-         CalcValue[[i][4]] = Math.round((Number(byValue[[i][3]]/1000000)),1)
-         CalcValue[[i][5]] = Math.round((Number(byValue[[i][3]]/1000000)),1);
-      }
-      if (month=="08"){
+  //    for (i=1;i<=numcodes;i++){ 
+//	 CalcValue[[i][3]] = Math.round((Number(byValue[[i][3]]/byValue[[i][3]])),1)
+ //        CalcValue[[i][4]] = Math.round((Number(byValue[[i][3]]/1000000)),1)
+  //       CalcValue[[i][5]] = Math.round((Number(byValue[[i][3]]/1000000)),1);
+  //    }
+ /*     if (month=="08"){
          $( "#commname" ).text(byValue[1][0]).toLocaleString();
          $( "#row1col1" ).text(byValue[[1][3]].toLocaleString());
          $( "#row3col1" ).text((byValue[1][2]).toLocaleString());	
