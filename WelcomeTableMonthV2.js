@@ -43,9 +43,16 @@ function retrieveData(passvar,mm,mon){
       }
   };
   $.get(url,expdata,callback);
+  $(document).ready(function(){
+        $(".add-row").click(function(){
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + name + "</td><td>" + email + "</td></tr>";
+            $("table tbody").append(markup);
+        }); 
 }
  
-      
+     
      /* var CalcValue = byValue.slice();
       CalcValue[[0][5]]="Unit Price";
       CalcValue[[0][6]]="Growth of Value";
