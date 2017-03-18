@@ -53,7 +53,7 @@ function retrieveData(passvar,mm,mon){
   $(document).ready(function(){
         var name = $("#name").val();
         var email = $("#email").val();
-        var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + name + "</td><td>" + email + "</td></tr>";
+        var markup = "<tr><td>Cty</td><td>val1</td><td>val2</td><td>val3</td><td>val4</td><td>val5</td></tr>";
         $("table tbody").append(markup);
   });
 }
