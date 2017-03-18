@@ -51,10 +51,10 @@
 .show {display:block;}
 
 .col1 {
-	width:500px;
+	width:50%;
 }
 .midcol {
-	width:110px;
+	width:10%;
 }
 /*
 #commname {
