@@ -73,9 +73,9 @@ function retrieveData(passvar,mm,mon){
 	 
         $(document).ready(function(){
           $( "#commname" ).text(topCtyTable[mon][1][0]).toLocaleString();
-          var markup = "<tr><td class=col1>$" + country + valIndicator + "</td><td class=midcol>" + val1 + "</td><td class=midcol>" + val2 +
-	               "</td><td class=midcol>" + val3 + "</td><td class=midcol>" + val4 + "</td><td class=midcol>" + val5 +
-		       "</td></tr>";
+          var markup = "<tr><td class=col1>" + country + "</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
+	               "</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" +val5+
+		       valIndicator + "</td></tr>";
           $("table tbody").append(markup);
         });  
       }
