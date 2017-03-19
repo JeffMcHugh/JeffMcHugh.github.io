@@ -58,7 +58,7 @@ function retrieveData(passvar,mm,mon){
         }else if(topCtyTable["Dec"][1][3]>1000000){
 	  var valIndicator="M";
 	  val1=topCtyTable["Aug"][1][3]/1000000;
-	  val2=topCtyTable["Sep"][1][3]/1000000;
+	 // val2=topCtyTable["Sep"][1][3]/1000000;
 	  val3=topCtyTable["Oct"][1][3]/1000000;
 	  val4=topCtyTable["Nov"][1][3]/1000000;
 	  val5=topCtyTable["Dec"][1][3]/1000000;
