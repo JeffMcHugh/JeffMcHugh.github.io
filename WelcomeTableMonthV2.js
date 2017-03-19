@@ -13,7 +13,7 @@ function myJsFunction(){
     retrieveData(passvar,"08","Aug");
  }
 
-var topCtyTable=["Dec","Nov","Oct","Sep"];
+var topCtyTable=["Dec","Nov","Oct","Sep","Aug"];
 	
 function retrieveData(passvar,mm,mon){
   var url="https://api.census.gov/data/timeseries/intltrade/exports";
