@@ -47,7 +47,7 @@ function retrieveData(passvar,mm,mon){
       console.log(topCtyTable);
       if (mon=="Aug"){
 	console.log(topCtyTable);
-        if(topCtyTable["Dec"][1][3]>1000000000) {
+        if(topCtyTable[0][1][3]>1000000000) {
           var valIndicator="B";
 	  val1=topCtyTable["Aug"][1][3]/1000000000;
 	  val2=topCtyTable["Sep"][1][3]/1000000000;
