@@ -41,8 +41,8 @@ function retrieveData(passvar,mm,mon){
 	  MONTH:mm,
 	  YEAR:"2016",
 	  SUMMARY_LVL:"DET",
-	  COMM_LVL:"HS10"
-	  //key: "63550916d57e686361cb2c21a3634dd765e01e28"
+	  COMM_LVL:"HS10",
+	  key: "63550916d57e686361cb2c21a3634dd765e01e28"
   };
   var callback= function(data){
       /* This next section sorts API call results by value */
