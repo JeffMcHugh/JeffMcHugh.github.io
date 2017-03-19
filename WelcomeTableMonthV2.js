@@ -10,6 +10,7 @@ function myJsFunction(){
     retrieveData(passvar,"11","Nov");
     retrieveData(passvar,"10","Oct");
     retrieveData(passvar,"09","Sep");
+    retrieveData(passvar,"08","Aug");
  }
 
 var topCtyTable=["Dec","Nov","Oct","Sep"];
@@ -45,11 +46,15 @@ function retrieveData(passvar,mm,mon){
         topCtyTable[mon][1][9]=topCtyTable[mon][1][3]/topCtyTable[mon][1][4];
       }
       console.log(topCtyTable);
-      $(document).ready(function(){
-        $( "#commname" ).text(topCtyTable["Dec"][1][0]).toLocaleString();
-        var markup = "<tr><td class=col1>Cty</td><td class=midcol>val1</td><td class=midcol>val2</td><td class=midcol>val3</td><td class=midcol>val4</td><td class=midcol>val5</td></tr>";
-        $("table tbody").append(markup);
-      });          
+      if (mon=="Aug"){
+        $(document).ready(function(){
+          $( "#commname" ).text(topCtyTable["Dec"][1][0]).toLocaleString();
+          var markup = "<tr><td class=col1>Cty</td><td class=midcol>val1</td><td class=midcol>val2</td><td class=midcol>val3</td><td class=midcol>val4</td><td class=midcol>val5</td></tr>";
+          $("table tbody").append(markup);
+        });  
+      }
+	      
+	      
       }
   };
   $.get(url,expdata,callback);
