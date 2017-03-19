@@ -39,14 +39,14 @@ function retrieveData(passvar,mm,mon){
          return b[3] - a[3];
       }
       topCtyTable[mon] = byValue;
+      console.log(topCtyTable);
       topCtyTable[mon][0][9]="Unit Price";      
       var i;
       for (i=1;i<=5;i++){
         topCtyTable[mon][1][9]=topCtyTable[mon][1][3]/topCtyTable[mon][1][4];
       }
-      console.log(topCtyTable);
+
       if (mon=="Aug"){
-	console.log(topCtyTable);
         if(topCtyTable[0][1][3]>1000000000) {
           var valIndicator="B";
 	  val1=topCtyTable[4][1][3]/1000000000;
