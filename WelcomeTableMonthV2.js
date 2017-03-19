@@ -44,9 +44,9 @@ function retrieveData(passvar,mm,mon){
       for (i=1;i<=5;i++){
         topCtyTable[mon][1][9]=topCtyTable[mon][1][3]/topCtyTable[mon][1][4];
       }
-      console.log(topCtyTable[1]);
+      console.log(topCtyTable);
       $(document).ready(function(){
-        //$( "#commname" ).text(topCtyTable["Dec"][1][0]).toLocaleString();
+        $( "#commname" ).text(topCtyTable["Dec"][1][0]).toLocaleString();
         var markup = "<tr><td class=col1>Cty</td><td class=midcol>val1</td><td class=midcol>val2</td><td class=midcol>val3</td><td class=midcol>val4</td><td class=midcol>val5</td></tr>";
         $("table tbody").append(markup);
       });          
