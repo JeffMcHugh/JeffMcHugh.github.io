@@ -41,7 +41,7 @@ function retrieveData(passvar,mm,mon){
       topCtyTable[mon] = byValue;
       topCtyTable[mon][0][9]="Unit Price";      
       var i;
-      for (i=1;i<=5;i+){
+      for (i=1;i<=5;i++){
         topCtyTable[mon][1][9]=topCtyTable[mon][1][3]/topCtyTable[mon][1][4];
       }
       console.log(topCtyTable);
