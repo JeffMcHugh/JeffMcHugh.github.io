@@ -49,25 +49,25 @@ function retrieveData(passvar,mm,mon){
 	console.log(topCtyTable);
         if(topCtyTable[0][1][3]>1000000000) {
           var valIndicator="B";
-	  val1=topCtyTable["Aug"][1][3]/1000000000;
-	  val2=topCtyTable["Sep"][1][3]/1000000000;
-	  val3=topCtyTable["Oct"][1][3]/1000000000;
-	  val4=topCtyTable["Nov"][1][3]/1000000000;
-	  val5=topCtyTable["Dec"][1][3]/1000000000;
-        }else if(topCtyTable["Dec"][1][3]>1000000){
+	  val1=topCtyTable[4][1][3]/1000000000;
+	  val2=topCtyTable[3][1][3]/1000000000;
+	  val3=topCtyTable[2][1][3]/1000000000;
+	  val4=topCtyTable[1][1][3]/1000000000;
+	  val5=topCtyTable[0][1][3]/1000000000;
+        }else if(topCtyTable[0][1][3]>1000000){
 	  var valIndicator="M";
-	  val1=topCtyTable["Aug"][1][3]/1000000;
-	  val2=topCtyTable["Sep"][1][3]/1000000;
-	  val3=topCtyTable["Oct"][1][3]/1000000;
-	  val4=topCtyTable["Nov"][1][3]/1000000;
-	  val5=topCtyTable["Dec"][1][3]/1000000;
+	  val1=topCtyTable[4][1][3]/1000000;
+	  val2=topCtyTable[3][1][3]/1000000;
+	  val3=topCtyTable[2][1][3]/1000000;
+	  val4=topCtyTable[1][1][3]/1000000;
+	  val5=topCtyTable[0][1][3]/1000000;
 	}else{
 	  var valIndicator="T";
-	  val1=topCtyTable["Aug"][1][3]/1000;
-	  val2=topCtyTable["Sep"][1][3]/1000;
-	  val3=topCtyTable["Oct"][1][3]/1000;
-	  val4=topCtyTable["Nov"][1][3]/1000;
-	  val5=topCtyTable["Dec"][1][3]/1000;
+	  val1=topCtyTable[4][1][3]/1000;
+	  val2=topCtyTable[3][1][3]/1000;
+	  val3=topCtyTable[2][1][3]/1000;
+	  val4=topCtyTable[1][1][3]/1000;
+	  val5=topCtyTable[0][1][3]/1000;
 	}
 	country=topCtyTable[mon][1][2];
 	 
