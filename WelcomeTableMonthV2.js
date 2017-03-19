@@ -74,7 +74,7 @@ function retrieveData(passvar,mm,mon){
         $(document).ready(function(){
           $( "#commname" ).text(topCtyTable[mon][1][0]).toLocaleString();
           var markup = "<tr><td class=col1>" + country + "</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
-	               "</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" +val5+
+	               "</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" + val5 +
 		       valIndicator + "</td></tr><br>
 	               <tr><td class=col1>Growth of Value</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
 	               "</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" +val5+
