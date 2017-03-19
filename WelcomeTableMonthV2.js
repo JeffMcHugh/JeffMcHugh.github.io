@@ -49,7 +49,7 @@ function retrieveData(passvar,mm,mon){
       }
   };
 	
-  console.log(topCtyTable);
+  console.log(topCtyTable[1]);
 	
 	
   $.get(url,expdata,callback);
