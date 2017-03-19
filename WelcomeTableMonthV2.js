@@ -47,9 +47,10 @@ function retrieveData(passvar,mm,mon){
       }
       console.log(topCtyTable);
       if (mon=="Aug"){
+	country=topCtyTable[mon][1][2];
         $(document).ready(function(){
-          $( "#commname" ).text(topCtyTable["Dec"][1][0]).toLocaleString();
-          var markup = "<tr><td class=col1>"topCtyTable[mon][1][2]"</td><td class=midcol>val1</td><td class=midcol>val2</td><td class=midcol>val3</td><td class=midcol>val4</td><td class=midcol>val5</td></tr>";
+          $( "#commname" ).text(topCtyTable[mon][1][0]).toLocaleString();
+          var markup = "<tr><td class=col1>" + country + "</td><td class=midcol>val1</td><td class=midcol>val2</td><td class=midcol>val3</td><td class=midcol>val4</td><td class=midcol>val5</td></tr>";
           $("table tbody").append(markup);
         });  
       }
