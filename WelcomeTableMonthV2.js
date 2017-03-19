@@ -45,10 +45,10 @@ function retrieveData(passvar,mm,mon){
         topCtyTable[mon][1][9]=topCtyTable[mon][1][3]/topCtyTable[mon][1][4];
       }
       
-	      console.log(topCtyTable[4][1][3]);
-	      console.log(topCtyTable[3][1][3]);
-	      console.log(topCtyTable[2][1][3]);
-	      console.log(topCtyTable[1][1][3]);
+	      console.log(topCtyTable["Dec"][1][3]);
+	      console.log(topCtyTable["Nov"][1][3]);
+	      console.log(topCtyTable["Oct"][1][3]);
+	      console.log(topCtyTable["Sep"][1][3]);
 	      
 	      
       if (mon=="Aug"){
