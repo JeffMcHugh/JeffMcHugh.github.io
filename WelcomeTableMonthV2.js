@@ -27,6 +27,7 @@ function retrieveData(passvar,mm,mon){
 	  //key: "63550916d57e686361cb2c21a3634dd765e01e28"
   };
   var callback= function(data){
+      console.log(data);
       /* This next section sorts API call results by value */
       if(!data) {
          console.log("Array Not set");
