@@ -13,24 +13,6 @@ function myJsFunction(){
  }
 
 var topCtyTable=["Dec","Nov","Oct","Sep"];
-
-
-
-
-function addrows(){
-  console.log(topCtyTable["Dec"][1][1]);
-	
-  $.get(url,expdata,callback);
-  $(document).ready(function(){
-        //$( "#commname" ).text(topCtyTable["Dec"][1][0]).toLocaleString();
-        var markup = "<tr><td class=col1>Cty</td><td class=midcol>val1</td><td class=midcol>val2</td><td class=midcol>val3</td><td class=midcol>val4</td><td class=midcol>val5</td></tr>";
-        $("table tbody").append(markup);
-  });
-}
-
-
-
-
 	
 function retrieveData(passvar,mm,mon){
   var url="https://api.census.gov/data/timeseries/intltrade/exports";
@@ -41,8 +23,8 @@ function retrieveData(passvar,mm,mon){
 	  MONTH:mm,
 	  YEAR:"2016",
 	  SUMMARY_LVL:"DET",
-	  COMM_LVL:"HS10",
-	  key: "63550916d57e686361cb2c21a3634dd765e01e28"
+	  COMM_LVL:"HS10"
+	  //key: "63550916d57e686361cb2c21a3634dd765e01e28"
   };
   var callback= function(data){
       /* This next section sorts API call results by value */
@@ -61,19 +43,28 @@ function retrieveData(passvar,mm,mon){
       for (i=1;i<=5;i++){
         topCtyTable[mon][1][9]=topCtyTable[mon][1][3]/topCtyTable[mon][1][4];
       }
-      if (mm == "09") {    	      
-	addrows();      
-      }}
+	      
+	      
+	      
+      }
   };
+	
+  console.log(topCtyTable[1]);
+	
+	
+  $.get(url,expdata,callback);
+  $(document).ready(function(){
+        //$( "#commname" ).text(topCtyTable["Dec"][1][0]).toLocaleString();
+        var markup = "<tr><td class=col1>Cty</td><td class=midcol>val1</td><td class=midcol>val2</td><td class=midcol>val3</td><td class=midcol>val4</td><td class=midcol>val5</td></tr>";
+        $("table tbody").append(markup);
+  });
 }
-
  
      
      /* var CalcValue = byValue.slice();
       CalcValue[[0][5]]="Unit Price";
       CalcValue[[0][6]]="Growth of Value";
       CalcValue[[0][6]]="Growth of Unit Price";
-
       /*the following sets the value of the unit price */
   //    for (i=1;i<=numcodes;i++){ 
 //	 CalcValue[[i][3]] = Math.round((Number(byValue[[i][3]]/byValue[[i][3]])),1)
@@ -125,12 +116,9 @@ function retrieveData(passvar,mm,mon){
 	 var r20c6=Math.round((Number(byValue[1][3]/1000000)),1); 
       }		 
       		 
-
       var r3c6=Math.round((Number((byValue[1][3]/1000000)/byValue[1][4])),1);
       var r1c6=Math.round((Number(byValue[1][3]/1000000)),1);
       var r1c6=Math.round((Number(byValue[1][3]/1000000)),1);
-
-
       //$( "#row3col6" ).text(r3c6.toLocaleString());
       //$( "#row5col6" ).text(round(Number(byValue[2][3]/1000000)),1).toLocaleString();  
       //$( "#row7col6" ).text(round(Number((byValue[2][3]/1000000)/byValue[2][4])),1).toLocaleString();
