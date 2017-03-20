@@ -55,8 +55,9 @@ function retrieveData(passvar,mm,mon){
   }
 
 
-
+console.log("pausing before topcountry print");
 console.log(topCtyTable);
+console.log("Did it print?");
 
 /*
 $(document).ready(function(){      
