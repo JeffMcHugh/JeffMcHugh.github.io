@@ -1,28 +1,5 @@
 var topCtyTable=["Dec","Nov","Oct","Sep","Aug"];
 
-function December(passvar, callback){
-  retrieveData(passvar,"12","Dec");
-  console.log(topCtyTable);
-  callback();
-}
-function November(passvar, callback){
-  retrieveData(passvar,"11","Nov");
-  callback();
-}
-function October(passvar, callback){
-  retrieveData(passvar,"10","Oct");
-  callback();
-}
-function September(passvar, callback){
-  retrieveData(passvar,"09","Sep");
-  callback();
-}
-function August(passvar, callback){
-  retrieveData(passvar,"08","Aug");
-  callback();
-}
-
-
 function myJsFunction(){
     var codeEntered=document.getElementById('input1').value;
     console.log(codeEntered);
@@ -31,23 +8,10 @@ function myJsFunction(){
     // Retrieve the object from storage
     var passvar = localStorage.getItem('enteredCode');	
     console.log(passvar);
-    
-    December(passvar, function() {
-       November(passvar, function() {
-          October(passvar, function() {
-             September(passvar, function() {
-                August(passvar, function() {
-                   addRows(passvar, function() {
-             //All three functions have completed, in order.
-	           });
-                });
-             });
-          });
-       });
-    });
+	  retrieveData("passvar");
  }
 	
-function retrieveData(passvar,mm,mon){
+function retrieveData(passvar){
   var url="https://api.census.gov/data/timeseries/intltrade/exports";
   var expdata = {
 	  get:"E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_MO,QTY_1_MO",
