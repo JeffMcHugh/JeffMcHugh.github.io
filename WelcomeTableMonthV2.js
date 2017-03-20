@@ -1,7 +1,7 @@
 var topCtyTable=["Dec","Nov","Oct","Sep","Aug"];
 
 function December(passvar, callback){
-  retrieveData(passVar,"12","Dec");
+  retrieveData(passvar,"12","Dec");
   console.log(topCtyTable);
   callback();
 }
@@ -10,15 +10,15 @@ function November(passvar, callback){
   callback();
 }
 function October(passvar, callback){
-  retrieveData(passVar,"10","Oct");
+  retrieveData(passvar,"10","Oct");
   callback();
 }
 function September(passvar, callback){
-  retrieveData(passVar,"09","Sep");
+  retrieveData(passvar,"09","Sep");
   callback();
 }
 function August(passvar, callback){
-  retrieveData(passVar,"08","Aug");
+  retrieveData(passvar,"08","Aug");
   callback();
 }
 
