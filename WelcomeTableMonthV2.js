@@ -11,6 +11,7 @@ function myJsFunction(){
     retrieveData(passvar,"10","Oct");
     retrieveData(passvar,"09","Sep");
     retrieveData(passvar,"08","Aug");
+    addRows();
  }
 
 var topCtyTable=["Dec","Nov","Oct","Sep","Aug"];
@@ -54,10 +55,11 @@ function retrieveData(passvar,mm,mon){
   $.get(url,expdata,callback);
   }
 
-
-console.log("pausing before topcountry print");
-console.log(topCtyTable);
-console.log("Did it print?");
+function addRows() {
+  console.log("pausing before topcountry print");
+  console.log(topCtyTable);
+  console.log("Did it print?");
+}
 
 /*
 $(document).ready(function(){      
