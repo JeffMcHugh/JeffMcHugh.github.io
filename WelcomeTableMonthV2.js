@@ -1,3 +1,5 @@
+var topCtyTable=["Dec","Nov","Oct","Sep","Aug"];
+
 function myJsFunction(){
     var codeEntered=document.getElementById('input1').value;
     console.log(codeEntered);
@@ -13,8 +15,6 @@ function myJsFunction(){
     retrieveData(passvar,"08","Aug");
     addRows();
  }
-
-var topCtyTable=["Dec","Nov","Oct","Sep","Aug"];
 	
 function retrieveData(passvar,mm,mon){
   var url="https://api.census.gov/data/timeseries/intltrade/exports";
