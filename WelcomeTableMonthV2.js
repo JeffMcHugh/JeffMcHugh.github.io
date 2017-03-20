@@ -1,5 +1,28 @@
 var topCtyTable=["Dec","Nov","Oct","Sep","Aug"];
 
+function December(value, callback){
+  retrieveData(passVar,"12","Dec");
+  console.log(topCtyTable);
+  callback();
+}
+function November(value, callback){
+  retrieveData(passVar,"11","Nov");
+  callback();
+}
+function October(value, callback){
+  retrieveData(passVar,"10","Oct");
+  callback();
+}
+function September(value, callback){
+  retrieveData(passVar,"09","Sep");
+  callback();
+}
+function August(value, callback){
+  retrieveData(passVar,"08","Aug");
+  callback();
+}
+
+
 function myJsFunction(){
     var codeEntered=document.getElementById('input1').value;
     console.log(codeEntered);
@@ -8,12 +31,20 @@ function myJsFunction(){
     // Retrieve the object from storage
     var passvar = localStorage.getItem('enteredCode');	
     console.log(passvar);
-    retrieveData(passvar,"12","Dec");
-    retrieveData(passvar,"11","Nov");
-    retrieveData(passvar,"10","Oct");
-    retrieveData(passvar,"09","Sep");
-    retrieveData(passvar,"08","Aug");
-    addRows();
+    
+    December(passvar, function() {
+       November(passvar, function() {
+          October(passvar, function() {
+             September(passvar, function() {
+                August(passvar, function() {
+                   addRows(passvar, function() {
+             //All three functions have completed, in order.
+	           });
+                });
+             });
+          });
+       });
+    });
  }
 	
 function retrieveData(passvar,mm,mon){
@@ -55,10 +86,12 @@ function retrieveData(passvar,mm,mon){
   $.get(url,expdata,callback);
   }
 
-function addRows() {
+
+function addRows(callback) {
   console.log("pausing before topcountry print");
   console.log(topCtyTable);
   console.log("Did it print?");
+  callback();
 }
 
 /*
