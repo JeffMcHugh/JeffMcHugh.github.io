@@ -62,6 +62,9 @@ function addRows() {
 }
 
 /*
+Asyncronous or Syncronis
+http://stackoverflow.com/questions/5187968/how-should-i-call-3-functions-in-order-to-execute-them-one-after-the-other
+
 $(document).ready(function(){      
 	      
       if (mon==="Aug"){
