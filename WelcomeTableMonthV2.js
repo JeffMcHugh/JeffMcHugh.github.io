@@ -50,18 +50,14 @@ function retrieveData(passvar,iteration){
         for (i=1;i<=5;i++){
           topCtyTable[monthNum][i][9]=topCtyTable[monthNum][i][3]/topCtyTable[monthNum][i][4];
         }
-	    if(iteration === 5) {
-		    
-		    
-		    
-	       console.log("pausing before topcountry print");
+	    if(iteration === 5) {    
+	       console.log("It's about to end.  Here's top country.");
   	       console.log(topCtyTable);
                console.log("Did it print?");
-	       retrieveData(passvar, iteration + 1);
-		    
-		    
-		      
-		      return;
+	       
+	       return;
+	    } else {
+	    retrieveData(passvar, iteration + 1);
 	    }
 
      }
