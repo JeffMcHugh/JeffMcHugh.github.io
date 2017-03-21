@@ -103,8 +103,8 @@ function retrieveData(passvar,iteration){
           	var markup = "<tr><td class=col1>" + country + "</td><td class=midcol>" + val1 +"</td><td class=midcol>" + val2 + 
 	        		"</td><td class=midcol>" + val3 + "</td><td class=midcol>" + val4 + "</td><td class=midcol>" + val5 +
 		    	"</td></tr>";
-	  		var markup2= "<tr><td class=col1>Growth of Value</td><td class=midcol>" + val1 + "</td><td class=midcol>" + val2 + 
-	            		"</td><td class=midcol>" + val3 + "</td><td class=midcol>" + val4 + "</td><td class=midcol>" +val5+
+	  		var markup2= "<tr><td class=col1>Growth of Value</td><td class=midcol>" + grow1 + "</td><td class=midcol>" + grow2 + 
+	            		"</td><td class=midcol>" + grow3 + "</td><td class=midcol>" + grow4 + "</td><td class=midcol>" +grow5+
 		       	"</td></tr>";
 	  		var markup3= "<tr><td class=col1>Average Unit Price</td><td class=midcol>" + val1 + "</td><td class=midcol>" + val2 +
 	            		"</td><td class=midcol>" + val3 + "</td><td class=midcol>" + val4 + "</td><td class=midcol>" + val5 +
