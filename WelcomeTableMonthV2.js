@@ -8,7 +8,7 @@ function myJsFunction(){
     // Retrieve the object from storage
     var passvar = localStorage.getItem('enteredCode');	
     console.log(passvar);
-	  retrieveData("passvar");
+	  retrieveData(passvar);
  }
 	
 function retrieveData(passvar,iteration){
