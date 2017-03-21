@@ -140,6 +140,18 @@ tbody td:last-child, thead th:last-child {
     border-right: none;
 }*/
 
+.grow2color {
+	color:green;
+}
+    
+
+
+
+    
+
+
+
+
 /* The following styles are for the buttons at the bottom of the page */
 .button {
     background-color: #4CAF50; /* Green */
