@@ -13,7 +13,7 @@ function myJsFunction(){
  }
 	
 function retrieveData(passvar,iteration){
-	if(!iteration) iteration = 0;
+	if(!iteration) {iteration = 0;}
 	if(iteration >= 5) {
 		// Abort when more than 12 months checked and still no results
 		return;
