@@ -1,4 +1,5 @@
 
+var topCtyTable=["08","09","10","11","12"];
 
 function myJsFunction(){
     var codeEntered=document.getElementById('input1').value;
