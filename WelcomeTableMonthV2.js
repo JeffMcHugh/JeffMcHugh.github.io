@@ -36,7 +36,7 @@ function retrieveData(passvar,iteration){
       if(!data) {
          console.log("Array Not set");
       } else {
-        var byValue = data.slice(0,5);
+        var byValue = data.slice(0,10);
         numcodes=byValue.length;
         byValue.sort(compareNumbers);
         function compareNumbers(a, b) {
