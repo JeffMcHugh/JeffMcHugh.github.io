@@ -68,6 +68,11 @@ function retrieveData(passvar,iteration){
 			    	val3=commaSeparateNumber(Math.round((Number(topCtyTable["10"][1][3]/1000000000)),1));
 			    	val4=commaSeparateNumber(Math.round((Number(topCtyTable["11"][1][3]/1000000000)),1));
 			    	val5=commaSeparateNumber(Math.round((Number(topCtyTable["12"][1][3]/1000000000)),1));
+			    	grow1="-"
+				grow2=val2-val1;
+				grow3=val3-val2;
+				grow4=val4-val3;
+				grow5=val5-val4;
         	}else if(topCtyTable[0][1][3]>1000000){
 	  			var valIndicator="M";
 	  			val1=commaSeparateNumber(Math.round((Number(topCtyTable["08"][1][3]/1000000)),1));
