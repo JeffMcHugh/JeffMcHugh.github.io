@@ -78,18 +78,18 @@ function retrieveData(passvar,iteration){
 			}
 			country=topCtyTable[mm][1][2];
           	$( "#commname" ).text(topCtyTable[mm][1][0]).toLocaleString();
-          	var markup = "<tr><td class=col1>" + country + "</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
-	        		"</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" + val5 +
-		    	valIndicator + "</td></tr>";
-	  		var markup2= "<tr><td class=col1>Growth of Value</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
-	            		"</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" +val5+
-		       	valIndicator + "</td></tr>";
-	  		var markup3= "<tr><td class=col1>Average Unit Price</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
-	            		"</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" +val5+
-		       	valIndicator + "</td></tr>";
-	  		var markup4= "<tr><td class=col1>Growth of UP since Aug</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
-	            		"</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" +val5+
-				valIndicator + "</td></tr>";
+          	var markup = "<tr><td class=col1>" + country + "</td><td class=midcol>" + val1 +"</td><td class=midcol>" + val2 + 
+	        		"</td><td class=midcol>" + val3 + "</td><td class=midcol>" + val4 "</td><td class=midcol>" + val5 +
+		    	"</td></tr>";
+	  		var markup2= "<tr><td class=col1>Growth of Value</td><td class=midcol>" + val1 + "</td><td class=midcol>" + val2 + 
+	            		"</td><td class=midcol>" + val3 + valIndicator + "</td><td class=midcol>" + val4 + valIndicator + "</td><td class=midcol>" +val5+
+		       	"</td></tr>";
+	  		var markup3= "<tr><td class=col1>Average Unit Price</td><td class=midcol>" + val1 + "</td><td class=midcol>" + val2 +
+	            		"</td><td class=midcol>" + val3 + "</td><td class=midcol>" + val4 + "</td><td class=midcol>" +val5+
+		       	"</td></tr>";
+	  		var markup4= "<tr><td class=col1>Growth of UP since Aug</td><td class=midcol>" + val1 + "</td><td class=midcol>" + val2 + 
+	            		"</td><td class=midcol>" + val3 + "</td><td class=midcol>" + val4 + "</td><td class=midcol>" +val5+
+				"</td></tr>";
           		$("table tbody").append(markup);
 	  		$("table tbody").append(markup2);
 	  		$("table tbody").append(markup3);
