@@ -57,6 +57,7 @@
 .midcol {
 	width:110px;
 	text-align:right;
+	padding-right:1px;
 }
 /*
 #commname {
