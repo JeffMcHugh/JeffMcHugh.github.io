@@ -12,8 +12,8 @@ function myJsFunction(){
  }
 	
 function retrieveData(passvar,iteration){
-	if(!iteration) iteration = 0;
-	if(iteration >= 4) {
+	if(!iteration) iteration = 1;
+	if(iteration >= 5) {
 		// Abort when more than 12 months checked and still no results
 		return;
 	}
@@ -47,7 +47,7 @@ function retrieveData(passvar,iteration){
         for (i=1;i<=5;i++){
           topCtyTable[monthNum][i][9]=topCtyTable[monthNum][i][3]/topCtyTable[monthNum][i][4];
         }
-	    if(iteration === 4) {
+	    if(iteration === 5) {
 		      
 		      return;
 	    }
