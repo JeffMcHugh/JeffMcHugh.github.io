@@ -41,7 +41,9 @@ function retrieveData(passvar,iteration){
         function compareNumbers(a, b) {
            return b[3] - a[3];
         }
+	console.log("Before topCty set to by Value");
         topCtyTable[monthNum] = byValue;
+	console.log("after topCty set");
         topCtyTable[monthNum][0][9]="Unit Price";      
         var i;
         for (i=1;i<=5;i++){
