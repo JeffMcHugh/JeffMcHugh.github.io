@@ -11,13 +11,20 @@ function myJsFunction(){
 	  retrieveData("passvar");
  }
 	
-function retrieveData(passvar){
+function retrieveData(passvar,iteration){
+	if(!iteration) iteration = 0;
+	if(iteration >= 4) {
+		// Abort when more than 12 months checked and still no results
+		return;
+	}
+  var monthNum(4)=["08","09","10","11","12"];
+	
   var url="https://api.census.gov/data/timeseries/intltrade/exports";
   var expdata = {
 	  get:"E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_MO,QTY_1_MO",
 	  E_COMMODITY: passvar,
 	  //ALL_VAL_YR,
-	  MONTH:mm,
+	  MONTH:monthNum[iteration],
 	  YEAR:"2016",
 	  SUMMARY_LVL:"DET",
 	  COMM_LVL:"HS10",
@@ -28,22 +35,27 @@ function retrieveData(passvar){
       if(!data) {
          console.log("Array Not set");
       } else {
-      var byValue = data.slice(0,5);
-      numcodes=byValue.length;
-      byValue.sort(compareNumbers);
-      function compareNumbers(a, b) {
-         return b[3] - a[3];
-      }
-      topCtyTable[mon] = byValue;
-      topCtyTable[mon][0][9]="Unit Price";      
-      var i;
-      for (i=1;i<=5;i++){
-        topCtyTable[mon][i][9]=topCtyTable[mon][i][3]/topCtyTable[mon][i][4];
-      }
-      
-
-
-      }
+        var byValue = data.slice(0,5);
+        numcodes=byValue.length;
+        byValue.sort(compareNumbers);
+        function compareNumbers(a, b) {
+           return b[3] - a[3];
+        }
+        topCtyTable[monthNum] = byValue;
+        topCtyTable[monthNum][0][9]="Unit Price";      
+        var i;
+        for (i=1;i<=5;i++){
+          topCtyTable[monthNum][i][9]=topCtyTable[monthNum][i][3]/topCtyTable[monthNum][i][4];
+        }
+	    if(iteration === 4) {
+		      
+		      return;
+	    }
+          console.log("pausing before topcountry print");
+  		  console.log(topCtyTable);
+          console.log("Did it print?");
+		  retrieveData(passvar, iteration + 1);
+     }
 	      
 	      
       }
@@ -51,12 +63,6 @@ function retrieveData(passvar){
   }
 
 
-function addRows(callback) {
-  console.log("pausing before topcountry print");
-  console.log(topCtyTable);
-  console.log("Did it print?");
-  callback();
-}
 
 /*
 Asyncronous or Syncronis
