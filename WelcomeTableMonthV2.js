@@ -19,13 +19,14 @@ function retrieveData(passvar,iteration,topCtyTable){
 		return;
 	}
   var monthNum=["08","09","10","11","12"];
+  var mm=monthNum[iteration].toLocaleString();
 	
   var url="https://api.census.gov/data/timeseries/intltrade/exports";
   var expdata = {
 	  get:"E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_MO,QTY_1_MO",
 	  E_COMMODITY: passvar,
 	  //ALL_VAL_YR,
-	  MONTH:monthNum[iteration].toLocaleString(),
+	  MONTH:mm,
 	  YEAR:"2016",
 	  SUMMARY_LVL:"DET",
 	  COMM_LVL:"HS10",
@@ -43,12 +44,12 @@ function retrieveData(passvar,iteration,topCtyTable){
            return b[3] - a[3];
         }
 	console.log("Before topCty set to by Value");
-        topCtyTable[monthNum] = byValue;
+        topCtyTable[mm].toLocaleString()] = byValue;
 	console.log("after topCty set");
-        topCtyTable[monthNum][0][9]="Unit Price";      
+        topCtyTable[monthNum[mm].toLocaleString()][0][9]="Unit Price";      
         var i;
         for (i=1;i<=5;i++){
-          topCtyTable[monthNum][i][9]=topCtyTable[monthNum][i][3]/topCtyTable[monthNum][i][4];
+          topCtyTable[mm][i][9]=topCtyTable[mm][i][3]/topCtyTable[mm][i][4];
         }
 	    if(iteration === 4) {    
 	       console.log("It's about to end.  Here's top country.");
