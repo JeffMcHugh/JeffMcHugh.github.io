@@ -74,11 +74,11 @@ function retrieveData(passvar,iteration){
 			    	grow3=commaSeparateNumber(Math.round((Number((topCtyTable["10"][1][3]-topCtyTable["09"][1][3])/1000000000)),1));
 			    	grow4=commaSeparateNumber(Math.round((Number((topCtyTable["11"][1][3]-topCtyTable["10"][1][3])/1000000000)),1));
 			    	grow5=commaSeparateNumber(Math.round((Number((topCtyTable["12"][1][3]-topCtyTable["11"][1][3])/1000000000)),1));
-			    	up1=commaSeparateNumber(Math.round((Number(topCtyTable["08"][1][9]/1000000000)),1));
-			    	up2=commaSeparateNumber(Math.round((Number(topCtyTable["09"][1][9]/1000000000)),1));
-			    	up3=commaSeparateNumber(Math.round((Number(topCtyTable["10"][1][9]/1000000000)),1));
-			    	up4=commaSeparateNumber(Math.round((Number(topCtyTable["11"][1][9]/1000000000)),1));
-			    	up5=commaSeparateNumber(Math.round((Number(topCtyTable["12"][1][9]/1000000000)),1));
+				up1=commaSeparateNumber((Number(topCtyTable["08"][1][9]/1000).toFixed(2)));
+				up2=commaSeparateNumber((Number(topCtyTable["09"][1][9]/1000).toFixed(2)));
+				up3=commaSeparateNumber((Number(topCtyTable["10"][1][9]/1000).toFixed(2)));
+				up4=commaSeparateNumber((Number(topCtyTable["11"][1][9]/1000).toFixed(2)));
+				up5=commaSeparateNumber((Number(topCtyTable["12"][1][9]/1000).toFixed(2)));
 			  				
         	}else if(topCtyTable[0][1][3]>1000000){
 	  			var valIndicator="M";
@@ -92,11 +92,11 @@ function retrieveData(passvar,iteration){
 				grow3=commaSeparateNumber(Math.round((Number((topCtyTable["10"][1][3]-topCtyTable["09"][1][3])/1000000)),1));
 			    	grow4=commaSeparateNumber(Math.round((Number((topCtyTable["11"][1][3]-topCtyTable["10"][1][3])/1000000)),1));
 			    	grow5=commaSeparateNumber(Math.round((Number((topCtyTable["12"][1][3]-topCtyTable["11"][1][3])/1000000)),1));
-				up1=commaSeparateNumber(Math.round((Number(topCtyTable["08"][1][9]/1000000)),1));
-			    	up2=commaSeparateNumber(Math.round((Number(topCtyTable["09"][1][9]/1000000)),1));
-			    	up3=commaSeparateNumber(Math.round((Number(topCtyTable["10"][1][9]/1000000)),1));
-			    	up4=commaSeparateNumber(Math.round((Number(topCtyTable["11"][1][9]/1000000)),1));
-			    	up5=commaSeparateNumber(Math.round((Number(topCtyTable["12"][1][9]/1000000)),1));
+				up1=commaSeparateNumber((Number(topCtyTable["08"][1][9]/1000).toFixed(2)));
+				up2=commaSeparateNumber((Number(topCtyTable["09"][1][9]/1000).toFixed(2)));
+				up3=commaSeparateNumber((Number(topCtyTable["10"][1][9]/1000).toFixed(2)));
+				up4=commaSeparateNumber((Number(topCtyTable["11"][1][9]/1000).toFixed(2)));
+				up5=commaSeparateNumber((Number(topCtyTable["12"][1][9]/1000).toFixed(2)));
 			}else{
 	  			var valIndicator="T";
 	  			val1=commaSeparateNumber(Math.round((Number(topCtyTable["08"][1][3]/1000)),1));
@@ -110,10 +110,10 @@ function retrieveData(passvar,iteration){
 			    	grow4=commaSeparateNumber(Math.round((Number((topCtyTable["11"][1][3]-topCtyTable["10"][1][3])/1000)),1));
 			    	grow5=commaSeparateNumber(Math.round((Number((topCtyTable["12"][1][3]-topCtyTable["11"][1][3])/1000)),1));
 				up1=commaSeparateNumber((Number(topCtyTable["08"][1][9]/1000).toFixed(2)));
-			    	up2=commaSeparateNumber(Math.round((Number(topCtyTable["09"][1][9]/1000)),1));
-			    	up3=commaSeparateNumber(Math.round((Number(topCtyTable["10"][1][9]/1000)),1));
-			    	up4=commaSeparateNumber(Math.round((Number(topCtyTable["11"][1][9]/1000)),1));
-			    	up5=commaSeparateNumber(Math.round((Number(topCtyTable["12"][1][9]/1000)),1));
+				up2=commaSeparateNumber((Number(topCtyTable["09"][1][9]/1000).toFixed(2)));
+				up3=commaSeparateNumber((Number(topCtyTable["10"][1][9]/1000).toFixed(2)));
+				up4=commaSeparateNumber((Number(topCtyTable["11"][1][9]/1000).toFixed(2)));
+				up5=commaSeparateNumber((Number(topCtyTable["12"][1][9]/1000).toFixed(2)));
 			}
 			country=topCtyTable[mm][1][2];
           	$( "#commname" ).text(topCtyTable[mm][1][0]).toLocaleString();
