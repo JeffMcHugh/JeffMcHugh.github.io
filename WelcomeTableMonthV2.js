@@ -12,7 +12,7 @@ function myJsFunction(){
 	  retrieveData(passvar);
  }
 	
-function retrieveData(passvar,iteration){
+function retrieveData(passvar,iteration,topCtyTable){
 	if(!iteration) iteration = 0;
 	if(iteration >= 5) {
 		// Abort when more than 12 months checked and still no results
@@ -57,7 +57,7 @@ function retrieveData(passvar,iteration){
 	       
 	       return;
 	    } else {
-	    retrieveData(passvar, iteration + 1);
+	    retrieveData(passvar, iteration + 1,topCtyTable);
 	    }
 
      }
