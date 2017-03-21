@@ -56,6 +56,7 @@
 }
 .midcol {
 	width:110px;
+	text-align:right;
 }
 /*
 #commname {
@@ -95,7 +96,7 @@ tr td {
 }
 
 .botrow {
-	border-bottom: 1px solid black;
+	border-bottom: 0px solid black;
 }
 /* The following takes aligns the columns by accounting for the scroll bar */
 .gap {
