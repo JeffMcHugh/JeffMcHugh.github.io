@@ -1,4 +1,4 @@
-var topCtyTable=["Dec","Nov","Oct","Sep","Aug"];
+
 
 function myJsFunction(){
     var codeEntered=document.getElementById('input1').value;
