@@ -62,10 +62,10 @@
 	width: 1050px;
 }*/
 
-
+/*
 table {
    width: 80%;
-}
+} */
 
 
 
@@ -97,10 +97,10 @@ tr td {
 .botrow {
 	border-bottom: 1px solid black;
 }
-/* The following takes aligns the columns by accounting for the scroll bar */
+/* The following takes aligns the columns by accounting for the scroll bar 
 .gap {
 	width: 13px;
-}
+} */
 
 
 table.scroll {
