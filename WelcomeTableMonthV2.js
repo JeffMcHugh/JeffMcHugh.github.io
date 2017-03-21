@@ -24,7 +24,7 @@ function retrieveData(passvar,iteration){
 	  get:"E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_MO,QTY_1_MO",
 	  E_COMMODITY: passvar,
 	  //ALL_VAL_YR,
-	  MONTH:monthNum[iteration],
+	  MONTH:monthNum[iteration].toLocaleString(),
 	  YEAR:"2016",
 	  SUMMARY_LVL:"DET",
 	  COMM_LVL:"HS10",
