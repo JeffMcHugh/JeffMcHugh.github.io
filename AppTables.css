@@ -170,3 +170,10 @@ tbody td:last-child, thead th:last-child {
 button#mainbutton {
 	
 }
+
+div{
+margin-top: 0;
+    margin-bottom: 0;
+    margin-right:0;
+    margin-left:0;
+}
