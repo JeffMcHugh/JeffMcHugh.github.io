@@ -94,7 +94,7 @@ function retrieveData(passvar,iteration){
 	  		var markup3= "<tr><td class=col1>Average Unit Price</td><td class=midcol>" + val1 + "</td><td class=midcol>" + val2 +
 	            		"</td><td class=midcol>" + val3 + "</td><td class=midcol>" + val4 + "</td><td class=midcol>" + val5 +
 		       	"</td></tr>";
-	  		var markup4= "<tr><td class=col1 botrow>Growth of UP since Aug</td><td class=midcol botrow>" + val1 + "</td><td class=midcol botrow>" + val2 + 
+	  		var markup4= "<tr><td class=\"col1 botrow\">Growth of UP since Aug</td><td class=midcol botrow>" + val1 + "</td><td class=midcol botrow>" + val2 + 
 	            		"</td><td class=midcol botrow>" + val3 + "</td><td class=midcol botrow>" + val4 + "</td><td class=midcol botrow>" + val5 +
 				"</td></tr>";
           		$("table tbody").append(markup);
