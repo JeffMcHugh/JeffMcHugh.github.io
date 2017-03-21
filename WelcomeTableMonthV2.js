@@ -109,8 +109,8 @@ function retrieveData(passvar,iteration){
 				grow3=commaSeparateNumber(Math.round((Number((topCtyTable["10"][1][3]-topCtyTable["09"][1][3])/1000)),1));
 			    	grow4=commaSeparateNumber(Math.round((Number((topCtyTable["11"][1][3]-topCtyTable["10"][1][3])/1000)),1));
 			    	grow5=commaSeparateNumber(Math.round((Number((topCtyTable["12"][1][3]-topCtyTable["11"][1][3])/1000)),1));
-				up1=commaSeparateNumber(Math.round((Number(topCtyTable["08"][1][9]/1000)),1));
-			    	up2=commaSeparateNumber(Math.round((Number(topCtyTable["09"][1][9]/1000)),1));
+				up1=commaSeparateNumber(Math.round((Number(topCtyTable["08"][1][9]/1000)),3));
+			    	up2=commaSeparateNumber(Math.round((Number(topCtyTable["09"][1][9]/1000)),3));
 			    	up3=commaSeparateNumber(Math.round((Number(topCtyTable["10"][1][9]/1000)),1));
 			    	up4=commaSeparateNumber(Math.round((Number(topCtyTable["11"][1][9]/1000)),1));
 			    	up5=commaSeparateNumber(Math.round((Number(topCtyTable["12"][1][9]/1000)),1));
