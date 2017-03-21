@@ -100,7 +100,7 @@ function retrieveData(passvar,iteration){
 	    }
 	} /*end of callback */
   	$.get(url,expdata,callback);	
-}; /*end of retrieveData function */     
+} /*end of retrieveData function */     
 
 
 
