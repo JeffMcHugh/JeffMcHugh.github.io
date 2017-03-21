@@ -44,9 +44,9 @@ function retrieveData(passvar,iteration,topCtyTable){
            return b[3] - a[3];
         }
 	console.log("Before topCty set to by Value");
-        topCtyTable[mm].toLocaleString()] = byValue;
+        topCtyTable[mm].toLocaleString() = byValue;
 	console.log("after topCty set");
-        topCtyTable[monthNum[mm].toLocaleString()][0][9]="Unit Price";      
+        topCtyTable[mm][0][9]="Unit Price";      
         var i;
         for (i=1;i<=5;i++){
           topCtyTable[mm][i][9]=topCtyTable[mm][i][3]/topCtyTable[mm][i][4];
