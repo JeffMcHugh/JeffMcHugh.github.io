@@ -56,7 +56,65 @@ function retrieveData(passvar,iteration){
   	       console.log(topCtyTable);
                console.log("Did it print?");
 	       
+		    
+		    
+		
+		    
+		    
+		    
+		    
+
+        if(topCtyTable[0][1][3]>1000000000) {
+          var valIndicator="B";
+	  val1=topCtyTable[4][1][3]/1000000000;
+	  val2=topCtyTable[3][1][3]/1000000000;
+	  val3=topCtyTable[2][1][3]/1000000000;
+	  val4=topCtyTable[1][1][3]/1000000000;
+	  val5=topCtyTable[0][1][3]/1000000000;
+        }else if(topCtyTable[0][1][3]>1000000){
+	  var valIndicator="M";
+	  val1=topCtyTable[4][1][3]/1000000;
+	  val2=topCtyTable[3][1][3]/1000000;
+	  val3=topCtyTable[2][1][3]/1000000;
+	  val4=topCtyTable[1][1][3]/1000000;
+	  val5=topCtyTable[0][1][3]/1000000;
+	}else{
+	  var valIndicator="T";
+	  val1=topCtyTable[4][1][3]/1000;
+	  val2=topCtyTable[3][1][3]/1000;
+	  val3=topCtyTable[2][1][3]/1000;
+	  val4=topCtyTable[1][1][3]/1000;
+	  val5=topCtyTable[0][1][3]/1000;
+	}
+	country=topCtyTable[mon][1][2];
+		    
+		    
+          $( "#commname" ).text(topCtyTable[mm][1][0]).toLocaleString();
+          var markup = "<tr><td class=col1>" + country + "</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
+	               "</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" + val5 +
+		       valIndicator + "</td></tr>";
+	  var markup2= "<tr><td class=col1>Growth of Value</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
+	               "</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" +val5+
+		       valIndicator + "</td></tr>";
+	  var markup3= "<tr><td class=col1>Average Unit Price</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
+	               "</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" +val5+
+		       valIndicator + "</td></tr>";
+	  var markup4= "<tr><td class=col1>Growth of UP since Aug</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
+	               "</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" +val5+
+		       valIndicator + "</td></tr>";
+          $("table tbody").append(markup);
+	  $("table tbody").append(markup2);
+	  $("table tbody").append(markup3);
+	  $("table tbody").append(markup4);
+)}; 
+		    
+		    
+		    
+		       
 	       return;
+	      
+	      
+	      
 	    } else {
 	    retrieveData(passvar, iteration + 1);
 	    }
