@@ -11,6 +11,13 @@ function myJsFunction(){
     console.log(passvar);
 	retrieveData(passvar);
  }
+
+  function commaSeparateNumber(val){
+    while (/(\d+)(\d{3})/.test(val.toString())){
+      val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
+    }
+    return val;
+  }
 	
 function retrieveData(passvar,iteration){
 	if(!iteration) {iteration = 0;}
@@ -70,7 +77,7 @@ function retrieveData(passvar,iteration){
 			    	val5=Math.round((Number(topCtyTable["12"][1][3]/1000000)),1);
 			}else{
 	  			var valIndicator="T";
-	  			val1=Math.round((Number(topCtyTable["08"][1][3]/1000)),1);
+	  			val1=commaSeparateNumber(Math.round((Number(topCtyTable["08"][1][3]/1000)),1));
 			    	val2=Math.round((Number(topCtyTable["09"][1][3]/1000)),1);
 			    	val3=Math.round((Number(topCtyTable["10"][1][3]/1000)),1);
 			    	val4=Math.round((Number(topCtyTable["11"][1][3]/1000)),1);
