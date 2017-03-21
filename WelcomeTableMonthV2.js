@@ -17,7 +17,7 @@ function retrieveData(passvar,iteration){
 		// Abort when more than 12 months checked and still no results
 		return;
 	}
-  var monthNum(4)=["08","09","10","11","12"];
+  var monthNum[4]=["08","09","10","11","12"];
 	
   var url="https://api.census.gov/data/timeseries/intltrade/exports";
   var expdata = {
