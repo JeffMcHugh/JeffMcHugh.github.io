@@ -9,122 +9,100 @@ function myJsFunction(){
     // Retrieve the object from storage
     var passvar = localStorage.getItem('enteredCode');	
     console.log(passvar);
-	  retrieveData(passvar);
+	retrieveData(passvar);
  }
 	
 function retrieveData(passvar,iteration){
 	if(!iteration) {iteration = 0;}
 	if(iteration >= 5) {
 		// Abort when more than 12 months checked and still no results
-		return;
+	return;
 	}
-  var monthNum=["08","09","10","11","12"];
-  var mm=monthNum[iteration].toLocaleString();
-	
-  var url="https://api.census.gov/data/timeseries/intltrade/exports";
-  var expdata = {
-	  get:"E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_MO,QTY_1_MO",
-	  E_COMMODITY: passvar,
-	  //ALL_VAL_YR,
-	  MONTH:mm,
-	  YEAR:"2016",
-	  SUMMARY_LVL:"DET",
-	  COMM_LVL:"HS10",
-	  //key: "63550916d57e686361cb2c21a3634dd765e01e28"
-  };
-  var callback= function(data){
-      /* This next section sorts API call results by value */
-      if(!data) {
-         console.log("Array Not set");
-      } else {
-        var byValue = data.slice(0,10);
-        numcodes=byValue.length;
-        byValue.sort(compareNumbers);
-        function compareNumbers(a, b) {
-           return b[3] - a[3];
-        }
-	console.log("Before topCty set to by Value");
+  	var monthNum=["08","09","10","11","12"];
+  	var mm=monthNum[iteration].toLocaleString();
+  	var url="https://api.census.gov/data/timeseries/intltrade/exports";
+  	var expdata = {
+	  	get:"E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_MO,QTY_1_MO",
+	  	E_COMMODITY: passvar,
+	  	//ALL_VAL_YR,
+	  	MONTH:mm,
+	  	YEAR:"2016",
+	  	SUMMARY_LVL:"DET",
+	  	COMM_LVL:"HS10",
+	  	//key: "63550916d57e686361cb2c21a3634dd765e01e28"
+	};
+	var callback= function(data){
+      	/* This next section sorts API call results by value */
+      	if(!data) {
+         	console.log("Array Not set");
+      	} else {
+        	var byValue = data.slice(0,10);
+        	numcodes=byValue.length;
+        	byValue.sort(compareNumbers);
+        	function compareNumbers(a, b) {
+           		return b[3] - a[3];
+        	}
+		console.log("Before topCty set to by Value");
         topCtyTable[mm]= byValue;
-	console.log("after topCty set");
+		console.log("after topCty set");
         topCtyTable[mm][0][9]="Unit Price";      
         var i;
         for (i=1;i<=5;i++){
-          topCtyTable[mm][i][9]=topCtyTable[mm][i][3]/topCtyTable[mm][i][4];
+          	topCtyTable[mm][i][9]=topCtyTable[mm][i][3]/topCtyTable[mm][i][4];
         }
-	    if(iteration === 4) {    
-	       console.log("It's about to end.  Here's top country.");
-  	       console.log(topCtyTable);
-               console.log("Did it print?");
-	       
-		    
-		    
-		
-		    
-		    
-		    
-		    
-
-        if(topCtyTable[0][1][3]>1000000000) {
-          var valIndicator="B";
-	  val1=topCtyTable[4][1][3]/1000000000;
-	  val2=topCtyTable[3][1][3]/1000000000;
-	  val3=topCtyTable[2][1][3]/1000000000;
-	  val4=topCtyTable[1][1][3]/1000000000;
-	  val5=topCtyTable[0][1][3]/1000000000;
-        }else if(topCtyTable[0][1][3]>1000000){
-	  var valIndicator="M";
-	  val1=topCtyTable[4][1][3]/1000000;
-	  val2=topCtyTable[3][1][3]/1000000;
-	  val3=topCtyTable[2][1][3]/1000000;
-	  val4=topCtyTable[1][1][3]/1000000;
-	  val5=topCtyTable[0][1][3]/1000000;
-	}else{
-	  var valIndicator="T";
-	  val1=topCtyTable[4][1][3]/1000;
-	  val2=topCtyTable[3][1][3]/1000;
-	  val3=topCtyTable[2][1][3]/1000;
-	  val4=topCtyTable[1][1][3]/1000;
-	  val5=topCtyTable[0][1][3]/1000;
-	}
-	country=topCtyTable[mon][1][2];
-		    
-		    
-          $( "#commname" ).text(topCtyTable[mm][1][0]).toLocaleString();
-          var markup = "<tr><td class=col1>" + country + "</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
-	               "</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" + val5 +
-		       valIndicator + "</td></tr>";
-	  var markup2= "<tr><td class=col1>Growth of Value</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
-	               "</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" +val5+
-		       valIndicator + "</td></tr>";
-	  var markup3= "<tr><td class=col1>Average Unit Price</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
-	               "</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" +val5+
-		       valIndicator + "</td></tr>";
-	  var markup4= "<tr><td class=col1>Growth of UP since Aug</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
-	               "</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" +val5+
-		       valIndicator + "</td></tr>";
-          $("table tbody").append(markup);
-	  $("table tbody").append(markup2);
-	  $("table tbody").append(markup3);
-	  $("table tbody").append(markup4);
-)}; 
-		    
-		    
-		    
-		       
-	       return;
-	      
-	      
-	      
-	    } else {
-	    retrieveData(passvar, iteration + 1);
+		if(iteration === 4) {    
+	       	console.log("It's about to end.  Here's top country.");
+  	       	console.log(topCtyTable);
+     		console.log("Did it print?");
+		    if(topCtyTable[0][1][3]>1000000000) {
+          		var valIndicator="B";
+	  			val1=topCtyTable[4][1][3]/1000000000;
+	  			val2=topCtyTable[3][1][3]/1000000000;
+	  			val3=topCtyTable[2][1][3]/1000000000;
+	  			val4=topCtyTable[1][1][3]/1000000000;
+	  			val5=topCtyTable[0][1][3]/1000000000;
+        	}else if(topCtyTable[0][1][3]>1000000){
+	  			var valIndicator="M";
+	  			val1=topCtyTable[4][1][3]/1000000;
+	  			val2=topCtyTable[3][1][3]/1000000;
+	  			val3=topCtyTable[2][1][3]/1000000;
+	 			val4=topCtyTable[1][1][3]/1000000;
+	  			val5=topCtyTable[0][1][3]/1000000;
+			}else{
+	  			var valIndicator="T";
+	  			val1=topCtyTable[4][1][3]/1000;
+	  			val2=topCtyTable[3][1][3]/1000;
+	  			val3=topCtyTable[2][1][3]/1000;
+	  			val4=topCtyTable[1][1][3]/1000;
+	  			val5=topCtyTable[0][1][3]/1000;
+			}
+			country=topCtyTable[mon][1][2];
+          	$( "#commname" ).text(topCtyTable[mm][1][0]).toLocaleString();
+          	var markup = "<tr><td class=col1>" + country + "</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
+	        	"</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" + val5 +
+		    	valIndicator + "</td></tr>";
+	  		var markup2= "<tr><td class=col1>Growth of Value</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
+	            "</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" +val5+
+		       	valIndicator + "</td></tr>";
+	  		var markup3= "<tr><td class=col1>Average Unit Price</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
+	            "</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" +val5+
+		       	valIndicator + "</td></tr>";
+	  		var markup4= "<tr><td class=col1>Growth of UP since Aug</td><td class=midcol>$" + val1 + valIndicator + "</td><td class=midcol>$" + val2 + valIndicator +
+	            "</td><td class=midcol>$" + val3 + valIndicator + "</td><td class=midcol>$" + val4 + valIndicator + "</td><td class=midcol>$" +val5+
+				valIndicator + "</td></tr>";
+          	$("table tbody").append(markup);
+	  		$("table tbody").append(markup2);
+	  		$("table tbody").append(markup3);
+	  		$("table tbody").append(markup4);
+			return;
+		} else {
+	    	retrieveData(passvar, iteration + 1);
 	    }
+	} /*end of callback */
+  	$.get(url,expdata,callback);	
+}; /*end of retrieveData function */     
 
-     }
-	      
-	      
-      }
-  $.get(url,expdata,callback);
-  }
+
 
 
 
