@@ -70,7 +70,7 @@ function retrieveData(passvar,iteration){
 	  			val5=topCtyTable["12"][1][3]/1000000;
 			}else{
 	  			var valIndicator="T";
-	  			val1=topCtyTable["08][1][3]/1000;
+	  			val1=topCtyTable["08"][1][3]/1000;
 	  			val2=topCtyTable["09"][1][3]/1000;
 	  			val3=topCtyTable["10"][1][3]/1000;
 	  			val4=topCtyTable["11"][1][3]/1000;
