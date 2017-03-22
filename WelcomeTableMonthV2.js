@@ -154,6 +154,7 @@ function retrieveData(passvar,iteration){
 	  		$("table tbody").append(markup2);
 	  		$("table tbody").append(markup3);
 	  		$("table tbody").append(markup4);
+			mapIt();
 			return;
 		} else {
 	    		retrieveData(passvar, iteration + 1);
@@ -163,6 +164,10 @@ function retrieveData(passvar,iteration){
   	$.get(url,expdata,callback);	
 } /*end of retrieveData function */     
 
+function mapIt(){;
+	retrieveData(passvar);
+	$("table").hide;
+}
 
 
 
