@@ -164,7 +164,7 @@ function retrieveData(passvar,iteration){
 } /*end of retrieveData function */     
 
 function mapIt(){;
-	$("table").hide;
+	$("<table>").hide;
 }
 
 
