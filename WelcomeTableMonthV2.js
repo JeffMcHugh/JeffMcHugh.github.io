@@ -165,10 +165,10 @@ function retrieveData(passvar,iteration){
 } /*end of retrieveData function */     
 
 function mapIt(){
-	$("#commTable").hide;
+	$(document).ready(function(){        
+      		$("#commTable").hide();
+	});
 }
-
-
 
 
 /*
