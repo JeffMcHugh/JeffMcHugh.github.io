@@ -1,6 +1,7 @@
 body {
-    background-color: lightblue;
+    background-color: 1a75ff;
 }
+
 
 
 
@@ -72,6 +73,7 @@ body {
 
 table {
    width: 80%;
+   background-color:white;
    border-right:1px solid black;
    border-left:1px solid black;
 	
