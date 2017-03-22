@@ -135,7 +135,8 @@ function retrieveData(passvar,iteration){
 			if (Number(topCtyTable["11"][1][3]-topCtyTable["10"][1][3])>0){grow4color="green"}else{grow4color="red"};
 			if (Number(topCtyTable["12"][1][3]-topCtyTable["11"][1][3])>0){grow5color="green"}else{grow5color="red"};
           	$( "#commname" ).text(topCtyTable[mm][1][0]).toLocaleString();
-		$("th.second").replaceWith("<th class="botrow" id="denom" colspan="6" align=center>Value in " + valIndicator + " of Dollars</th>");
+		
+		$("th.second").html($("th.second").html().replace('in Dollars', "in " + valIndicator + "Dollars"));
           	var markup = "<tr><td class=col1>" + country + "</td><td class=midcol>" + val1 +"</td><td class=midcol>" + val2 + 
 	        		"</td><td class=midcol>" + val3 + "</td><td class=midcol>" + val4 + "</td><td class=midcol>" + val5 +
 		    	"</td></tr>";
