@@ -42,20 +42,20 @@ function retrieveData(passvar,iteration){
       	if(!data) {
          	console.log("Array Not set");
       	} else {
-        	var byValue = data.slice(0,10);
+        	var byValue = data.slice(0);
         	numcodes=byValue.length;
         	byValue.sort(compareNumbers);
         	function compareNumbers(a, b) {
            		return b[3] - a[3];
         	}
 		console.log("Before topCty set to by Value");
-        topCtyTable[mm]= byValue;
+        	topCtyTable[mm]= byValue;
 		console.log("after topCty set");
-        topCtyTable[mm][0][9]="Unit Price";      
-        var i;
-        for (i=1;i<=5;i++){
+        	topCtyTable[mm][0][9]="Unit Price";      
+        	var i;
+        	for (i=1;i<=5;i++){
           	topCtyTable[mm][i][9]=topCtyTable[mm][i][3]/topCtyTable[mm][i][4];
-        }
+        	}
 		if(iteration === 4) {    
 	       	console.log("It's about to end.  Here's top country.");
   	       	console.log(topCtyTable);
