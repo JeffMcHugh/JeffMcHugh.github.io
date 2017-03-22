@@ -69,17 +69,21 @@ function retrieveData(passvar,iteration){
 			    	val3=commaSeparateNumber(Math.round((Number(topCtyTable["10"][1][3]/1000000000)),1));
 			    	val4=commaSeparateNumber(Math.round((Number(topCtyTable["11"][1][3]/1000000000)),1));
 			    	val5=commaSeparateNumber(Math.round((Number(topCtyTable["12"][1][3]/1000000000)),1));
-			    	grow1="-"
+			    	grow1="-";
 				grow2=commaSeparateNumber(Math.round((Number((topCtyTable["09"][1][3]-topCtyTable["08"][1][3])/1000000000)),1));
 			    	grow3=commaSeparateNumber(Math.round((Number((topCtyTable["10"][1][3]-topCtyTable["09"][1][3])/1000000000)),1));
 			    	grow4=commaSeparateNumber(Math.round((Number((topCtyTable["11"][1][3]-topCtyTable["10"][1][3])/1000000000)),1));
 			    	grow5=commaSeparateNumber(Math.round((Number((topCtyTable["12"][1][3]-topCtyTable["11"][1][3])/1000000000)),1));
-				up1=commaSeparateNumber((Number(topCtyTable["08"][1][9]/1000).toFixed(2)));
-				up2=commaSeparateNumber((Number(topCtyTable["09"][1][9]/1000).toFixed(2)));
-				up3=commaSeparateNumber((Number(topCtyTable["10"][1][9]/1000).toFixed(2)));
-				up4=commaSeparateNumber((Number(topCtyTable["11"][1][9]/1000).toFixed(2)));
-				up5=commaSeparateNumber((Number(topCtyTable["12"][1][9]/1000).toFixed(2)));
-			  				
+				up1=commaSeparateNumber((Number(topCtyTable["08"][1][9]/1000000000).toFixed(2)));
+				up2=commaSeparateNumber((Number(topCtyTable["09"][1][9]/1000000000).toFixed(2)));
+				up3=commaSeparateNumber((Number(topCtyTable["10"][1][9]/1000000000).toFixed(2)));
+				up4=commaSeparateNumber((Number(topCtyTable["11"][1][9]/1000000000).toFixed(2)));
+				up5=commaSeparateNumber((Number(topCtyTable["12"][1][9]/1000000000).toFixed(2)));
+			    	up1growth="-";
+			        up2growth=commaSeparateNumber((Number((topCtyTable["09"][1][9]-topCtyTable["08"][1][9])/1000000000).toFixed(2)));
+			  	up3growth=commaSeparateNumber((Number((topCtyTable["10"][1][9]-topCtyTable["09"][1][9])/1000000000).toFixed(2)));
+			    	up4growth=commaSeparateNumber((Number((topCtyTable["11"][1][9]-topCtyTable["10"][1][9])/1000000000).toFixed(2)));
+			    	up5growth=commaSeparateNumber((Number((topCtyTable["12"][1][9]-topCtyTable["11"][1][9])/1000000000).toFixed(2)));
         	}else if(topCtyTable[0][1][3]>1000000){
 	  			var valIndicator="M";
 	  			val1=commaSeparateNumber(Math.round((Number(topCtyTable["08"][1][3]/1000000)),1));
@@ -92,11 +96,16 @@ function retrieveData(passvar,iteration){
 				grow3=commaSeparateNumber(Math.round((Number((topCtyTable["10"][1][3]-topCtyTable["09"][1][3])/1000000)),1));
 			    	grow4=commaSeparateNumber(Math.round((Number((topCtyTable["11"][1][3]-topCtyTable["10"][1][3])/1000000)),1));
 			    	grow5=commaSeparateNumber(Math.round((Number((topCtyTable["12"][1][3]-topCtyTable["11"][1][3])/1000000)),1));
-				up1=commaSeparateNumber((Number(topCtyTable["08"][1][9]/1000).toFixed(2)));
-				up2=commaSeparateNumber((Number(topCtyTable["09"][1][9]/1000).toFixed(2)));
-				up3=commaSeparateNumber((Number(topCtyTable["10"][1][9]/1000).toFixed(2)));
-				up4=commaSeparateNumber((Number(topCtyTable["11"][1][9]/1000).toFixed(2)));
-				up5=commaSeparateNumber((Number(topCtyTable["12"][1][9]/1000).toFixed(2)));
+				up1=commaSeparateNumber((Number(topCtyTable["08"][1][9]/1000000).toFixed(2)));
+				up2=commaSeparateNumber((Number(topCtyTable["09"][1][9]/1000000).toFixed(2)));
+				up3=commaSeparateNumber((Number(topCtyTable["10"][1][9]/1000000).toFixed(2)));
+				up4=commaSeparateNumber((Number(topCtyTable["11"][1][9]/1000000).toFixed(2)));
+				up5=commaSeparateNumber((Number(topCtyTable["12"][1][9]/1000000).toFixed(2)));
+				up1growth="-";
+			        up2growth=commaSeparateNumber((Number((topCtyTable["09"][1][9]-topCtyTable["08"][1][9])/1000000).toFixed(2)));
+			  	up3growth=commaSeparateNumber((Number((topCtyTable["10"][1][9]-topCtyTable["09"][1][9])/1000000).toFixed(2)));
+			    	up4growth=commaSeparateNumber((Number((topCtyTable["11"][1][9]-topCtyTable["10"][1][9])/1000000).toFixed(2)));
+			    	up5growth=commaSeparateNumber((Number((topCtyTable["12"][1][9]-topCtyTable["11"][1][9])/1000000).toFixed(2)));
 			}else{
 	  			var valIndicator="T";
 	  			val1=commaSeparateNumber(Math.round((Number(topCtyTable["08"][1][3]/1000)),1));
@@ -114,6 +123,11 @@ function retrieveData(passvar,iteration){
 				up3=commaSeparateNumber((Number(topCtyTable["10"][1][9]/1000).toFixed(2)));
 				up4=commaSeparateNumber((Number(topCtyTable["11"][1][9]/1000).toFixed(2)));
 				up5=commaSeparateNumber((Number(topCtyTable["12"][1][9]/1000).toFixed(2)));
+				up1growth="-";
+			        up2growth=commaSeparateNumber((Number((topCtyTable["09"][1][9]-topCtyTable["08"][1][9])/1000).toFixed(2)));
+			  	up3growth=commaSeparateNumber((Number((topCtyTable["10"][1][9]-topCtyTable["09"][1][9])/1000).toFixed(2)));
+			    	up4growth=commaSeparateNumber((Number((topCtyTable["11"][1][9]-topCtyTable["10"][1][9])/1000).toFixed(2)));
+			    	up5growth=commaSeparateNumber((Number((topCtyTable["12"][1][9]-topCtyTable["11"][1][9])/1000).toFixed(2)));
 			}
 			country=topCtyTable[mm][1][2];
 			if (Number(topCtyTable["09"][1][3]-topCtyTable["08"][1][3])>0){grow2color="green"}else{grow2color="red"};
@@ -131,9 +145,9 @@ function retrieveData(passvar,iteration){
 	  		var markup3= "<tr><td class=col1>Average Unit Price</td><td class=midcol>" + up1 + "</td><td class=midcol>" + up2 +
 	            		"</td><td class=midcol>" + up3 + "</td><td class=midcol>" + up4 + "</td><td class=midcol>" + up5 +
 		       	"</td></tr>";
-	  		var markup4= "<tr><td class=\"col1 botrow\">Growth of UP since Aug</td><td class=\"midcol botrow\">" + val1 + "</td><td class=\"midcol botrow\">" + val2 + 
-	            		"</td><td class=\"midcol botrow\">" + val3 + "</td><td class=\"midcol botrow\">" + val4 + "</td><td class=\"midcol botrow\">" + val5 +
-				"</td></tr>";
+	  		var markup4= "<tr><td class=\"col1 botrow\">Growth of UP since Aug</td><td class=\"midcol botrow\">" + up1growth 
+			+ "</td><td class=\"midcol botrow\">" + up2growth + "</td><td class=\"midcol botrow\">" + up3growth + 
+			"</td><td class=\"midcol botrow\">" + up4growth + "</td><td class=\"midcol botrow\">" + up5growth + "</td></tr>";
           		$("table tbody").append(markup);
 	  		$("table tbody").append(markup2);
 	  		$("table tbody").append(markup3);
