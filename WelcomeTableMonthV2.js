@@ -136,7 +136,7 @@ function retrieveData(passvar,iteration){
 			if (Number(topCtyTable["12"][1][3]-topCtyTable["11"][1][3])>0){grow5color="green"}else{grow5color="red"};
           	$( "#commname" ).text(topCtyTable[mm][1][0]).toLocaleString();
 		
-		$("#denom").text("Value in" + valIndicator + "of Dollars");
+		$("#denom").text("Value in " + valIndicator + " of Dollars");
           	var markup = "<tr><td class=col1>" + country + "</td><td class=midcol>" + val1 +"</td><td class=midcol>" + val2 + 
 	        		"</td><td class=midcol>" + val3 + "</td><td class=midcol>" + val4 + "</td><td class=midcol>" + val5 +
 		    	"</td></tr>";
