@@ -31,7 +31,7 @@ function goFunction(hslabel){
 				gethsdata(hsstring);	
 }
 function gethsnumbers(){
-				$.get("http://api.census.gov/data/timeseries/intltrade/exports", {
+				$.get("https://api.census.gov/data/timeseries/intltrade/exports", {
 					get: "E_COMMODITY,E_COMMODITY_SDESC",
 					YEAR: year,
 					MONTH: monthStr,
