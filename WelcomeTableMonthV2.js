@@ -116,10 +116,10 @@ function retrieveData(passvar,iteration){
 				up5=commaSeparateNumber((Number(topCtyTable["12"][1][9]/1000).toFixed(2)));
 			}
 			country=topCtyTable[mm][1][2];
-			if (grow2>0){grow2color="green"}else{grow2color="red"};
-			if (grow2>0){grow3color="green"}else{grow3color="red"};
-			if (grow2>0){grow4color="green"}else{grow4color="red"};
-			if (grow2>0){grow5color="green"}else{grow5color="red"};
+			if (Number(topCtyTable["09"][1][3]-topCtyTable["08"][1][3]))>0){grow2color="green"}else{grow2color="red"};
+			if (Number(topCtyTable["10"][1][3]-topCtyTable["09"][1][3]))>0){grow3color="green"}else{grow3color="red"};
+			if (Number(topCtyTable["11"][1][3]-topCtyTable["10"][1][3]))>0){grow4color="green"}else{grow4color="red"};
+			if (Number(topCtyTable["12"][1][3]-topCtyTable["11"][1][3]))>0){grow5color="green"}else{grow5color="red"};
           	$( "#commname" ).text(topCtyTable[mm][1][0]).toLocaleString();
           	var markup = "<tr><td class=col1>" + country + "</td><td class=midcol>" + val1 +"</td><td class=midcol>" + val2 + 
 	        		"</td><td class=midcol>" + val3 + "</td><td class=midcol>" + val4 + "</td><td class=midcol>" + val5 +
