@@ -140,8 +140,12 @@ tbody td:last-child, thead th:last-child {
     border-right: none;
 }*/
 
-.grow2color {
+.green {
 	color:green;
+	font-weight:bold;
+}
+.red {
+	color:red;
 	font-weight:bold;
 }
     
