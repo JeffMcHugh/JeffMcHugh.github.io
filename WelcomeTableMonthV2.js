@@ -164,7 +164,7 @@ function retrieveData(passvar,iteration){
   	$.get(url,expdata,callback);	
 } /*end of retrieveData function */     
 
-function mapIt(){;
+function mapIt(){
 	$("#commTable").hide;
 }
 
