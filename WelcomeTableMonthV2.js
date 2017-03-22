@@ -45,10 +45,10 @@ function retrieveData(passvar,iteration){
       	} else {
         	var byValue = data.slice(0,10);
         	numcodes=byValue.length;
-        	byValue.sort(compareNumbers);
         	function compareNumbers(a, b) {
            		return b[3] - a[3];
         	}
+		byValue.sort(compareNumbers);
 		console.log("Before topCty set to by Value");
         topCtyTable[mm]= byValue;
 		console.log("after topCty set");
