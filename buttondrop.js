@@ -9,10 +9,10 @@ function myFunction() {
 
 function filterFunction() {
     var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
+    input = document.getElementById("input1");
     filter = input.value.toUpperCase();
-    div = document.getElementById("myDropdown");
-    a = div.getElementsByTagName("option");
+    codes = document.getElementById("myDropdown");
+    a = codes.getElementsByTagName("option");
     for (i = 0; i < a.length; i++) {
         if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
             a[i].style.display = "";
@@ -60,30 +60,3 @@ gethsnumbers();
 
 
 
-function gethsdata(commodity){
-				$.get("http://api.census.gov/data/timeseries/intltrade/exports", {
-					get: "CTY_CODE,CTY_NAME,E_COMMODITY,ALL_VAL_YR,QTY_1_YR",
-					YEAR: year,
-					MONTH: monthStr,
-					SUMMARY_LVL: "DET",
-					E_COMMODITY: commodity
-				}, function(data) {
-					if(!data) {
-						// Nothing found, try again with previous month
-						console.log("No Data for this code");
-					}
-					else {
-						var byValue = data.slice(0);
-						byValue.sort(compareNumbers);
-						function compareNumbers(a, b) {
-  						return b[3] - a[3];
-						}
-						populateChart(byValue);
-					}
-				});
-}
-
-function populateChart(data){
-	
-	
-}
