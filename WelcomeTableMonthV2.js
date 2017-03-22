@@ -36,7 +36,7 @@ function retrieveData(passvar,iteration){
 	  	YEAR:"2016",
 	  	SUMMARY_LVL:"DET",
 	  	COMM_LVL:"HS10",
-		CTY_CODE:"1220",
+		CTY_CODE:"",
 	  	//key: "63550916d57e686361cb2c21a3634dd765e01e28"
 	};
 	var callback= function(data){
@@ -71,7 +71,6 @@ function retrieveData(passvar,iteration){
 			    	val5=commaSeparateNumber(Math.round((Number(topCtyTable["12"][1][3]/1000000000)),1));
 			    	grow1="-"
 				grow2=commaSeparateNumber(Math.round((Number((topCtyTable["09"][1][3]-topCtyTable["08"][1][3])/1000000000)),1));
-				if (grow2>0){grow2color="green"};
 			    	grow3=commaSeparateNumber(Math.round((Number((topCtyTable["10"][1][3]-topCtyTable["09"][1][3])/1000000000)),1));
 			    	grow4=commaSeparateNumber(Math.round((Number((topCtyTable["11"][1][3]-topCtyTable["10"][1][3])/1000000000)),1));
 			    	grow5=commaSeparateNumber(Math.round((Number((topCtyTable["12"][1][3]-topCtyTable["11"][1][3])/1000000000)),1));
@@ -117,13 +116,17 @@ function retrieveData(passvar,iteration){
 				up5=commaSeparateNumber((Number(topCtyTable["12"][1][9]/1000).toFixed(2)));
 			}
 			country=topCtyTable[mm][1][2];
+			if (grow2>0){grow2color="green"}else{grow2color="red"};
+			if (grow2>0){grow3color="green"}else{grow3color="red"};
+			if (grow2>0){grow4color="green"}else{grow4color="red"};
+			if (grow2>0){grow5color="green"}else{grow5color="red"};
           	$( "#commname" ).text(topCtyTable[mm][1][0]).toLocaleString();
           	var markup = "<tr><td class=col1>" + country + "</td><td class=midcol>" + val1 +"</td><td class=midcol>" + val2 + 
 	        		"</td><td class=midcol>" + val3 + "</td><td class=midcol>" + val4 + "</td><td class=midcol>" + val5 +
 		    	"</td></tr>";
 	  		var markup2= "<tr><td class=col1>Growth of Value</td><td class=midcol>" + grow1 + "</td><td class=\"midcol grow2color\">" + grow2 + 
-	            		"</td><td class=midcol>" + grow3 + "</td><td class=midcol>" + grow4 + "</td><td class=midcol>" +grow5+
-		       	"</td></tr>";
+	            		"</td><td class=\"midcol grow3color\">" + grow3 + "</td><td class=\"midcol grow4color\">" + grow4 + 
+			    "</td><td class=\"midcol grow5color\">" +grow5 + "</td></tr>";
 	  		var markup3= "<tr><td class=col1>Average Unit Price</td><td class=midcol>" + up1 + "</td><td class=midcol>" + up2 +
 	            		"</td><td class=midcol>" + up3 + "</td><td class=midcol>" + up4 + "</td><td class=midcol>" + up5 +
 		       	"</td></tr>";
