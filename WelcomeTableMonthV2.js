@@ -36,7 +36,7 @@ function retrieveData(passvar,iteration){
 	  	YEAR:"2016",
 	  	SUMMARY_LVL:"DET",
 	  	COMM_LVL:"HS10",
-		CTY_CODE:"",
+		CTY_CODE:"1220",
 	  	//key: "63550916d57e686361cb2c21a3634dd765e01e28"
 	};
 	var callback= function(data){
