@@ -157,11 +157,11 @@ tbody td:last-child, thead th:last-child {
 	font-weight:bold;
 }
 
-#regions_div {display:inline-block;
+#regions_div {width:800px; margin:0 auto; text-align:left; display:inline-block;
 }
     
 
-
+#chart_div{width: 800px; margin: 0 auto; text-align: left;}
 
 
 /* The following styles are for the buttons at the bottom of the page */
