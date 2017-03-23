@@ -1,7 +1,7 @@
 
 function addOption(){
 var addop = "<option value=\"Subaru\">Subaru</option>";
-$("select").append(addop);		
+$("#menuc").append(addop);		
 }
 addOption();
 
