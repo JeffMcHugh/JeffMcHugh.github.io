@@ -182,7 +182,7 @@ function mapIt(){
           		['France', 600],
           		['RU', 700]
         	]);
-        	var options = {position:center};
+        	var options = {};
 		var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
         	chart.draw(data, options);
       		}	
