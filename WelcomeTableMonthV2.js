@@ -38,7 +38,7 @@ function retrieveData(passvar,iteration){
 	  	SUMMARY_LVL:"DET",
 	  	COMM_LVL:"HS10",
 		CTY_CODE:"",
-	  	//key: "63550916d57e686361cb2c21a3634dd765e01e28"
+	  	key: "63550916d57e686361cb2c21a3634dd765e01e28",
 	};
 	var callback= function(data){
       	/* This next section sorts API call results by value */
