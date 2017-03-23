@@ -1,7 +1,30 @@
+
+function addOption(){
+var addop = "<option value="Subaru">Subaru</option>
+$("form select").append(markup);		
+}
+
+
+
+/*
+
+<form>
+  <select name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <br><br>
+  <input type="submit">
+</form>  */
+
+
+/*
 var year="2016";
 var monthStr="12";
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+When the user clicks on the button,
+toggle between hiding and showing the dropdown content 
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
     $("<option>Extra Tools<option>").appendTo(".dropdown-content");
@@ -57,4 +80,4 @@ function gethsnumbers(){
 				});
 }
 gethsnumbers();
-
+*/
