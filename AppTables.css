@@ -157,7 +157,8 @@ tbody td:last-child, thead th:last-child {
 	font-weight:bold;
 }
 
-
+#regions_div {display:inline-block;
+}
     
 
 
