@@ -31,10 +31,11 @@ function gethsnumbers(year,monthStr){
 		else {
 			var numcodes = data.length;
 			var i;
+			$(document).ready(function(){
     			for (i=1;i<=numcodes;i++){
 				var addop = "<option value=\"Subaru\">" + data[i][0]+ "</option>";
     				$("#menuc").append(addop);	
-    			}	
+    			}});	
 		}
 	};
 	$.get(url2,expdata2,callback2);
