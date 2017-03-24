@@ -35,8 +35,8 @@ function gethsnumbers(year,monthStr){
       						hscodelist[[i-1][1]] = AllHS[[i][1]];
     						}	
 					}
-				};
-});
+				});
+};
 
 function addOption(){
   $(document).ready(function(){
