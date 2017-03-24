@@ -45,7 +45,7 @@ function gethsnumbers(year,monthStr){
 function addOption(){
   $(document).ready(function(){
 	gethsnumbers("2016","12");
-    var addop = "<option value=\"Subaru\">Subaru</option>";
+    var addop = "<option value=\"Subaru\">" + hscodelist[1][0]+ "</option>";
     $("#menuc").append(addop);	
   });
 }
