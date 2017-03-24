@@ -1,7 +1,7 @@
 
 function addOption(){
   $(document).ready(function(){
-	gethsnumbers();
+	gethsnumbers("2016","12");
     var addop = "<option value=\"Subaru\">Subaru</option>";
     $("#menuc").append(addop);	
   });
@@ -21,7 +21,7 @@ addOption();
 	</form>
 </div>  */
 
-function gethsnumbers(){
+function gethsnumbers(year,monthStr){
 				$.get("https://api.census.gov/data/timeseries/intltrade/exports", {
 					get: "E_COMMODITY,E_COMMODITY_SDESC",
 					YEAR: year,
