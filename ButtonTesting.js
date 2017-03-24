@@ -20,6 +20,7 @@ function gethsnumbers(year,monthStr){
 					YEAR: year,
 					MONTH: monthStr,
 					COMM_LVL: "HS10",
+					key: "63550916d57e686361cb2c21a3634dd765e01e28",
 				}, function(data) {
 					if(!data) {
 						// Nothing found, try again with previous month
