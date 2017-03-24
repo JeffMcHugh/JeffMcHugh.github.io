@@ -11,15 +11,13 @@ addOption();
 
 /*
 
-<form>
-  <select name="cars">
-    <option value="volvo">Volvo</option>
-    <option value="saab">Saab</option>
-    <option value="fiat">Fiat</option>
-    <option value="audi">Audi</option>
-  </select>
-  <br><br>
-  <input type="submit">
-</form>  */
+<div align="center" class="menu-options">	
+	<form>
+ 	 	<select id="menuc" name="cars">
+   	 		<option value="default">Select your HS code</option>
+ 	 	</select>
+ 		<input type="Submit">
+	</form>
+</div>  */
 
 
