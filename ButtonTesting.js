@@ -36,6 +36,8 @@ function gethsnumbers(year,monthStr){
     			for (i=1;i<=numcodes;i++){
       				hscodelist[[i-1][0]] = AllHS[[i][0]];
       				hscodelist[[i-1][1]] = AllHS[[i][1]];
+				var addop = "<option value=\"Subaru\">" + hscodelist[1][0]+ "</option>";
+    				$("#menuc").append(addop);	
     			}	
 		}
 	};
@@ -45,8 +47,6 @@ function gethsnumbers(year,monthStr){
 function addOption(){
   $(document).ready(function(){
 	gethsnumbers("2016","12");
-    var addop = "<option value=\"Subaru\">" + hscodelist[1][0]+ "</option>";
-    $("#menuc").append(addop);	
   });
 }
 addOption();
