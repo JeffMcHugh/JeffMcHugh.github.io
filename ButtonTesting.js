@@ -30,11 +30,9 @@ function gethsnumbers(year,monthStr){
 		}
 		else {
 			var numcodes = data.length;
-			var hscodelist = Array(numcodes);
 			var i;
     			for (i=1;i<=2;i++){
-      				hscodelist[[i][0]] = data[[i][0]];
-				var addop = "<option value=\"Subaru\">" + hscodelist[i][0]+ "</option>";
+				var addop = "<option value=\"Subaru\">" + data[i][0]+ "</option>";
     				$("#menuc").append(addop);	
     			}	
 		}
