@@ -1,12 +1,5 @@
 
-function addOption(){
-  $(document).ready(function(){
-	gethsnumbers("2016","12");
-    var addop = "<option value=\"Subaru\">Subaru</option>";
-    $("#menuc").append(addop);	
-  });
-}
-addOption();
+
 
 
 
@@ -47,6 +40,14 @@ function gethsnumbers(year,monthStr){
 					}
 				});
 }
-gethsnumbers();
+
+function addOption(){
+  $(document).ready(function(){
+	gethsnumbers("2016","12");
+    var addop = "<option value=\"Subaru\">Subaru</option>";
+    $("#menuc").append(addop);	
+  });
+}
+addOption();
 
 
