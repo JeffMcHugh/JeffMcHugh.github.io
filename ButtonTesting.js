@@ -38,8 +38,8 @@ function gethsnumbers(year,monthStr){
 						
 						
 					}
-				});
-}
+				}
+});
 
 function addOption(){
   $(document).ready(function(){
