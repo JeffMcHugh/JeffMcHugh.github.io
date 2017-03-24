@@ -33,9 +33,8 @@ function gethsnumbers(year,monthStr){
 			var numcodes = AllHS.length;
 			var hscodelist = Array(numcodes);
 			var i;
-    			for (i=1;i<=numcodes;i++){
-      				hscodelist[[i-1][0]] = AllHS[[i][0]];
-      				hscodelist[[i-1][1]] = AllHS[[i][1]];
+    			for (i=1;i<=numcodes;1){
+      				hscodelist[[i][0]] = AllHS[[i][0]];
 				var addop = "<option value=\"Subaru\">" + hscodelist[1][0]+ "</option>";
     				$("#menuc").append(addop);	
     			}	
