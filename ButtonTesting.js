@@ -31,7 +31,7 @@ function gethsnumbers(year,monthStr){
 		else {
 			var numcodes = data.length;
 			var i;
-    			for (i=1;i<=2;i++){
+    			for (i=1;i<=numcodes;i++){
 				var addop = "<option value=\"Subaru\">" + data[i][0]+ "</option>";
     				$("#menuc").append(addop);	
     			}	
