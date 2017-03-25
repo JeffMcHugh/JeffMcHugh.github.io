@@ -142,9 +142,9 @@ tbody td:last-child, thead th:last-child {
 .button {
     background-color: #e79629;
 	border-radius: 12px;
-    border: black;
-    color: black;
-    padding: 4px 4px;
+    border: white;
+    color: white;
+    padding: 8px 36px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
