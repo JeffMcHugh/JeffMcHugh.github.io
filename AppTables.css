@@ -164,9 +164,9 @@ tbody td:last-child, thead th:last-child {
 
 /* The following styles are for the buttons at the bottom of the page */
 .button {
-    background-color: grey;
+    background-color: white;
 	border-radius: 12px;
-    border: none;
+    border: black;
     color: black;
     padding: 8px 32px;
     text-align: center;
