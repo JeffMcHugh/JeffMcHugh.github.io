@@ -164,6 +164,18 @@ tbody td:last-child, thead th:last-child {
 
 /* The following styles are for the buttons at the bottom of the page */
 .button {
+    background-color: #ff9999;
+	border-radius: 12px;
+    border: black;
+    color: black;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+#myInput {
     background-color: white;
 	border-radius: 12px;
     border: black;
@@ -175,6 +187,7 @@ tbody td:last-child, thead th:last-child {
     font-size: 16px;
 
 }
+	
 
 .button1 {
     background-color: #3385ff; 
