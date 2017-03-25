@@ -1,35 +1,11 @@
 body {
-    background-color: #80b3ff;
+    background-color: #3131A2;
 }
 
 p { display:block;}
 
 
 
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-
-
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-}
-#myInput {
-    border-box: box-sizing;
-    background-image: url('searchicon.png');
-    background-position: 14px 12px;
-    background-repeat: no-repeat;
-    font-size: 16px;
-    padding: 14px 20px 12px 45px;
-    border: none;
-}
 
 .dropdown {
     position: relative;
@@ -176,7 +152,7 @@ tbody td:last-child, thead th:last-child {
 
 }
 #myInput {
-    background-color: white;
+    background-color: #FFF593;
 	border-radius: 12px;
     border: black;
     color: black;
