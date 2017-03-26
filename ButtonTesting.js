@@ -54,7 +54,9 @@ function gethsnumbers(year,monthStr){
     			for (i=1;i<numcodes-1;i++){
 				data[i][5]= data[i][0].toLocaleString()+data[i][1].toLocaleString();
 				var addop = "<option value=\"" + data[i][0] + "\">" + data[i][5] + "</option>";
-    				$("#hscodes").append(addop);	
+    				$("#hscodes").append(addop);
+				var addop2 ="<option data-value=\""+data[i][0]+"\" value=\"+data[i][0]+\""></option>";
+				$("#hscodes2".append(addop2);
     			}});	
 		}
 	};
