@@ -53,7 +53,7 @@ function gethsnumbers(year,monthStr){
 			$(document).ready(function(){
     			for (i=1;i<numcodes-1;i++){
 				data[i][5]= data[i][0].toLocaleString()+data[i][1].toLocaleString();
-				var addop = "<option value=\"" + data[i][0] + "\">" + data[i][0]+ " " + "</option>";
+				var addop = "<option value=\"" + data[i][0] + "\">" + data[i][5] + "</option>";
     				$("#hscodes").append(addop);	
     			}});	
 		}
