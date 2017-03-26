@@ -6,16 +6,16 @@ function myFunction() {
 
 $(document).ready(function() {
 var data2 = {};
-$("#hscodes option").each(function(i,el) {  
+$("#hscodes2 option").each(function(i,el) {  
    data[$(el).data2("value")] = $(el).val();
 });
-console.log(data2, $("#hscodes option").val());
+console.log(data2, $("#hscodes2 option").val());
 
 
     $('#submit').click(function()
     {
-        var value = $('#myInput').val();
-        alert($('#hscodes [value="' + value + '"]').data2('value'));
+        var value = $('#myInput2').val();
+        alert($('#hscodes2 [value="' + value + '"]').data2('value'));
     });
 });
 
