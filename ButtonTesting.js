@@ -9,7 +9,6 @@ var data2 = {};
 $("#hscodes2 option").each(function(i,el) {  
    data[$(el).data2("value")] = $(el).val();
 });
-console.log(data2, $("#hscodes2 option").val());
 
 
     $('#submit').click(function()
