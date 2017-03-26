@@ -14,7 +14,7 @@ $("#hscodes2 option").each(function(i,el) {
 $('#submit').click(function()
     {
         var value = $('#myInput2').val();
-        alert($('#hscodes2 [value="' + value + '"]').data2('value'));
+        //alert($('#hscodes2 [value="' + value + '"]').data2('value'));
     });
 });
 
