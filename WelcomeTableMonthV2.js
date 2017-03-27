@@ -180,9 +180,10 @@ function mapIt(){
       		$("#commTable").hide();
 		var ctycnt=topCtyTable["12"].length;
 		var mapTots=new Array;
-		mapTots[0]="I am able";
-		for(i=0;i<60;i++){
-			mapTots[i]=[topCtyTable["12"][i][2],topCtyTable["12"][i][3]];
+		mapTots[0,0]="Country";
+		mapTots[0,1]="Export Value";
+		for(i=1;i<60;i++){
+			mapTots[i]=[topCtyTable["12"][i][2], Number(topCtyTable["12"][i][3])];
 		}
 		console.log(mapTots);
 		
