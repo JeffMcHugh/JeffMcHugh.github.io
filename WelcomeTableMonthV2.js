@@ -63,7 +63,7 @@ function retrieveData(passvar,iteration){
 	       	console.log("It's about to end.  Here's top country.");
   	       	console.log(topCtyTable);
      		console.log("Did it print?");
-		    if(topCtyTable[0][1][3]>1000000000) {
+		    if(topCtyTable["12"][1][3]>1000000000) {
           		var valIndicator="Billions";			 
 	  			val1=commaSeparateNumber(Math.round((Number(topCtyTable["08"][1][3]/1000000000)),1));
 			    	val2=commaSeparateNumber(Math.round((Number(topCtyTable["09"][1][3]/1000000000)),1));
@@ -85,7 +85,7 @@ function retrieveData(passvar,iteration){
 			  	up3growth=commaSeparateNumber((Number((topCtyTable["10"][1][9]-topCtyTable["09"][1][9])/1000000000).toFixed(2)));
 			    	up4growth=commaSeparateNumber((Number((topCtyTable["11"][1][9]-topCtyTable["10"][1][9])/1000000000).toFixed(2)));
 			    	up5growth=commaSeparateNumber((Number((topCtyTable["12"][1][9]-topCtyTable["11"][1][9])/1000000000).toFixed(2)));
-        	}else if(topCtyTable[0][1][3]>1000000){
+        	}else if(topCtyTable["12"][1][3]>1000000){
 	  			var valIndicator="Millions";
 	  			val1=commaSeparateNumber(Math.round((Number(topCtyTable["08"][1][3]/1000000)),1));
 			    	val2=commaSeparateNumber(Math.round((Number(topCtyTable["09"][1][3]/1000000)),1));
