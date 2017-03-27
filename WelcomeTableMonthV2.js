@@ -32,7 +32,7 @@ function retrieveData(passvar,iteration){
   	var mm=monthNum[iteration].toLocaleString();
   	var url="https://api.census.gov/data/timeseries/intltrade/exports";
   	var expdata = {
-	  	get:"E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_MO,QTY_1_MO",
+	  	get:"E_COMMODITY_LDESC,CTY_CODE,CTY_NAME,ALL_VAL_MO,QTY_1_MO",
 	  	E_COMMODITY: passvar,
 	  	//ALL_VAL_YR,
 	  	MONTH:mm,
@@ -68,7 +68,7 @@ function retrieveData(passvar,iteration){
 		for (i=1;i<=5;i++){
 		
 		    if(topCtyTable["12"][1][3]>1000000000) {
-          		var valIndicator="Millions";			 
+          		var valIndicator="Millions of ";			 
 	  			val1=commaSeparateNumber(Math.round((Number(topCtyTable["08"][i][3]/1000000)),1));
 			    	val2=commaSeparateNumber(Math.round((Number(topCtyTable["09"][i][3]/1000000)),1));
 			    	val3=commaSeparateNumber(Math.round((Number(topCtyTable["10"][i][3]/1000000)),1));
@@ -90,7 +90,7 @@ function retrieveData(passvar,iteration){
 			    	up4growth=commaSeparateNumber((Number((topCtyTable["11"][i][9]-topCtyTable["10"][i][9])/1000000).toFixed(2)));
 			    	up5growth=commaSeparateNumber((Number((topCtyTable["12"][i][9]-topCtyTable["11"][i][9])/1000000).toFixed(2)));
         	}else if(topCtyTable["12"][1][3]>1000000){
-	  			var valIndicator="Thousands";
+	  			var valIndicator="Thousands of ";
 	  			val1=commaSeparateNumber(Math.round((Number(topCtyTable["08"][i][3]/1000)),1));
 			    	val2=commaSeparateNumber(Math.round((Number(topCtyTable["09"][i][3]/1000)),1));
 			    	val3=commaSeparateNumber(Math.round((Number(topCtyTable["10"][i][3]/1000)),1));
@@ -112,7 +112,7 @@ function retrieveData(passvar,iteration){
 			    	up4growth=commaSeparateNumber((Number((topCtyTable["11"][i][9]-topCtyTable["10"][i][9])/1000).toFixed(2)));
 			    	up5growth=commaSeparateNumber((Number((topCtyTable["12"][i][9]-topCtyTable["11"][i][9])/1000).toFixed(2)));
 			}else{
-	  			var valIndicator="Nominal";
+	  			var valIndicator="";
 	  			val1=commaSeparateNumber(Math.round((Number(topCtyTable["08"][i][3])),1));
 			    	val2=commaSeparateNumber(Math.round((Number(topCtyTable["09"][i][3])),1));
 			    	val3=commaSeparateNumber(Math.round((Number(topCtyTable["10"][i][3])),1));
@@ -145,7 +145,7 @@ function retrieveData(passvar,iteration){
 			if (Number(topCtyTable["12"][i][9]-topCtyTable["11"][i][9])>0){upgrow5color="green"}else{upgrow5color="red"};
           	$( "#commname" ).text(topCtyTable[mm][i][0]).toLocaleString();
 		
-		$("#denom").text("Value in " + valIndicator + " of Dollars");
+		$("#denom").text("Value in " + valIndicator + "Dollars");
           	var markup = "<tr><td class=col1>" + country + "</td><td class=midcol>" + val1 +"</td><td class=midcol>" + val2 + 
 	        		"</td><td class=midcol>" + val3 + "</td><td class=midcol>" + val4 + "</td><td class=midcol>" + val5 +
 		    	"</td></tr>";
