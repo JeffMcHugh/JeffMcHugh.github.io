@@ -1,7 +1,7 @@
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
-    var selected = (document.getElementById("myInput").value).substr(1,10);
+    var selected = document.getElementById("myInput").value;
 }
 
 $(document).ready(function() {
