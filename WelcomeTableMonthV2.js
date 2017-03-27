@@ -2,7 +2,7 @@
 var topCtyTable=["08","09","10","11","12"];
 
 function myJsFunction(){
-    var codeEntered=document.getElementById('myInput2').value;
+    var codeEntered=(document.getElementById('myInput2').value).substring(1,10);
     console.log(codeEntered);
     // Put the object into storage
     localStorage.setItem('enteredCode', codeEntered);
