@@ -180,6 +180,7 @@ function mapIt(){
       		$("#commTable").hide();
 		var ctycnt=topCtyTable["12"].length;
 		var mapTots=new Array;
+		mapTots[0]="I am able";
 		for(i=2;i<ctycnt;i++){
 			mapTots[i-2]=[topCtyTable[i][2],topCtyTable[i][3]];
 		}
