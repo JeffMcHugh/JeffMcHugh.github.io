@@ -62,6 +62,7 @@ function retrieveData(passvar,iteration){
           	topCtyTable[mm][i][9]=topCtyTable[mm][i][3]/topCtyTable[mm][i][4];
         }
 		if(iteration === 4) {    
+		
 	       	console.log("It's about to end.  Here's top country.");
   	       	console.log(topCtyTable);
      		console.log("Did it print?");
@@ -177,15 +178,24 @@ function mapIt(){
 	$(document).ready(function(){  
 		$("#regions_div").show();
       		$("#commTable").hide();
-		console.log("This is TopCtyTable in the mapIT function");
-		console.log(topCtyTable);
-		
-		
+		ctycnt=topCtyTable["12"].length;
+		for(i=2;i<length;i++){
+		mapTots[i-2]=[topCtyTable[i][2],topCtyTable[i][3]];
+		}
+
 		
 		google.charts.load('current', {'packages':['geochart']});
       		google.charts.setOnLoadCallback(drawRegionsMap);
       		function drawRegionsMap() {
-        		var data = google.visualization.arrayToDataTable([
+        		var data = google.visualization.arrayToDataTable(mapTots);
+        	var options = {};
+		var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+        	chart.draw(data, options);
+      		}	
+	});
+}
+/*
+[
           		['Country', 'Popularity'],
           		['Germany', 200],
           		['United States', 300],
@@ -193,15 +203,7 @@ function mapIt(){
           		['Canada', 500],
           		['France', 600],
           		['RU', 700]
-        	]);
-        	var options = {};
-		var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
-        	chart.draw(data, options);
-      		}	
-	});
-}
-
-
+        	] */
 /*
 Asyncronous or Syncronis
 http://stackoverflow.com/questions/5187968/how-should-i-call-3-functions-in-order-to-execute-them-one-after-the-other
