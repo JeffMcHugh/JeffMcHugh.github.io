@@ -63,7 +63,7 @@ function retrieveData(passvar,iteration){
 	       	console.log("It's about to end.  Here's top country.");
   	       	console.log(topCtyTable);
      		console.log("Did it print?");
-		for (i=1,i<=5,i++){
+		for (i=1;i<=5;i++){
 		
 		    if(topCtyTable["12"][1][3]>1000000000) {
           		var valIndicator="Millions";			 
