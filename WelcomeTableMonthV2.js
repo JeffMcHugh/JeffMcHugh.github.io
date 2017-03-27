@@ -3,6 +3,7 @@ var topCtyTable=["08","09","10","11","12"];
 
 function myJsFunction(){
 	$("#regions_div").hide();
+	$("#commTable").show();
     var codeEntered=(document.getElementById('myInput2').value).substring(0,10);
     console.log(codeEntered);
     // Put the object into storage
@@ -173,7 +174,8 @@ function retrieveData(passvar,iteration){
 } /*end of retrieveData function */     
 
 function mapIt(){
-	$(document).ready(function(){        
+	$(document).ready(function(){  
+		$("#regions_div").show();
       		$("#commTable").hide();
 		
 		
