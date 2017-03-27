@@ -182,7 +182,7 @@ function mapIt(){
 		for(i=2;i<length;i++){
 		mapTots[i-2]=[topCtyTable[i][2],topCtyTable[i][3]];
 		}
-
+		console.log(mapTots);
 		
 		google.charts.load('current', {'packages':['geochart']});
       		google.charts.setOnLoadCallback(drawRegionsMap);
