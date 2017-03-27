@@ -63,6 +63,8 @@ function retrieveData(passvar,iteration){
 	       	console.log("It's about to end.  Here's top country.");
   	       	console.log(topCtyTable);
      		console.log("Did it print?");
+			for (i=1,i<=5,i++) {
+		
 		    if(topCtyTable["12"][1][3]>1000000000) {
           		var valIndicator="Millions";			 
 	  			val1=commaSeparateNumber(Math.round((Number(topCtyTable["08"][1][3]/1000000)),1));
@@ -159,6 +161,7 @@ function retrieveData(passvar,iteration){
 	  		$("table tbody").append(markup2);
 	  		$("table tbody").append(markup3);
 	  		$("table tbody").append(markup4);
+			}
 			return;
 		} else {
 	    		retrieveData(passvar, iteration + 1);
