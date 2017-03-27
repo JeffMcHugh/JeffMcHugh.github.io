@@ -179,7 +179,7 @@ function mapIt(){
 		$("#regions_div").show();
       		$("#commTable").hide();
 		var ctycnt=topCtyTable["12"].length;
-		var mapTots=["Country","Export Value"];
+		var mapTots[0]=["Country","Export Value"];
 		for(i=1;i<60;i++){
 			mapTots[i]=[topCtyTable["12"][i][2], Number(topCtyTable["12"][i][3])];
 		}
