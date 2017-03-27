@@ -179,8 +179,9 @@ function mapIt(){
 		$("#regions_div").show();
       		$("#commTable").hide();
 		ctycnt=topCtyTable["12"].length;
+		var mapTots=new Array;
 		for(i=2;i<length;i++){
-		var mapTots[i-2]=[topCtyTable[i][2],topCtyTable[i][3]];
+			mapTots[i-2]=[topCtyTable[i][2],topCtyTable[i][3]];
 		}
 		console.log(mapTots);
 		
