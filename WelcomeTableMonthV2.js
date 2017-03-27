@@ -132,7 +132,7 @@ function retrieveData(passvar,iteration){
 			    	up4growth=commaSeparateNumber((Number((topCtyTable["11"][i][9]-topCtyTable["10"][i][9])).toFixed(2)));
 			    	up5growth=commaSeparateNumber((Number((topCtyTable["12"][i][9]-topCtyTable["11"][i][9])).toFixed(2)));
 			}
-			country=topCtyTable[mm][1][2];
+			country=topCtyTable[mm][i][2];
 			if (Number(topCtyTable["09"][i][3]-topCtyTable["08"][i][3])>0){grow2color="green"}else{grow2color="red"};
 			if (Number(topCtyTable["10"][i][3]-topCtyTable["09"][i][3])>0){grow3color="green"}else{grow3color="red"};
 			if (Number(topCtyTable["11"][i][3]-topCtyTable["10"][i][3])>0){grow4color="green"}else{grow4color="red"};
