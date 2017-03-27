@@ -154,7 +154,7 @@ function retrieveData(passvar,iteration){
 		       	"</td></tr>";
 	  		var markup4= "<tr><td class=\"col1 botrow\">Growth of Unit Price Since Aug</td><td class=\"midcol botrow\">" + up1growth 
 			+ "</td><td class=\"midcol "+upgrow2color+" botrow\">" + up2growth + "</td><td class=\"midcol botrow "+upgrow3color+"\">" + up3growth + 
-			"</td><td class=\"midcol botrow\">" + up4growth + "</td><td class=\"midcol botrow\">" + up5growth + "</td></tr>";
+			"</td><td class=\"midcol botrow "+upgrow4color+"\">" + up4growth + "</td><td class=\"midcol botrow "+upgrowgrow5color+"\">" + up5growth + "</td></tr>";
           		$("table tbody").append(markup);
 	  		$("table tbody").append(markup2);
 	  		$("table tbody").append(markup3);
