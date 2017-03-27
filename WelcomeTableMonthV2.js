@@ -180,7 +180,7 @@ function mapIt(){
       		$("#commTable").hide();
 		ctycnt=topCtyTable["12"].length;
 		for(i=2;i<length;i++){
-		mapTots[i-2]=[topCtyTable[i][2],topCtyTable[i][3]];
+		var mapTots[i-2]=[topCtyTable[i][2],topCtyTable[i][3]];
 		}
 		console.log(mapTots);
 		
