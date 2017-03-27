@@ -133,15 +133,15 @@ function retrieveData(passvar,iteration){
 			    	up5growth=commaSeparateNumber((Number((topCtyTable["12"][i][9]-topCtyTable["11"][i][9])).toFixed(2)));
 			}
 			country=topCtyTable[mm][1][2];
-			if (Number(topCtyTable["09"][1][3]-topCtyTable["08"][i][3])>0){grow2color="green"}else{grow2color="red"};
-			if (Number(topCtyTable["10"][1][3]-topCtyTable["09"][i][3])>0){grow3color="green"}else{grow3color="red"};
-			if (Number(topCtyTable["11"][1][3]-topCtyTable["10"][i][3])>0){grow4color="green"}else{grow4color="red"};
-			if (Number(topCtyTable["12"][1][3]-topCtyTable["11"][i][3])>0){grow5color="green"}else{grow5color="red"};
-			if (Number(topCtyTable["09"][1][9]-topCtyTable["08"][i][9])>0){upgrow2color="green"}else{upgrow2color="red"};
-			if (Number(topCtyTable["10"][1][9]-topCtyTable["09"][i][9])>0){upgrow3color="green"}else{upgrow3color="red"};
-			if (Number(topCtyTable["11"][1][9]-topCtyTable["10"][i][9])>0){upgrow4color="green"}else{upgrow4color="red"};
-			if (Number(topCtyTable["12"][1][9]-topCtyTable["11"][i][9])>0){upgrow5color="green"}else{upgrow5color="red"};
-          	$( "#commname" ).text(topCtyTable[mm][1][0]).toLocaleString();
+			if (Number(topCtyTable["09"][i][3]-topCtyTable["08"][i][3])>0){grow2color="green"}else{grow2color="red"};
+			if (Number(topCtyTable["10"][i][3]-topCtyTable["09"][i][3])>0){grow3color="green"}else{grow3color="red"};
+			if (Number(topCtyTable["11"][i][3]-topCtyTable["10"][i][3])>0){grow4color="green"}else{grow4color="red"};
+			if (Number(topCtyTable["12"][i][3]-topCtyTable["11"][i][3])>0){grow5color="green"}else{grow5color="red"};
+			if (Number(topCtyTable["09"][i][9]-topCtyTable["08"][i][9])>0){upgrow2color="green"}else{upgrow2color="red"};
+			if (Number(topCtyTable["10"][i][9]-topCtyTable["09"][i][9])>0){upgrow3color="green"}else{upgrow3color="red"};
+			if (Number(topCtyTable["11"][i][9]-topCtyTable["10"][i][9])>0){upgrow4color="green"}else{upgrow4color="red"};
+			if (Number(topCtyTable["12"][i][9]-topCtyTable["11"][i][9])>0){upgrow5color="green"}else{upgrow5color="red"};
+          	$( "#commname" ).text(topCtyTable[mm][i][0]).toLocaleString();
 		
 		$("#denom").text("Value in " + valIndicator + " of Dollars");
           	var markup = "<tr><td class=col1>" + country + "</td><td class=midcol>" + val1 +"</td><td class=midcol>" + val2 + 
