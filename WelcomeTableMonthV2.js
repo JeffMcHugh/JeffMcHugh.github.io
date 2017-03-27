@@ -181,7 +181,7 @@ function mapIt(){
 		var ctycnt=topCtyTable["12"].length;
 		var mapTots=new Array;
 		mapTots[0]="I am able";
-		for(i=2;i<ctycnt;i++){
+		for(i=2;i<60;i++){
 			mapTots[i-2]=[topCtyTable[i][2],topCtyTable[i][3]];
 		}
 		console.log(mapTots);
