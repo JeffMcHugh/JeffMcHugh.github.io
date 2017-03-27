@@ -178,7 +178,7 @@ function mapIt(){
 		$("#regions_div").show();
       		$("#commTable").hide();
 		console.log("This is TopCtyTable in the mapIT function");
-		console.log(TopCtyTable);
+		console.log(topCtyTable);
 		
 		
 		
