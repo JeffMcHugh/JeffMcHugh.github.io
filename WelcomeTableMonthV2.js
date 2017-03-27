@@ -181,9 +181,9 @@ function mapIt(){
 		var ctycnt=topCtyTable["12"].length;
 		
 		var mapTots =[[],[]]; 
-		for(i=0;i<60;i++){
-			mapTots[i][0]=topCtyTable["12"][i][2];
-			mapTots[i][1]=Number(topCtyTable["12"][i][3]);
+		for(i=1;i<60;i++){
+			mapTots[i-1][0]=topCtyTable["12"][i][2];
+			mapTots[i-1][1]=Number(topCtyTable["12"][i][3]);
 		}
 		console.log(mapTots);
 		
