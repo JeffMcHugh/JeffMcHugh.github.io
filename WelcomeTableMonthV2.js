@@ -2,6 +2,7 @@
 var topCtyTable=["08","09","10","11","12"];
 
 function myJsFunction(){
+	$("#regions_div").hide();
     var codeEntered=(document.getElementById('myInput2').value).substring(0,10);
     console.log(codeEntered);
     // Put the object into storage
@@ -46,7 +47,7 @@ function retrieveData(passvar,iteration){
          	console.log("Array Not set");
       	} else {
         	var byValue = data.slice(0,10);
-        	numcodes=byValue.length;
+        	numcodes=byValue.length;	
         	function compareNumbers(a, b) {
            		return b[3] - a[3];
         	}
