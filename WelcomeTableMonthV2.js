@@ -135,6 +135,10 @@ function retrieveData(passvar,iteration){
 			if (Number(topCtyTable["10"][1][3]-topCtyTable["09"][1][3])>0){grow3color="green"}else{grow3color="red"};
 			if (Number(topCtyTable["11"][1][3]-topCtyTable["10"][1][3])>0){grow4color="green"}else{grow4color="red"};
 			if (Number(topCtyTable["12"][1][3]-topCtyTable["11"][1][3])>0){grow5color="green"}else{grow5color="red"};
+			if (Number(topCtyTable["09"][1][9]-topCtyTable["08"][1][9])>0){upgrow2color="green"}else{upgrow2color="red"};
+			if (Number(topCtyTable["10"][1][9]-topCtyTable["09"][1][9])>0){upgrow3color="green"}else{upgrow3color="red"};
+			if (Number(topCtyTable["11"][1][9]-topCtyTable["10"][1][9])>0){upgrow4color="green"}else{upgrow4color="red"};
+			if (Number(topCtyTable["12"][1][9]-topCtyTable["11"][1][9])>0){upgrow5color="green"}else{upgrow5color="red"};
           	$( "#commname" ).text(topCtyTable[mm][1][0]).toLocaleString();
 		
 		$("#denom").text("Value in " + valIndicator + " of Dollars");
