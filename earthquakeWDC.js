@@ -1,4 +1,4 @@
-(function () {
+$(document).ready(function () {
 	// the Tableau object below is not defined locally in our code. It's defined globally in the WDC library.
     var myConnector = tableau.makeConnector();  
 
