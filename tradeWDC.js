@@ -25,8 +25,8 @@
 myConnector.getData = function(table, doneCallback) {
     var url="https://api.census.gov/data/timeseries/intltrade/exports";
     var expdata = {
-		get:"time,E_COMMODITY,E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_YR,QTY_1_YR",
-		time:"from+2016-01+to+2017-01",
+		get:"E_COMMODITY,E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_YR,QTY_1_YR",
+		time:"2016-12",
 	  	SUMMARY_LVL:"DET",
 	  	COMM_LVL:"HS10",
 	  	E_COMMODITY:"8517120080",
@@ -38,12 +38,12 @@ myConnector.getData = function(table, doneCallback) {
         // Iterate over the JSON object
         for (var i = 1, len = hsdata.length-1; i < len; i++) {
             tableData.push({
-		"time": hsdata[i][0],
-                "hs": hsdata[i][1],
-                "desc": hsdata[i][2],
-                "country": hsdata[i][4],
-                "value": Number(hsdata[i][5]),
-                "qty1": Number(hsdata[i][6]),
+                "hs": hsdata[i][0],
+                "desc": hsdata[i][1],
+                "country": hsdata[i][3],
+                "value": Number(hsdata[i][4]),
+                "qty1": Number(hsdata[i][5]),
+		"time": hsdata[i][6];
             });
         }
         table.appendRows(tableData);
