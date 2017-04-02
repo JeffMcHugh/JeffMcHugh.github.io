@@ -29,7 +29,7 @@ myConnector.getData = function(table, doneCallback) {
 	  	SUMMARY_LVL:"DET",
 	  	COMM_LVL:"HS10",
 	  	E_COMMODITY:"8517120080",
-	    	time:"from%25252B2016-01",
+	    	time:"from2016-01",
   	};  
   	var callback= function(data2){
         var hsdata = data2;
