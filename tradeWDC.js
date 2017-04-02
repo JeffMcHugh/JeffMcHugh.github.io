@@ -43,7 +43,7 @@ myConnector.getData = function(table, doneCallback) {
                 "country": hsdata[i][3],
                 "value": Number(hsdata[i][4]),
                 "qty1": Number(hsdata[i][5]),
-		"time": hsdata[i][9]
+		"time": "from"+encodeURIComponent('+')+"2016-01",
             });
         }
         table.appendRows(tableData);
