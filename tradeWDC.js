@@ -14,7 +14,7 @@
 	  { id : "qty2", alias : "qty2", dataType: tableau.dataTypeEnum.float},
 	  { id : "airval", alias : "airval", dataType: tableau.dataTypeEnum.float},
 	  { id : "contval", alias : "contval", dataType: tableau.dataTypeEnum.float},
-	  { id : "vesval", alias : "vesval", dataType: tableau.dataTypeEnum.integer},
+	  { id : "vesval", alias : "vesval", dataType: tableau.dataTypeEnum.float},
      ];
 
     var tableInfo = {
