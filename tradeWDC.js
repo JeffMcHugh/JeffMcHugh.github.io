@@ -54,11 +54,25 @@ myConnector.getData = function(table, doneCallback) {
 
 
 
-    tableau.registerConnector(myConnector);
-    $(document).ready(function () {
-    $("#submitButton").click(function () {
-        tableau.connectionName = "Census Exports Feed";
-        tableau.submit();
+$(document).ready(function() {
+    $("#submitButton").click(function() {
+        var dateObj = {
+            startDate: $('#start-date-one').val().trim(),
+            endDate: $('#end-date-one').val().trim(),
+        };
+
+        function isValidDate(dateStr) {
+            var d = new Date(dateStr);
+            return !isNaN(d.getDate());
+        }
+
+        if (isValidDate(dateObj.startDate) && isValidDate(dateObj.endDate)) {
+            tableau.connectionData = JSON.stringify(dateObj);
+            tableau.connectionName = "USGS Earthquake Feed";
+            tableau.submit();
+        } else {
+            $('#errorMsg').html("Enter valid dates. For example, 2016-05-08.");
+        }
     });
 });
 })();
