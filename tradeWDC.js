@@ -30,10 +30,10 @@
 myConnector.getData = function(table, doneCallback) {
     var url="https://api.census.gov/data/timeseries/intltrade/exports";
     var expdata = {
-		get:"E_COMMODITY,E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_MO,QTY_1_MO,QTY_2_MO,AIR_VAL_MO,CNT_VAL_MO,VES_VAL_MO",
+		get:"E_COMMODITY,E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_MO,QTY_1_MO,AIR_VAL_MO,CNT_VAL_MO,VES_VAL_MO",
 	  	SUMMARY_LVL:"DET",
 	  	COMM_LVL:"HS10",
-	  	E_COMMODITY:"8*",
+	  	E_COMMODITY:"85*",
 	    	time:"from2016-10",
   	};  
   	var callback= function(data2){
