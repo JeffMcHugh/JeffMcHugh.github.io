@@ -1,3 +1,4 @@
+
 (function () {
 	// the Tableau object below is not defined locally in our code. It's defined globally in the WDC library.
     var myConnector = tableau.makeConnector();  
@@ -54,25 +55,11 @@ myConnector.getData = function(table, doneCallback) {
 
 
 
-$(document).ready(function() {
-    $("#submitButton").click(function() {
-        var dateObj = {
-            startDate: $('#start-date-one').val().trim(),
-            endDate: $('#end-date-one').val().trim(),
-        };
-
-        function isValidDate(dateStr) {
-            var d = new Date(dateStr);
-            return !isNaN(d.getDate());
-        }
-
-        if (isValidDate(dateObj.startDate) && isValidDate(dateObj.endDate)) {
-            tableau.connectionData = JSON.stringify(dateObj);
-            tableau.connectionName = "USGS Earthquake Feed";
-            tableau.submit();
-        } else {
-            $('#errorMsg').html("Enter valid dates. For example, 2016-05-08.");
-        }
+    tableau.registerConnector(myConnector);
+    $(document).ready(function () {
+    $("#submitButton").click(function () {
+        tableau.connectionName = "Census Exports Feed";
+        tableau.submit();
     });
 });
 })();
