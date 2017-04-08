@@ -4,22 +4,57 @@
 	// the Tableau object below is not defined locally in our code. It's defined globally in the WDC library.
     var myConnector = tableau.makeConnector();  
 
-    myConnector.getSchema = function (schemaCallback) {
-      var cols = [
-          { id : "mag", alias : "magnitude", dataType : tableau.dataTypeEnum.float },
-          { id : "title", alias : "title", dataType : tableau.dataTypeEnum.string },
-          { id : "url", alias : "url", dataType : tableau.dataTypeEnum.string },
-          { id : "lat", alias : "latitude", columnRole: "dimension", dataType : tableau.dataTypeEnum.float },
-          { id : "lon", alias : "longitude",columnRole: "dimension", dataType : tableau.dataTypeEnum.float }
-     ];
+myConnector.getSchema = function(schemaCallback) {
+	// Schema for magnitude and place data
+	var mag_place_cols = [{
+		id: "id",
+		dataType: tableau.dataTypeEnum.string
+	}, {
+		id: "mag",
+		alias: "magnitude",
+		dataType: tableau.dataTypeEnum.float
+	}, {
+		id: "title",
+		alias: "title",
+		dataType: tableau.dataTypeEnum.string
+	}, {
+		id: "lat",
+		alias: "latitude",
+		columnRole: "dimension",
+		dataType: tableau.dataTypeEnum.float
+	}, {
+		id: "lon",
+		alias: "longitude",
+		columnRole: "dimension",
+		dataType: tableau.dataTypeEnum.float
+	}];
 
-    var tableInfo = {
-        id : "earthquakeFeed",
-        alias : "Earthquakes with magnitude greater than 4.5 in the last seven days",
-        columns : cols
-    };
+	var magPlaceTable = {
+		id: "magPlace",
+		alias: "Magnitude and Place Data",
+		columns: mag_place_cols
+	};
 
-    schemaCallback([tableInfo]);
+	// Schema for time and URL data
+	var time_url_cols = [{
+		id: "id",
+		dataType: tableau.dataTypeEnum.string
+	}, {
+		id: "time",
+		alias: "time",
+		dataType: tableau.dataTypeEnum.date
+	}, {
+		id: "url",
+		alias: "url",
+		dataType: tableau.dataTypeEnum.string
+	}];
+
+	var timeUrlTable = {
+		id: "timeUrl",
+		alias: "Time and URL Data",
+		columns: time_url_cols
+	};
+	schemaCallback([magPlaceTable, timeUrlTable]);
 };
 
 myConnector.getData = function(table, doneCallback) {
