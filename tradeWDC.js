@@ -11,6 +11,10 @@
           { id : "value", alias : "value", dataType : tableau.dataTypeEnum.float},
           { id : "country", alias : "Country", dataType : tableau.dataTypeEnum.string},
           { id : "qty1", alias : "qty1", dataType: tableau.dataTypeEnum.float},
+	  { id : "qty2", alias : "qty2", dataType: tableau.dataTypeEnum.float},
+	  { id : "airval", alias : "airval", dataType: tableau.dataTypeEnum.float},
+	  { id : "contval", alias : "contval", dataType: tableau.dataTypeEnum.float},
+	  { id : "vesval", alias : "vesval", dataType: tableau.dataTypeEnum.integer},
      ];
 
     var tableInfo = {
@@ -26,11 +30,11 @@
 myConnector.getData = function(table, doneCallback) {
     var url="https://api.census.gov/data/timeseries/intltrade/exports";
     var expdata = {
-		get:"E_COMMODITY,E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_MO,QTY_1_YR",
+		get:"E_COMMODITY,E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_MO,QTY_1_MO,QTY_2_MO,AIR_VAL_MO,CNT_VAL_MO,VES_VAL_MO",
 	  	SUMMARY_LVL:"DET",
 	  	COMM_LVL:"HS10",
-	  	E_COMMODITY:"8517120080",
-	    	time:"from2016-01",
+	  	E_COMMODITY:"8*",
+	    	time:"from2016-10",
   	};  
   	var callback= function(data2){
         var hsdata = data2;
@@ -44,7 +48,11 @@ myConnector.getData = function(table, doneCallback) {
                 "country": hsdata[i][3],
                 "value": Number(hsdata[i][4]),
                 "qty1": Number(hsdata[i][5]),
-		"time": hsdata[i][9],
+		"qty2": Number(hsdata[i][6]),
+		"airval": Number(hsdata[i][7]),
+		"contval": Number(hsdata[i][8]),
+		"vesval": Number(hsdata[i][9]),
+		"time": hsdata[i][13],
             });
         }
         table.appendRows(tableData);
