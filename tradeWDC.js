@@ -11,7 +11,6 @@
           { id : "value", alias : "value", dataType : tableau.dataTypeEnum.float},
           { id : "country", alias : "Country", dataType : tableau.dataTypeEnum.string},
           { id : "qty1", alias : "qty1", dataType: tableau.dataTypeEnum.float},
-	  { id : "qty2", alias : "qty2", dataType: tableau.dataTypeEnum.float},
 	  { id : "airval", alias : "airval", dataType: tableau.dataTypeEnum.float},
 	  { id : "contval", alias : "contval", dataType: tableau.dataTypeEnum.float},
 	  { id : "vesval", alias : "vesval", dataType: tableau.dataTypeEnum.float},
@@ -48,11 +47,10 @@ myConnector.getData = function(table, doneCallback) {
                 "country": hsdata[i][3],
                 "value": Number(hsdata[i][4]),
                 "qty1": Number(hsdata[i][5]),
-		"qty2": Number(hsdata[i][6]),
-		"airval": Number(hsdata[i][7]),
-		"contval": Number(hsdata[i][8]),
-		"vesval": Number(hsdata[i][9]),
-		"time": hsdata[i][13],
+		"airval": Number(hsdata[i][6]),
+		"contval": Number(hsdata[i][7]),
+		"vesval": Number(hsdata[i][8]),
+		"time": hsdata[i][12],
             });
         }
         table.appendRows(tableData);
