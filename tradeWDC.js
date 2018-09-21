@@ -27,7 +27,7 @@
 
 
 myConnector.getData = function(table, doneCallback) {
-    var url="https://api.census.gov/data/timeseries/intltrade/exports";
+    var url="https://api.census.gov/data/timeseries/intltrade/exports/hs";
     var expdata = {
 		get:"E_COMMODITY,E_COMMODITY_SDESC,CTY_CODE,CTY_NAME,ALL_VAL_MO,QTY_1_MO,AIR_VAL_MO,CNT_VAL_MO,VES_VAL_MO",
 	  	SUMMARY_LVL:"DET",
