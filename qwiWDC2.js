@@ -1,5 +1,5 @@
 function add() {
-  var api1 = %22+document.getElementById('api1').value;
+  var api1 = document.getElementById('api1').value;
   var api2 = document.getElementById('api2').value;
 
   var call = api1;
