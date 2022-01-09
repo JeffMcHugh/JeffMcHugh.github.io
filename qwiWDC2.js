@@ -4,7 +4,7 @@ function add() {
 
   var call = api1;
 
-  document.getElementById("demo").innerHTML = "test";
+  //document.getElementById("demo").innerHTML = "test";
 }
 
 
