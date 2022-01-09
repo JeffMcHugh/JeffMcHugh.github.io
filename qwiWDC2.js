@@ -2,27 +2,36 @@
     // Create the connector object
     var myConnector = tableau.makeConnector();
 
-    // Use API call results to retrieve info for defining schema
-    myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://api.census.gov/data/timeseries/qwi/sa?get=Emp&for=county:198&in=state:02&year=2012&quarter=1&sex=1&sex=2&agegrp=A02&agegrp=A07&ownercode=A05&firmsize=1&seasonadj=U&industry=11", function(resp1) {
-            //var feat = resp.features,
-            let apicall = prompt("Enter the API call right now", "https://api.census.gov/data/timeseries/qwi/sa?get=Emp&for=county:198&in=state:02&year=2012&quarter=1&sex=1&sex=2&agegrp=A02&agegrp=A07&ownercode=A05&firmsize=1&seasonadj=U&industry=11");
-            let text;
-            if (apicall == null || apicall == "") {
-              text = "User cancelled the prompt.";
-            } else {
-              text = "You entered: " + apicall;
-            }
-            doneCallback();
-        });
-    };
     function add() {
       var api1 = document.getElementById('api1').value;
       var api2 = document.getElementById('api2').value;
 
       var call = api1;
       alert(call);
-}
+    }
+
+    // Use API call results to retrieve info for defining schema
+    myConnector.getData = function(table, doneCallback) {
+        $.getJSON(api1, function(resp1) {
+            //var feat = resp.features,
+
+            //let apicall = prompt("Enter the API call right now", "https://api.census.gov/data/timeseries/qwi/sa?get=Emp&for=county:198&in=state:02&year=2012&quarter=1&sex=1&sex=2&agegrp=A02&agegrp=A07&ownercode=A05&firmsize=1&seasonadj=U&industry=11");
+            //let text;
+            //if (apicall == null || apicall == "") {
+              //text = "User cancelled the prompt.";
+            //} else {
+              //text = "You entered: " + apicall;
+            //}
+            let text;
+            if (api1 == null || api1 == "") {
+              text = "User cancelled the prompt.";
+            } else {
+              text = "You entered: " + api1;
+            }
+            doneCallback();
+        });
+    };
+
 
 
 
