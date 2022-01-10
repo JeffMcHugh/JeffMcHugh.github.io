@@ -6,12 +6,6 @@ function add() {
 
 }
 
-function displaycall(){
-    document.getElementById("demo").innerHTML = api1;
-
-
-}
-
 
 (function() {
     // Create the connector object
