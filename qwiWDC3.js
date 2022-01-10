@@ -16,10 +16,10 @@ function add() {
     var myConnector = tableau.makeConnector();
 
 
-/*
+
     // Use API call results to retrieve info for defining schema
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON(api1text, function(prelim_results) {
+        $.getJSON("https://api.census.gov/data/timeseries/qwi/sa?get=Emp&for=county:198&in=state:02&year=2012&quarter=1&sex=1&sex=2&agegrp=A02&agegrp=A07&ownercode=A05&firmsize=1&seasonadj=U&industry=11&key=fb52f59fa656edc68e1a96839776f5493e3317c0", function(prelim_results) {
 
             let text;
             if (api1 == null || api1 == "") {
@@ -36,7 +36,7 @@ function add() {
         });
     };
 
-*/
+
 
 
     // Define the schema
@@ -91,7 +91,7 @@ function add() {
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://api.census.gov/data/timeseries/qwi/sa?get=Emp&for=county:198&in=state:02&year=2012&quarter=1&sex=1&sex=2&agegrp=A02&agegrp=A07&ownercode=A05&firmsize=1&seasonadj=U&industry=11", function(resp) {
+        $.getJSON("https://api.census.gov/data/timeseries/qwi/sa?get=Emp&for=county:198&in=state:02&year=2012&quarter=1&sex=1&sex=2&agegrp=A02&agegrp=A07&ownercode=A05&firmsize=1&seasonadj=U&industry=11&key=fb52f59fa656edc68e1a96839776f5493e3317c0", function(resp) {
             //var feat = resp.features,
             let apicall = prompt("Enter the API call", "https://api.census.gov/data/timeseries/qwi/sa?get=Emp&for=county:198&in=state:02&year=2012&quarter=1&sex=1&sex=2&agegrp=A02&agegrp=A07&ownercode=A05&firmsize=1&seasonadj=U&industry=11");
             let text;
