@@ -8,7 +8,7 @@ function add() {
 }
 
 function displaycall(){
-    document.getElementById("demo").innerHTML = "testing testing 123";
+    document.getElementById("demo").innerHTML = api1;
 
 
 }
