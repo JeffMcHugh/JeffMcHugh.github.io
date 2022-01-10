@@ -11,6 +11,7 @@ function add() {
 
 (function() {
     // Create the connector object
+    console.log('testing this too')
     var myConnector = tableau.makeConnector();
 
 
