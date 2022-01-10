@@ -60,7 +60,7 @@ var apicallresults = {};
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
         var cols = [{
-            id: "Emp",
+            id: apicallresults[0][0],
             dataType: tableau.dataTypeEnum.string
         }, {
             id: "year",
