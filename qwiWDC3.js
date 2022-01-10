@@ -46,7 +46,7 @@ function add() {
             dataType: tableau.dataTypeEnum.string
         }, {
             id: tableSchema[1],
-            alias: "year",
+            alias: "yearnew",
             dataType: tableau.dataTypeEnum.int
         }, {
             id: "quarter",
