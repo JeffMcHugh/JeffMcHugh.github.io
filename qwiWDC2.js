@@ -5,7 +5,7 @@ function add() {
   //document.getElementById("demo").innerHTML = api1text;
   console.log("test console log")
   console.log(api1text)
-  document.getElementById("demo").innerHTML = "Testing this";
+  document.getElementById("demo").innerHTML = api1text;
 
 }
 
