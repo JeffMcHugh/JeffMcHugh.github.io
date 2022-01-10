@@ -45,8 +45,8 @@ function add() {
             id: tableSchema[0],
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "yearnew",
-            alias: "yearnew",
+            id: "year",
+            alias: "year",
             dataType: tableau.dataTypeEnum.string
         }, {
             id: "quarter",
@@ -105,7 +105,7 @@ function add() {
             for (var i = 0, len = resp.length; i < resp.length-1; i++) {
                 tableData.push({
                     "Emp": resp[i+1][0],
-                    "yearnew": resp[i+1][1],
+                    "year": resp[i+1][1],
                     "quarter": resp[i+1][2],
                     "sex": resp[i+1][3],
                     "agegrp": resp[i+1][4],
