@@ -16,7 +16,7 @@ function add() {
     var myConnector = tableau.makeConnector();
 
 
-
+/*
     // Use API call results to retrieve info for defining schema
     myConnector.getData = function(table, doneCallback) {
         $.getJSON(api1text, function(prelim_results) {
@@ -36,7 +36,7 @@ function add() {
         });
     };
 
-
+*/
 
 
     // Define the schema
