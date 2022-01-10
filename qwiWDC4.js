@@ -51,8 +51,8 @@ function add() {
             id: resp2[0][0],
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "year",
-            alias: "year",
+            id: resp2[0][1],
+            alias: "yearnew",
             dataType: tableau.dataTypeEnum.string
         }, {
             id: "quarter",
