@@ -3,7 +3,6 @@ function add() {
   var api2 = document.getElementById('api2').value;
   document.getElementById("demo").innerHTML = api1;
   var call = api1;
-  document.getElementById("demo").innerHTML = api1;
 
 }
 
