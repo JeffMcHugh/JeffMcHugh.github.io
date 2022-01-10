@@ -3,6 +3,10 @@ function add() {
   api1text = document.getElementById('api1').value;
   api2text = document.getElementById('api2').value;
 
+  window.localStorage.setItem("api1",api1text);
+  window.localStorage.setItem("api2",api2text);
+  //Above: in this case, the `grade` is the key while `One` is the value.
+
   //document.getElementById("demo").innerHTML = api1text;
   console.log("test console log")
   console.log(api1text)
@@ -13,7 +17,7 @@ function add() {
 //The next part should be global
 var apicallresults = {};
   $.ajax({
-    url:api1text,
+    url: window.localStorage.getItem('api1'),
     async: false,
     dataType: 'json',
     success: function(data){
@@ -107,9 +111,9 @@ var apicallresults = {};
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON(api1text, function(resp) {
+        $.getJSON(window.localStorage.getItem('api1'), function(resp) {
             //var feat = resp.features,
-            let apicall = prompt("Enter the API call", api1text);
+            let apicall = prompt("Enter the API call", window.localStorage.getItem('api1'));
             let text;
             if (apicall == null || apicall == "") {
               text = "User cancelled the prompt.";
