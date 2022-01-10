@@ -48,11 +48,11 @@ function add() {
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
         var cols = [{
-            id: resp2[0][0],
+            id: "Emp",
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "yearnew",
-            alias: resp2[0][1],
+            id: "year",
+            alias: "year",
             dataType: tableau.dataTypeEnum.string
         }, {
             id: "quarter",
@@ -111,7 +111,7 @@ function add() {
             for (var i = 0, len = resp.length; i < resp.length-1; i++) {
                 tableData.push({
                     "Emp": resp[i+1][0],
-                    "yearnew": resp[i+1][1],
+                    "year": resp[i+1][1],
                     "quarter": resp[i+1][2],
                     "sex": resp[i+1][3],
                     "agegrp": resp[i+1][4],
