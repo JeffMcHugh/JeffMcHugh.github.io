@@ -1,4 +1,5 @@
-
+api1text = document.getElementById('api1').value;
+api2text = document.getElementById('api2').value;
 
 function add() {
   api1text = document.getElementById('api1').value;
