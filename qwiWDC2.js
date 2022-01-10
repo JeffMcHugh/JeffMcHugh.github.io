@@ -1,7 +1,6 @@
 
 
 function add() {
-  event.preventDefault()
   api1text = document.getElementById('api1').value;
   api2text = document.getElementById('api2').value;
 
