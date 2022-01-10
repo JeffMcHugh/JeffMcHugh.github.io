@@ -1,5 +1,4 @@
-api1text = document.getElementById('api1').value;
-api2text = document.getElementById('api2').value;
+
 
 function add() {
   api1text = document.getElementById('api1').value;
@@ -10,7 +9,7 @@ function add() {
   console.log(api1text)
 
 }
-document.getElementById("demo").innerHTML = api1text;
+document.getElementById("demo").innerHTML = "Testing this";
 
 (function() {
     // Create the connector object
