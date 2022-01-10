@@ -1,10 +1,13 @@
+
+
 function add() {
-  var api1 = document.getElementById('api1').value;
-  var api2 = document.getElementById('api2').value;
-  document.getElementById("demo").innerHTML = api1;
-  var call = api1;
+  event.preventDefault()
+  api1text = document.getElementById('api1').value;
+  api2text = document.getElementById('api2').value;
+
+  document.getElementById("demo").innerHTML = api1text;
   console.log("test console log")
-  console.log(call)
+  console.log(api1text)
 
 }
 
