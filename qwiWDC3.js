@@ -42,7 +42,7 @@ function add() {
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
         var cols = [{
-            id: tableSchema[0],
+            id: "Emp",
             dataType: tableau.dataTypeEnum.string
         }, {
             id: "year",
