@@ -19,7 +19,7 @@ function add() {
 
     // Use API call results to retrieve info for defining schema
     //myConnector.getData = function(table, doneCallback) {
-        //$.getJSON("https://api.census.gov/data/timeseries/qwi/sa?get=Emp&for=county:198&in=state:02&year=2012&quarter=1&sex=1&sex=2&agegrp=A02&agegrp=A07&ownercode=A05&firmsize=1&seasonadj=U&industry=11&key=fb52f59fa656edc68e1a96839776f5493e3317c0", function(resp2) {
+        $.getJSON("https://api.census.gov/data/timeseries/qwi/sa?get=Emp&for=county:198&in=state:02&year=2012&quarter=1&sex=1&sex=2&agegrp=A02&agegrp=A07&ownercode=A05&firmsize=1&seasonadj=U&industry=11&key=fb52f59fa656edc68e1a96839776f5493e3317c0", function(resp2) {
             //var feat = resp.features,
 
             //let apicall = prompt("Enter the API call right now", "https://api.census.gov/data/timeseries/qwi/sa?get=Emp&for=county:198&in=state:02&year=2012&quarter=1&sex=1&sex=2&agegrp=A02&agegrp=A07&ownercode=A05&firmsize=1&seasonadj=U&industry=11");
@@ -38,7 +38,7 @@ function add() {
             }
             doneCallback();
 */
-        //});
+        });
     //};
 
 
