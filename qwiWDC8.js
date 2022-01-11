@@ -13,6 +13,8 @@ function add() {
   document.getElementById("demo").innerHTML = api1text;
 
 }
+test = api1t;
+test2= api1t+"&key=fb52f59fa656edc68e1a96839776f5493e3317c0";
 
 //The next part should be global
 var apicallresults = {};
