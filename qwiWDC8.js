@@ -4,7 +4,6 @@ function add() {
 
   window.localStorage.setItem("api1",api1text);
   api1t=window.localStorage.getItem('api1');
-  api1clean=api1t.replace("https://","")
 
   //Above: in this case, the `grade` is the key while `One` is the value.
 
@@ -18,7 +17,7 @@ function add() {
 //The next part should be global
 var apicallresults = {};
   $.ajax({
-    url: api1clean,
+    url: api1t,
     async: false,
     dataType: 'json',
     success: function(data){
