@@ -3,7 +3,7 @@ function add() {
   api1text = document.getElementById('api1').value;
 
   window.localStorage.setItem("api1",api1text);
-  api1t=(window.localStorage.getItem('api1')).replace("http://","");
+  api1t=(window.localStorage.getItem('api1')).replace("https://","");
 
   //Above: in this case, the `grade` is the key while `One` is the value.
 
