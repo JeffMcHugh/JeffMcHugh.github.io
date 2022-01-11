@@ -3,7 +3,7 @@ function add() {
   api1text = document.getElementById('api1').value;
 
   window.localStorage.setItem("api1",api1text);
-  api1t=window.localStorage.getItem('api1');
+  api1t=window.localStorage.getItem('api1')+"&key=fb52f59fa656edc68e1a96839776f5493e3317c0";
 
   //Above: in this case, the `grade` is the key while `One` is the value.
 
