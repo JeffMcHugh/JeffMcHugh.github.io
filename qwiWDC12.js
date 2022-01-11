@@ -24,7 +24,6 @@ function add() {
     // Storing data in form of JSON
     var data = await response.json();
     console.log(data);
-    show(data);
     window.localStorage.setItem("var1",data[0][0]);
   }
   // Calling that async function
