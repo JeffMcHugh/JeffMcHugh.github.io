@@ -4,8 +4,7 @@ function add() {
 
   window.localStorage.setItem("api1",api1text);
   api1t=window.localStorage.getItem('api1');
-  api1t.replace("https://","")
-  h2=api1t.replace("https:","X")
+  api1t=api1t.replace("https://","")
 
   //Above: in this case, the `grade` is the key while `One` is the value.
 
