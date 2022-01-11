@@ -48,7 +48,8 @@ function add() {
     myConnector.getSchema = function(schemaCallback) {
         var cols = [{
             id: window.localStorage.getItem('param1'),
-            dataType: window.localStorage.getItem('param1type')
+            dataType: tableau.dataTypeEnum.string
+            //dataType: window.localStorage.getItem('param1type')
         }, {
             id: "year",
             dataType: tableau.dataTypeEnum.string
