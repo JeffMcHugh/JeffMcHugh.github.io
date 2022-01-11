@@ -13,7 +13,7 @@ function add() {
   console.log("test console log")
   console.log(api1t)
   document.getElementById("demo").innerHTML = api1text;
-  $.getJSON(api1t, function(preresp) {
+  $.getJSON("https://api.census.gov/data/timeseries/qwi/sa?get=Emp&for=county:198&in=state:02&year=2012&quarter=1&sex=1&sex=2&agegrp=A02&agegrp=A07&ownercode=A05&firmsize=1&seasonadj=U&industry=12&key=fb52f59fa656edc68e1a96839776f5493e3317c0", function(preresp) {
     window.localStorage.setItem("var1",preresp[0][0])
   });
 }
