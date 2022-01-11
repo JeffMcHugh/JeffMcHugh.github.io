@@ -51,6 +51,7 @@ function add() {
             dataType: tableau.dataTypeEnum.string
         }, {
             id: "year",
+            alias: "year",
             dataType: tableau.dataTypeEnum.string
         }, {
             id: "quarter",
@@ -93,15 +94,8 @@ function add() {
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON(api1t, function(resp) {
+        $.getJSON("https://api.census.gov/data/timeseries/qwi/sa?get=Emp&for=county:198&in=state:02&year=2012&quarter=1&sex=1&sex=2&agegrp=A02&agegrp=A07&ownercode=A05&firmsize=1&seasonadj=U&industry=11&key=fb52f59fa656edc68e1a96839776f5493e3317c0", function(resp) {
             //var feat = resp.features,
-            let apicall = prompt("Enter the API call", api1t);
-            let text;
-            if (apicall == null || apicall == "") {
-              text = "User cancelled the prompt.";
-            } else {
-              text = "You entered: " + apicall;
-            }
             tableData = [];
             // Iterate over the JSON object
             for (var i = 0, len = resp.length; i < resp.length-1; i++) {
@@ -130,7 +124,7 @@ function add() {
     // Create event listeners for when the user submits the form
     $(document).ready(function() {
         $("#submitButton").click(function() {
-            tableau.connectionName = "USGS Earthquake Feed"; // This will be the data source name in Tableau
+            tableau.connectionName = "QWI Feed"; // This will be the data source name in Tableau
             tableau.submit(); // This sends the connector object to Tableau
         });
     });
