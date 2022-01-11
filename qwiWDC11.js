@@ -15,7 +15,7 @@ function add() {
   document.getElementById("demo").innerHTML = api1text;
   $.getJSON(api1t, function(preresp) {
     window.localStorage.setItem("var1",preresp[0][0])
-  }
+  });
 }
 
 
