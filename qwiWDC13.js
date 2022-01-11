@@ -25,7 +25,8 @@ function add() {
     var data = await response.json();
     console.log(data);
     for (var i = 0, len = data[0].length-1; i < len; i++) {
-    window.localStorage.setItem("var1",data[0][i]);
+      window.localStorage.setItem("var1",data[0][i]);
+    }
   }
   // Calling that async function
   getapi(api1t);
