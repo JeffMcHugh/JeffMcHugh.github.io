@@ -1,10 +1,8 @@
 function add() {
   //If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
   api1text = document.getElementById('api1').value;
-  api2text = document.getElementById('api2').value;
 
   window.localStorage.setItem("api1",api1text);
-  window.localStorage.setItem("api2",api2text);
   api1t=window.localStorage.getItem('api1');
 
   //Above: in this case, the `grade` is the key while `One` is the value.
