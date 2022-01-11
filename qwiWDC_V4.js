@@ -32,11 +32,11 @@ function add() {
       if (data[0][i]="Emp") {window.localStorage.setItem(paramtype,"string")};
     }
     var cols2test=[];
-      for (var i = 0, len = numparms-1; i < numparms; i++) {
-        var col={id: window.localStorage.getItem('param'+i.toString()),
-                 dataType: tableau.dataTypeEnum.string};
-        cols2test.push(col);
-      }
+    for (var i = 0, len = numparms-1; i < numparms; i++) {
+      var col={id: window.localStorage.getItem('param'+i.toString()),
+      dataType: tableau.dataTypeEnum.string};
+      cols2test.push(col);
+    }
   }
   // Calling that async function
   getapi(api1t);
@@ -54,13 +54,12 @@ function add() {
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
         numparms=window.localStorage.getItem('numparameters');
-        var cols2=[{
-          for (var i = 0, len = numparms-1; i < numparms; i++) {
-            id: window.localStorage.getItem('param'+i.toString()),
-            dataType: tableau.dataTypeEnum.string},
-          }
-        }];
-
+        var cols2=[];
+        for (var i = 0, len = numparms-1; i < numparms; i++) {
+          var col={id: window.localStorage.getItem('param'+i.toString()),
+          dataType: tableau.dataTypeEnum.string};
+          cols2.push(col);
+        }
 
         var cols = [{
             id: window.localStorage.getItem('param0'),
