@@ -33,8 +33,8 @@ function add() {
     }
     var cols2test=[];
     for (var i = 0, len = numparms-1; i < numparms; i++) {
-      var col={id: window.localStorage.getItem('param'+i.toString()),
-      dataType: tableau.dataTypeEnum.string};
+      var col=[{id: window.localStorage.getItem('param'+i.toString()),
+      dataType: tableau.dataTypeEnum.string}];
       cols2test.push(col);
     }
   }
@@ -56,8 +56,8 @@ function add() {
         numparms=window.localStorage.getItem('numparameters');
         var cols2=[];
         for (var i = 0, len = numparms-1; i < numparms; i++) {
-          var col={id: window.localStorage.getItem('param'+i.toString()),
-          dataType: tableau.dataTypeEnum.string};
+          var col=[{id: window.localStorage.getItem('param'+i.toString()),
+          dataType: tableau.dataTypeEnum.string}];
           cols2.push(col);
         }
 
