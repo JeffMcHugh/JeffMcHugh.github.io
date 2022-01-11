@@ -49,7 +49,6 @@ function add() {
         var cols = [{
             id: window.localStorage.getItem('param0'),
             dataType: tableau.dataTypeEnum.string
-            //dataType: window.localStorage.getItem('param1type')
         }, {
             id: "year",
             dataType: tableau.dataTypeEnum.string
