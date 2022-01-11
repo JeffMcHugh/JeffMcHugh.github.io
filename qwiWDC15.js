@@ -40,7 +40,7 @@ function add() {
 
 (function() {
     // Create the connector object
-    console.log('testing this too')
+    console.log('testing this too');
     var myConnector = tableau.makeConnector();
 
 
@@ -57,10 +57,10 @@ function add() {
             id: "quarter",
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "agegrp",
+            id: "sex",
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "sex",
+            id: "agegrp",
             dataType: tableau.dataTypeEnum.string
         }, {
             id: "ownercode",
@@ -81,6 +81,7 @@ function add() {
             id: "county",
             dataType: tableau.dataTypeEnum.string
         }];
+        console.log(cols);
 
         var tableSchema = {
             id: "QWIFeed",
@@ -109,8 +110,8 @@ function add() {
                     "Emp": resp[i+1][0],
                     "year": resp[i+1][1],
                     "quarter": resp[i+1][2],
-                    "agegrp": resp[i+1][3],
-                    "sex": resp[i+1][4],
+                    "sex": resp[i+1][3],
+                    "agegrp": resp[i+1][4],
                     "ownercode": resp[i+1][5],
                     "firmsize": resp[i+1][6],
                     "seasonadj": resp[i+1][7],
