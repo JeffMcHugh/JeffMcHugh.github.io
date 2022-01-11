@@ -16,6 +16,14 @@ function add() {
 
 }
 
+
+let show = function() {
+    console.log(api1t);
+};
+show();
+
+
+
 //The next part should be global
 var apicallresults = {};
   $.ajax({
@@ -63,66 +71,57 @@ var apicallresults = {};
 
 
 
+    // Define the schema
+    myConnector.getSchema = function(schemaCallback) {
+        var cols = [{
+            id: apicallresults[0][0],
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: apicallresults[0][1],
+            alias: "year",
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: apicallresults[0][2],
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: apicallresults[0][3],
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: apicallresults[0][4],
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: apicallresults[0][5],
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: apicallresults[0][6],
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: apicallresults[0][7],
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: apicallresults[0][8],
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: apicallresults[0][9],
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: apicallresults[0][10],
+            dataType: tableau.dataTypeEnum.string
+        }];
 
+        var tableSchema = {
+            id: "QWIFeed",
+            alias: "QWI Data",
+            columns: cols
+        };
+
+        schemaCallback([tableSchema]);
+    };
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
         $.getJSON(api1t, function(resp) {
             //var feat = resp.features,
-
-            // Define the schema
-            myConnector.getSchema = function(schemaCallback) {
-                var cols = [{
-                    id: "Emp",
-                    dataType: tableau.dataTypeEnum.string
-                }, {
-                    id: "year",
-                    alias: "year",
-                    dataType: tableau.dataTypeEnum.string
-                }, {
-                    id: "quarter",
-                    dataType: tableau.dataTypeEnum.string
-                }, {
-                    id: "agegrp",
-                    dataType: tableau.dataTypeEnum.string
-                }, {
-                    id: "sex",
-                    dataType: tableau.dataTypeEnum.string
-                }, {
-                    id: "ownercode",
-                    dataType: tableau.dataTypeEnum.string
-                }, {
-                    id: "firmsize",
-                    dataType: tableau.dataTypeEnum.string
-                }, {
-                    id: "seasonadj",
-                    dataType: tableau.dataTypeEnum.string
-                }, {
-                    id: "industry",
-                    dataType: tableau.dataTypeEnum.string
-                }, {
-                    id: "state",
-                    dataType: tableau.dataTypeEnum.string
-                }, {
-                    id: "county",
-                    dataType: tableau.dataTypeEnum.string
-                }];
-
-                var tableSchema = {
-                    id: "QWIFeed",
-                    alias: "QWI Data",
-                    columns: cols
-                };
-
-                schemaCallback([tableSchema]);
-            };
-
-
-
-
-
-
-
             let apicall = prompt("Enter the API call", api1t);
             let text;
             if (apicall == null || apicall == "") {
