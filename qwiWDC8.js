@@ -17,16 +17,12 @@ function add() {
 //The next part should be global
 var apicallresults = {};
   $.ajax({
-    url: "https://api.census.gov/data/timeseries/qwi/sa?get=Emp&for=county:198&in=state:02&year=2012&quarter=1&sex=1&sex=2&agegrp=A02&agegrp=A07&ownercode=A05&firmsize=1&seasonadj=U&industry=11&key=fb52f59fa656edc68e1a96839776f5493e3317c0",
+    url: api1t,
     async: false,
     dataType: 'json',
     success: function(data){
       apicallresults=data;
     }
-    error: function(XMLHttpRequest, textStatus, errorThrown) {
-    alert("Status: " + textStatus); alert("Error: " + errorThrown);
-    }
-
   });
 //end of api call that sets global variable
 
