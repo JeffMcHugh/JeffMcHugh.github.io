@@ -17,7 +17,7 @@ function add() {
 //The next part should be global
 var apicallresults = {};
   $.ajax({
-    url: api1t,
+    url: "https://api.census.gov/data/timeseries/qwi/sa?get=Emp&for=county:198&in=state:02&year=2012&quarter=1&agegrp=A02&sex=1&ownercode=A05&firmsize=1&seasonadj=U&industry=11",
     async: false,
     dataType: 'json',
     success: function(data){
