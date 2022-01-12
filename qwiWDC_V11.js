@@ -1,4 +1,5 @@
 var api1t;
+/*
 function testcall(){
   api1t=window.localStorage.getItem('api1');
   $.getJSON(api1t, function(testresp) {
@@ -7,6 +8,23 @@ function testcall(){
       // Iterate over the JSON object
       for (var i = 0, rows = testresp.length; i < rows; i++) {
           tableData2.push({
+
+            const strEmp = testresp[i+1][0];
+            const strYear = testresp[i+1][1];
+            const strQuarter = testresp[i+1][2];
+            const strSex = testresp[i+1][3];
+            const strAgegrp = testresp[i+1][4];
+            const strOwnercode = testresp[i+1][5];
+            const strFirmSize = testresp[i+1][6];
+            const strSeasonadj = testresp[i+1][7];
+            const strIndustry = testresp[i+1][8];
+            const strState = testresp[i+1][9];
+            const strCounty = testresp[i+1][10];
+
+
+            if (!str1 || !str2){
+              console.log("This is empty!, i.e. either null or undefined")
+            }
               "Emp": testresp[i+1][0],
               "year": testresp[i+1][1],
               "quarter": testresp[i+1][2],
@@ -23,6 +41,7 @@ function testcall(){
   });
 
 }
+*/
 
 function add() {
   //If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
@@ -65,7 +84,7 @@ function add() {
   }
   // Calling that async function
   getapi(api1t);
-  testcall();
+  //testcall();
 }
 
 
@@ -105,7 +124,7 @@ function add() {
 
         var cols = [{
             id: "Emp",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }, {
             id: "year",
             alias: "year",
@@ -157,19 +176,36 @@ function add() {
             //var feat = resp.features,
             tableData = [];
             // Iterate over the JSON object
+
+            for (var i = 0, len = resp.length; i < resp.length-1; i++) {
+              if (resp[i+1][0] == null) {resp[i+1][0]=0;}
+              if (resp[i+1][0] == null) {resp[i+1][1]="";}
+              if (resp[i+1][0] == null) {resp[i+1][2]="";}
+              if (resp[i+1][0] == null) {resp[i+1][3]="";}
+              if (resp[i+1][0] == null) {resp[i+1][4]="";}
+              if (resp[i+1][0] == null) {resp[i+1][5]="";}
+              if (resp[i+1][0] == null) {resp[i+1][6]="";}
+              if (resp[i+1][0] == null) {resp[i+1][7]="";}
+              if (resp[i+1][0] == null) {resp[i+1][8]="";}
+              if (resp[i+1][0] == null) {resp[i+1][9]="";}
+              if (resp[i+1][0] == null) {resp[i+1][10]="";}
+            }
+
+
+
             for (var i = 0, rows = resp.length; i < rows; i++) {
                 tableData.push({
-                    "Emp": 1,
-                    "year": "test",
-                    "quarter": "test",
-                    "sex": "test",
-                    "agegrp": "test",
-                    "ownercode": "test",
-                    "firmsize": "test",
-                    "seasonadj": "test",
-                    "industry": "test",
-                    "state": "test",
-                    "county": "test"
+                    "Emp": resp[i+1][0],
+                    "year": resp[i+1][1],
+                    "quarter": resp[i+1][2],
+                    "sex": resp[i+1][3],
+                    "agegrp": resp[i+1][4],
+                    "ownercode": resp[i+1][5],
+                    "firmsize": resp[i+1][6],
+                    "seasonadj": resp[i+1][7],
+                    "industry": resp[i+1][8],
+                    "state": resp[i+1][9],
+                    "county": resp[i+1][10]
                 });
             }
 
