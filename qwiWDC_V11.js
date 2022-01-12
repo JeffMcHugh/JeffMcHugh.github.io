@@ -131,7 +131,7 @@ function add() {
             //var feat = resp.features,
             tableData = [];
             // Iterate over the JSON object
-            for (var i = 0, len = 11; i < 11; i++) {
+            for (var i = 0, len = resp[0].length; i < 10; i++) {
                 tableData.push({
                     "Emp": resp[i+1][0],
                     "year": resp[i+1][1],
