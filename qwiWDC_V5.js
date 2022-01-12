@@ -74,7 +74,7 @@ function add() {
           }
           cols2.push(col);
         }
-
+        /*
         var cols = [{
             id: window.localStorage.getItem('param0'),
             dataType: tableau.dataTypeEnum.string
@@ -110,11 +110,11 @@ function add() {
             id: "county",
             dataType: tableau.dataTypeEnum.string
         }];
-        console.log(cols);
+        */
+        console.log(cols2);
 
         var tableSchema = {
             id: "QWIFeed",
-            description: window.localStorage.getItem('api1'),
             alias: "QWI Data",
             columns: cols2
         };
