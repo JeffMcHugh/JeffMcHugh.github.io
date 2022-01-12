@@ -123,7 +123,8 @@ function add() {
 
         //schemaCallback([tableSchema]);
     };
-    /*
+    myconnector();
+
     // Download the data
     myConnector.getData = function(table, doneCallback) {
         api1t=window.localStorage.getItem('api1');
@@ -151,7 +152,6 @@ function add() {
             doneCallback();
         });
     };
-    */
 
     tableau.registerConnector(myConnector);
 
