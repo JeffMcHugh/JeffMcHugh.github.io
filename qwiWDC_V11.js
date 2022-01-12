@@ -64,8 +64,8 @@ function testcall(){
               "county": testrep[i+1][10]
           });
       }
-}
-testcall()
+  });
+testcall();
 
 
 (function() {
