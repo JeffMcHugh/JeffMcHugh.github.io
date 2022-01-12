@@ -68,7 +68,7 @@ function add() {
             var col=[{id: parameters[i],
             dataType: tableau.dataTypeEnum.string}];
           }
-          if typeNumbers.includes(parameters[i]){
+          else if typeNumbers.includes(parameters[i]){
             var col=[{id: parameters[i],
             dataType: tableau.dataTypeEnum.int}];
           }
