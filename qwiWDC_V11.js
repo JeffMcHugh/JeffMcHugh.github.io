@@ -49,10 +49,10 @@ function add() {
 (function() {
     // Create the connector object
     console.log('testing this too');
-    //var myConnector = tableau.makeConnector();
+    var myConnector = tableau.makeConnector();
 
     // Define the schema
-    //myConnector.getSchema = function(schemaCallback) {
+    myConnector.getSchema = function(schemaCallback) {
 
         /*
         numparms=window.localStorage.getItem('numparameters');
@@ -78,7 +78,7 @@ function add() {
         */
 
         var cols = [{
-            id: window.localStorage.getItem('param0'),
+            id: "Emp",
             dataType: tableau.dataTypeEnum.string
         }, {
             id: "year",
@@ -121,7 +121,7 @@ function add() {
             columns: cols
         };
 
-        //schemaCallback([tableSchema]);
+        schemaCallback([tableSchema]);
     };
 
     // Download the data
