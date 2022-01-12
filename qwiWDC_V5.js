@@ -56,7 +56,7 @@ function add() {
     myConnector.getSchema = function(schemaCallback) {
         numparms=window.localStorage.getItem('numparameters');
         var parameters=[];
-        for (var p = 0, len = numparms-1, p < numparms; p++){
+        for (var p = 0, len = numparms-1; p < numparms; p++){
           var parameter = "param"+p.toString());
           parameters.push(window.localStorage.getItem(parameter));
         }
