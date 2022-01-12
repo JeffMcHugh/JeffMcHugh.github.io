@@ -49,7 +49,7 @@ function add() {
 (function() {
     // Create the connector object
     console.log('testing this too');
-    var myConnector = tableau.makeConnector();
+    //var myConnector = tableau.makeConnector();
 
     // window.localStorage.getItem('param0')
     // Define the schema
