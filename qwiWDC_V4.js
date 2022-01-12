@@ -24,12 +24,11 @@ function add() {
     // Storing data in form of JSON
     var data = await response.json();
     console.log(data);
-    numparms=window.localStorage.setItem("numparameters",data[0].length);
-    for (var i = 0, len = data[0].length-1; i < len; i++) {
+    numparms=data[0].length;
+    window.localStorage.setItem("numparameters",numparms);
+    for (var i = 0, len = numparms-1; i < len; i++) {
       var param="param"+i.toString();
       window.localStorage.setItem(param,data[0][i]);
-      var paramtype=param+"type";
-      if (data[0][i]="Emp") {window.localStorage.setItem(paramtype,"string")};
     }
     var cols2test=[];
     for (var i = 0, len = numparms-1; i < numparms; i++) {
