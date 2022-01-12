@@ -65,6 +65,7 @@ function testcall(){
           });
       }
 }
+testcall()
 
 
 (function() {
