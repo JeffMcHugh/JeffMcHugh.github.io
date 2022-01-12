@@ -1,4 +1,28 @@
 var api1t;
+function testcall(){
+  api1t=window.localStorage.getItem('api1');
+  $.getJSON(api1t, function(testresp) {
+      //var feat = resp.features,
+      tableData2 = [];
+      // Iterate over the JSON object
+      for (var i = 0, rows = testresp.length; i < rows; i++) {
+          tableData2.push({
+              "Emp": testresp[i+1][0],
+              "year": testresp[i+1][1],
+              "quarter": testresp[i+1][2],
+              "sex": testresp[i+1][3],
+              "agegrp": testresp[i+1][4],
+              "ownercode": testresp[i+1][5],
+              "firmsize": testresp[i+1][6],
+              "seasonadj": testresp[i+1][7],
+              "industry": testresp[i+1][8],
+              "state": testresp[i+1][9],
+              "county": testresp[i+1][10]
+          });
+      }
+  });
+
+}
 
 function add() {
   //If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
@@ -41,33 +65,11 @@ function add() {
   }
   // Calling that async function
   getapi(api1t);
+  testcall();
 }
 
-function testcall(){
-  api1t=window.localStorage.getItem('api1');
-  $.getJSON(api1t, function(testresp) {
-      //var feat = resp.features,
-      tableData2 = [];
-      // Iterate over the JSON object
-      for (var i = 0, rows = testresp.length; i < rows; i++) {
-          tableData2.push({
-              "Emp": testresp[i+1][0],
-              "year": testresp[i+1][1],
-              "quarter": testresp[i+1][2],
-              "sex": testresp[i+1][3],
-              "agegrp": testresp[i+1][4],
-              "ownercode": testresp[i+1][5],
-              "firmsize": testresp[i+1][6],
-              "seasonadj": testresp[i+1][7],
-              "industry": testresp[i+1][8],
-              "state": testresp[i+1][9],
-              "county": testresp[i+1][10]
-          });
-      }
-  });
 
-}
-testcall();
+
 
 
 (function() {
