@@ -45,23 +45,23 @@ function add() {
 
 function testcall(){
   api1t=window.localStorage.getItem('api1');
-  $.getJSON(api1t, function(testrep) {
+  $.getJSON(api1t, function(testresp) {
       //var feat = resp.features,
       tableData2 = [];
       // Iterate over the JSON object
       for (var i = 0, rows = testresp.length; i < rows; i++) {
           tableData2.push({
-              "Emp": testrep[i+1][0],
-              "year": testrep[i+1][1],
-              "quarter": testrep[i+1][2],
-              "sex": testrep[i+1][3],
-              "agegrp": testrep[i+1][4],
-              "ownercode": testrep[i+1][5],
-              "firmsize": testrep[i+1][6],
-              "seasonadj": testrep[i+1][7],
-              "industry": testrep[i+1][8],
-              "state": testrep[i+1][9],
-              "county": testrep[i+1][10]
+              "Emp": testresp[i+1][0],
+              "year": testresp[i+1][1],
+              "quarter": testresp[i+1][2],
+              "sex": testresp[i+1][3],
+              "agegrp": testresp[i+1][4],
+              "ownercode": testresp[i+1][5],
+              "firmsize": testresp[i+1][6],
+              "seasonadj": testresp[i+1][7],
+              "industry": testresp[i+1][8],
+              "state": testresp[i+1][9],
+              "county": testresp[i+1][10]
           });
       }
   });
