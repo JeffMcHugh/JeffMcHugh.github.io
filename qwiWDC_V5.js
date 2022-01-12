@@ -57,7 +57,7 @@ function add() {
         numparms=window.localStorage.getItem('numparameters');
         var parameters=[];
         for (var p = 0, len = numparms-1; p < numparms; p++){
-          var parameter = "param"+p.toString());
+          var parameter = "param"+p.toString();
           parameters.push(window.localStorage.getItem(parameter));
         }
         var numbers=['Emp'];
