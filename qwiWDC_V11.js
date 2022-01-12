@@ -133,17 +133,17 @@ function add() {
             // Iterate over the JSON object
             for (var i = 0, rows = resp.length; i < rows; i++) {
                 tableData.push({
-                    "Emp": resp[i+1][0],
-                    "year": resp[i+1][1],
-                    "quarter": resp[i+1][2],
-                    "sex": resp[i+1][3],
-                    "agegrp": resp[i+1][4],
-                    "ownercode": resp[i+1][5],
-                    "firmsize": resp[i+1][6],
-                    "seasonadj": resp[i+1][7],
-                    "industry": resp[i+1][8],
-                    "state": resp[i+1][9],
-                    "county": resp[i+1][10]
+                    "Emp": 1,
+                    "year": "test",
+                    "quarter": "test",
+                    "sex": "test",
+                    "agegrp": "test",
+                    "ownercode": "test",
+                    "firmsize": "test",
+                    "seasonadj": "test",
+                    "industry": "test",
+                    "state": "test",
+                    "county": "test"
                 });
             }
 
