@@ -120,7 +120,7 @@ function add() {
             columns: cols2
         };
 
-        schemaCallback([tableSchema]);
+        //schemaCallback([tableSchema]);
     };
     myconnector();
 
