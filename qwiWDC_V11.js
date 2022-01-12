@@ -193,7 +193,7 @@ function add() {
 
 
 
-            for (var i = 0, rows = resp.length; i < rows; i++) {
+            for (var i = 0, rows = resp.length; i < rows-1; i++) {
                 tableData.push({
                     "Emp": resp[i+1][0],
                     "year": resp[i+1][1],
