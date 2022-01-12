@@ -124,7 +124,7 @@ function add() {
 
         var cols = [{
             id: "Emp",
-            dataType: tableau.dataTypeEnum.int
+            dataType: tableau.dataTypeEnum.string
         }, {
             id: "year",
             alias: "year",
@@ -179,17 +179,17 @@ function add() {
             // Iterate over the JSON object
 
             for (var i = 0, len = resp.length; i < resp.length-1; i++) {
-              if (resp[i+1][0] == null) {resp[i+1][0]=0;}
-              if (resp[i+1][0] == null) {resp[i+1][1]="";}
-              if (resp[i+1][0] == null) {resp[i+1][2]="";}
-              if (resp[i+1][0] == null) {resp[i+1][3]="";}
-              if (resp[i+1][0] == null) {resp[i+1][4]="";}
-              if (resp[i+1][0] == null) {resp[i+1][5]="";}
-              if (resp[i+1][0] == null) {resp[i+1][6]="";}
-              if (resp[i+1][0] == null) {resp[i+1][7]="";}
-              if (resp[i+1][0] == null) {resp[i+1][8]="";}
-              if (resp[i+1][0] == null) {resp[i+1][9]="";}
-              if (resp[i+1][0] == null) {resp[i+1][10]="";}
+              if (resp[i+1][0] == null) {resp[i+1][0]="";}
+              if (resp[i+1][1] == null) {resp[i+1][1]="";}
+              if (resp[i+1][2] == null) {resp[i+1][2]="";}
+              if (resp[i+1][3] == null) {resp[i+1][3]="";}
+              if (resp[i+1][4] == null) {resp[i+1][4]="";}
+              if (resp[i+1][5] == null) {resp[i+1][5]="";}
+              if (resp[i+1][6] == null) {resp[i+1][6]="";}
+              if (resp[i+1][7] == null) {resp[i+1][7]="";}
+              if (resp[i+1][8] == null) {resp[i+1][8]="";}
+              if (resp[i+1][9] == null) {resp[i+1][9]="";}
+              if (resp[i+1][10] == null) {resp[i+1][10]="";}
             }
 
 
