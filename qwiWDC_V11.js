@@ -99,7 +99,6 @@ function add() {
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
 
-        /*
         numparms=window.localStorage.getItem('numparameters');
         var parameters=[];
         for (var p = 0, len = numparms-1; p < numparms; p++){
@@ -120,8 +119,8 @@ function add() {
           }
           cols2.push(col);
         }
-        */
 
+        /*
         var cols = [{
             id: "Emp",
             dataType: tableau.dataTypeEnum.int
@@ -157,13 +156,14 @@ function add() {
             id: "county",
             dataType: tableau.dataTypeEnum.string
         }];
+        */
 
-        console.log(cols);
+        console.log(cols2);
 
         var tableSchema = {
             id: "QWIFeed",
             alias: "QWI Data",
-            columns: cols
+            columns: cols2
         };
 
         schemaCallback([tableSchema]);
