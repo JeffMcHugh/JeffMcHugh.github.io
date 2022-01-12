@@ -120,7 +120,7 @@ function add() {
         };
 
         schemaCallback([tableSchema]);
-    };
+    }
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
