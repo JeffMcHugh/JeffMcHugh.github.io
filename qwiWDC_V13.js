@@ -168,6 +168,7 @@ function add() {
             alias: "QWI Data",
             columns: cols2
         };
+        console.log("tableSchema: ",tableSchema)
 
         schemaCallback([tableSchema]);
     };
