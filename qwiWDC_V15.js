@@ -178,6 +178,7 @@ function add() {
             id: "county",
             dataType: tableau.dataTypeEnum.string
         }];
+        console.log("cols: ",cols)
         var tableSchema = {
             id: "QWIFeed",
             alias: "QWI Data",
@@ -229,6 +230,7 @@ function add() {
             }
 
             table.appendRows(tableData);
+            console.log("tableData: ",tableData)
             doneCallback();
         });
     };
