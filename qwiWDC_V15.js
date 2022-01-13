@@ -137,13 +137,14 @@ function add() {
       }
       precols.push(col);
     }
+    var myConnector = tableau.makeConnector();
 
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
       // Create the connector object
-      var myConnector = tableau.makeConnector();
+
         var cols = [{
-            id: cols[0][0],
+            id: precols[0][0],
             dataType: "int"
         }, {
             id: "year",
