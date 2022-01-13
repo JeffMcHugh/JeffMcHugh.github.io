@@ -150,7 +150,7 @@ function add() {
 
         var cols = [{
             id: "Emp",
-            dataType: tableau.dataTypeEnum.string
+            dataType: "string"
         }, {
             id: "year",
             alias: "year",
