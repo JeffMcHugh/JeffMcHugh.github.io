@@ -40,9 +40,32 @@ function testcall(){
           });
       }
   });
-
 }
 */
+function test(){
+numparms=window.localStorage.getItem('numparameters');
+var parameters=[];
+
+for (var p = 0, len = numparms-1; p < numparms; p++){
+  var parameter = "param"+p.toString();
+  parameters.push(window.localStorage.getItem(parameter));
+}
+var numbers=['Emp'];
+var strings=['year','quarter','sex','agegrp','ownercode','firmsize','seasonadj','industry','state','county'];
+var cols2=[];
+for (var i = 0, len = numparms-1; i < numparms; i++) {
+  if (strings.includes(parameters[i])){
+    var col=[{id: parameters[i],
+    dataType: tableau.dataTypeEnum.string}];
+  }
+  else if (numbers.includes(parameters[i])){
+    var col=[{id: parameters[i],
+    dataType: tableau.dataTypeEnum.int}];
+  }
+  cols2.push(col);
+}
+}
+
 
 function add() {
   //If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
@@ -85,6 +108,7 @@ function add() {
   }
   // Calling that async function
   getapi(api1t);
+  test();
   //testcall();
 }
 
@@ -99,9 +123,10 @@ function add() {
 
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
-
+        /*
         numparms=window.localStorage.getItem('numparameters');
         var parameters=[];
+
         for (var p = 0, len = numparms-1; p < numparms; p++){
           var parameter = "param"+p.toString();
           parameters.push(window.localStorage.getItem(parameter));
@@ -120,9 +145,9 @@ function add() {
           }
           cols2.push(col);
         }
+        */
 
 
-        /*
         var cols = [{
             id: "Emp",
             dataType: tableau.dataTypeEnum.string
@@ -158,15 +183,15 @@ function add() {
             id: "county",
             dataType: tableau.dataTypeEnum.string
         }];
-        */
 
 
-        console.log(cols2);
+
+        console.log(cols);
 
         var tableSchema = {
             id: "QWIFeed",
             alias: "QWI Data",
-            columns: cols2
+            columns: cols
         };
         console.log("tableSchema: ",tableSchema)
 
