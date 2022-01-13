@@ -144,7 +144,7 @@ function add() {
       // Create the connector object
 
         var cols = [{
-            id: "Emp",
+            id: precols[0][0],
             dataType: "int"
         }, {
             id: "year",
