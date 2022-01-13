@@ -131,18 +131,18 @@ function add() {
           var parameter = "param"+p.toString();
           parameters.push(window.localStorage.getItem(parameter));
         }
-        var numbers=['Emp'];
-        var strings=['year','quarter','sex','agegrp','ownercode','firmsize','seasonadj','industry','state','county'];
+        //var numbers=['Emp'];
+        //var strings=['year','quarter','sex','agegrp','ownercode','firmsize','seasonadj','industry','state','county'];
         var cols=[];
         for (var i = 0, len = numparms-1; i < numparms; i++) {
-          if (strings.includes(parameters[i])){
+          //if (strings.includes(parameters[i])){
             var col=[{id: parameters[i],
             dataType: "string"}];
-          }
-          else if (numbers.includes(parameters[i])){
-            var col=[{id: parameters[i],
-            dataType: "int"}];
-          }
+          //}
+          //else if (numbers.includes(parameters[i])){
+            //var col=[{id: parameters[i],
+            //dataType: "int"}];
+          //}
           cols.push(col);
         }
 
